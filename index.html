@@ -3,27 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RACM Inteligencia Artificial & Ciencia de Datos</title>
+    <title>Inicio | RACM-IA-DataScience.github.io</title>
     <style>
         :root {
             --primary-color: #2c3e50;
             --secondary-color: #3498db;
             --bg-color: #f8f9fa;
             --text-color: #333333;
-            --border-color: #e1e4e8;
         }
-        
         * { margin: 0; padding: 0; box-sizing: border-box; }
-
         body {
             font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
             background-color: var(--bg-color);
             color: var(--text-color);
             line-height: 1.6;
         }
-
         header {
-            /* El linear-gradient oscurece la imagen de fondo para que el texto resalte */
             background-image: linear-gradient(rgba(26, 37, 47, 0.85), rgba(26, 37, 47, 0.85)), url('img/banner.jpg');
             background-size: cover;
             background-position: center;
@@ -32,8 +27,6 @@
             padding: 4rem 1rem;
             border-bottom: 4px solid var(--secondary-color);
         }
-
-        /* Estilo para hacer la foto de perfil redonda */
         .foto-perfil {
             width: 150px;
             height: 150px;
@@ -43,7 +36,21 @@
             margin-bottom: 1rem;
             box-shadow: 0 4px 8px rgba(0,0,0,0.3);
         }
-
+        nav {
+            background-color: var(--primary-color);
+            padding: 1rem;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 1rem;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: var(--secondary-color);
+        }
         main {
             max-width: 800px;
             margin: 2rem auto;
@@ -52,116 +59,35 @@
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
-
         h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
         h2 {
             color: var(--primary-color);
             margin-bottom: 1rem;
             border-bottom: 2px solid var(--secondary-color);
             padding-bottom: 0.5rem;
-            margin-top: 2rem;
         }
         p { margin-bottom: 1.5rem; }
-
-        /* Estilos para las tarjetas de los repositorios */
-        .repo-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-
-        .repo-card {
-            border: 1px solid var(--border-color);
-            border-radius: 6px;
-            padding: 1rem;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        .repo-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-
-        .repo-name {
-            font-weight: bold;
-            color: var(--secondary-color);
-            text-decoration: none;
-            font-size: 1.1rem;
-        }
-
-        .repo-name:hover { text-decoration: underline; }
-        .repo-desc { font-size: 0.9rem; color: #586069; margin: 0.5rem 0; }
-        .repo-lang { font-size: 0.8rem; font-weight: bold; color: var(--primary-color); }
-
         footer { text-align: center; padding: 1.5rem; margin-top: 3rem; color: #666; }
     </style>
 </head>
 <body>
-
-    <header>
-        <!-- Asegúrate de tener una foto tuya (o una con Grillo) guardada en la carpeta img -->
-        <img src="img/perfil.jpg" alt="Foto de Roberto Alejandro" class="foto-perfil">
-        <h1>RACM Inteligencia Artificial & Ciencia de Datos</h1>
-        <p>Roberto Alejandro Chagra Martinez
-            Lic. en Inteligencia Artificial y Ciencia de Datos</p>
-    </header>
-
-    <main>
-        <h2>Sobre Mí</h2>
-        <p>Bienvenido a mi sitio web. Aquí podrás encontrar la documentación de mis proyectos tanto de Machine Learning, desarrollos con Python y experimentación con redes neuronales y RAG.</p>
-        
-        <h2>Mis Repositorios</h2>
-        <!-- Contenedor donde JavaScript inyectará los repositorios -->
-        <div id="repositorios" class="repo-grid">
-            <p>Cargando proyectos...</p>
-        </div>
-    </main>
-
-    <footer>
-        <p>&copy; 2026 RACM Inteligencia Artificial & Ciencia de Datos. Construido y alojado con GitHub Pages.</p>
-    </footer>
-
-    <script>
-        const githubUsername = '\n' + 'RACM-IA-DataScience';
-        const apiUrl = `https://api.github.com/users/${githubUsername}/repos?sort=updated`;
-
-        async function fetchRepos() {
-            const container = document.getElementById('repositorios');
-            
-            try {
-                const response = await fetch(apiUrl);
-                if (!response.ok) throw new Error('Error al obtener los datos');
-                
-                const repos = await response.json();
-                
-                // Limpiar el mensaje de "Cargando..."
-                container.innerHTML = '';
-
-                // Filtrar repositorios (opcional: quitar forks) y mostrar los primeros 6
-                const reposAMostrar = repos.filter(repo => !repo.fork).slice(0, 6);
-
-                reposAMostrar.forEach(repo => {
-                    const card = document.createElement('div');
-                    card.className = 'repo-card';
-                    
-                    card.innerHTML = `
-                        <a href="${repo.html_url}" class="repo-name" target="_blank">${repo.name}</a>
-                        <p class="repo-desc">${repo.description || 'Sin descripción disponible.'}</p>
-                        <span class="repo-lang">💻 ${repo.language || 'Múltiples lenguajes'}</span>
-                    `;
-                    
-                    container.appendChild(card);
-                });
-
-            } catch (error) {
-                container.innerHTML = '<p>Hubo un error al cargar los repositorios. Por favor, visita mi perfil directamente.</p>';
-                console.error(error);
-            }
-        }
-
-        // Ejecutar la función al cargar la página
-        fetchRepos();
-    </script>
+<header>
+    <img src="img/perfil.jpg" alt="Foto de Roberto Alejandro" class="foto-perfil">
+    <h1>RACM Inteligencia Artificial & Ciencia de Datos</h1>
+    <p>Roberto Alejandro Chagra Martinez
+        Lic. en Inteligencia Artificial y Ciencia de Datos</p>
+</header>
+<nav>
+    <a href="index.html">Inicio</a>
+    <a href="proyectos.html">Proyectos</a>
+    <a href="contacto.html">Contacto</a>
+</nav>
+<main>
+    <h2>Bienvenido</h2>
+    <p>Este es mi sitio web. Aquí podrás encontrar la documentación de mis proyectos tanto de Machine Learning, desarrollos con Python y experimentación con redes neuronales y RAG.</p>
+</main>
+<footer>
+    <p>&copy; 2026  `https://api.github.com/users/${githubUsername}/rep. Construido con GitHub Pages.</p>
+</footer>
 </body>
 </html>
