@@ -102,10 +102,12 @@
     </div>
 </header>
 
-<!-- NAVEGACIÓN PRINCIPAL -->
+<!-- NAVEGACIÓN PRINCIPAL CON 5 PESTAÑAS -->
 <nav class="site-nav">
     <a href="index.html" class="active">⚡ Inicio</a>
+    <a href="servicios.html">🛠️ Servicios</a>
     <a href="proyectos.html">💼 Proyectos</a>
+    <a href="nosotros.html">🏢 Nosotros</a>
     <a href="contacto.html">📬 Contacto</a>
 </nav>
 
@@ -127,11 +129,14 @@
                 En <strong>RACM Inteligencia Artificial & Ciencia de Datos</strong> transformamos datos complejos en ventajas competitivas medibles. Diseñamos arquitecturas escalables, orquestamos agentes autónomos adaptativos, implementamos pipelines reproducibles con MLOps y desplegamos APIs de alto rendimiento contenerizadas en Docker.
             </p>
             <div class="hero-ctas">
-                <a href="proyectos.html" class="btn btn-primary">
-                    <span>Ver Proyectos & Casos de Éxito (10)</span> &rarr;
+                <a href="servicios.html" class="btn btn-primary">
+                    <span>Nuestros Servicios</span> &rarr;
+                </a>
+                <a href="proyectos.html" class="btn btn-outline">
+                    Ver Proyectos (10)
                 </a>
                 <a href="contacto.html" class="btn btn-glow-cyan">
-                    <span>Solicitar Consulta / Diagnóstico</span>
+                    <span>Solicitar Consulta</span>
                 </a>
                 <a href="https://github.com/RACM-IA-DataScience" target="_blank" rel="noopener noreferrer" class="btn btn-github">
                     <svg height="18" width="18" viewBox="0 0 16 16" fill="currentColor">
@@ -198,166 +203,91 @@
         </div>
     </section>
 
-    <!-- SECCIÓN 1: SERVICIOS Y SOLUCIONES EMPRESARIALES -->
+    <!-- PREVIEW DE SERVICIOS EMPRESARIALES -->
     <section class="glass-panel" style="padding: 2.4rem 2rem;">
-        <h2 class="section-title">
-            <span>🛠️ Nuestras Soluciones y Servicios Empresariales</span>
-        </h2>
-        <p class="section-desc">
-            Acompañamos a organizaciones en cada etapa de madurez analítica, entregando sistemas de software de inteligencia artificial listos para integrarse en producción:
-        </p>
+        <div class="featured-header-strip">
+            <div>
+                <h2 class="section-title" style="margin-bottom: 0.2rem;">
+                    <span>🛠️ Servicios y Soluciones Principales</span>
+                </h2>
+                <p style="color: var(--text-muted); font-size: 0.95rem;">Ingeniería de software aplicada para resolver retos complejos de datos e IA:</p>
+            </div>
+            <a href="servicios.html" class="btn btn-outline">
+                Ver Catálogo & Metodología en Servicios &rarr;
+            </a>
+        </div>
 
         <div class="services-grid">
-            <!-- SERVICIO 1: Agentes y RAG -->
             <div class="service-card">
                 <div>
                     <div class="service-icon-box">🤖</div>
-                    <h3>Agentes Autónomos & RAG Empresarial</h3>
+                    <h3>Agentes Autónomos & RAG</h3>
                     <p>
-                        Diseño de sistemas de IA conversacional y agentes que ejecutan acciones sobre tus sistemas internos sin riesgo de alucinación ni fugas de información confidencial.
+                        Grafos de decisión en LangGraph, motores de búsqueda vectorial con FAISS y LLMs líderes para consultar datos corporativos con total privacidad.
                     </p>
-                    <ul class="service-checklist">
-                        <li>Orquestación con grafos de decisión adaptativos (LangGraph)</li>
-                        <li>Motores RAG con bases vectoriales (FAISS, Qdrant, Chroma)</li>
-                        <li>Integración de LLMs líderes (Google Gemini, OpenAI, Claude)</li>
-                        <li>Ejecución de herramientas y llamadas a funciones (Tool Calling)</li>
-                    </ul>
                 </div>
                 <div class="domain-tags">
                     <span class="tag-pill">LangGraph</span>
-                    <span class="tag-pill">RAG</span>
+                    <span class="tag-pill">Gemini</span>
                     <span class="tag-pill">FAISS</span>
-                    <span class="tag-pill">PostgreSQL</span>
                 </div>
             </div>
 
-            <!-- SERVICIO 2: MLOps -->
             <div class="service-card">
                 <div>
                     <div class="service-icon-box">⚙️</div>
-                    <h3>MLOps & Arquitectura en Producción</h3>
+                    <h3>MLOps & Producción</h3>
                     <p>
-                        Llevamos modelos predictivos desde prototipos experimentales hasta APIs de microsegundos, asegurando monitoreo continuo, reproducibilidad y gobernanza.
+                        APIs REST de alta concurrencia con FastAPI, contenedores Docker reproducibles, experiment tracking en MLflow y versionado con DVC.
                     </p>
-                    <ul class="service-checklist">
-                        <li>Microservicios REST de alta concurrencia con FastAPI</li>
-                        <li>Contenerización estandarizada y reproducible con Docker</li>
-                        <li>Versionado de datos y pipelines de entrenamiento con DVC</li>
-                        <li>Trazabilidad de métricas e hiperparámetros con MLflow</li>
-                    </ul>
                 </div>
                 <div class="domain-tags">
-                    <span class="tag-pill">Docker</span>
                     <span class="tag-pill">FastAPI</span>
+                    <span class="tag-pill">Docker</span>
                     <span class="tag-pill">MLflow</span>
-                    <span class="tag-pill">DVC / CI-CD</span>
                 </div>
             </div>
 
-            <!-- SERVICIO 3: Visión por Computadora -->
             <div class="service-card">
                 <div>
                     <div class="service-icon-box">👁️</div>
-                    <h3>Computer Vision & Diagnóstico</h3>
+                    <h3>Computer Vision</h3>
                     <p>
-                        Entrenamiento y ajuste fino de redes neuronales convolucionales para inspección visual automatizada, detección de defectos y diagnóstico médico asistido.
+                        Redes neuronales convolucionales con TensorFlow y Keras aplicadas a inspección visual automatizada y diagnóstico biomédico asistido.
                     </p>
-                    <ul class="service-checklist">
-                        <li>Clasificación y segmentación de imágenes biomédicas e industriales</li>
-                        <li>Transfer Learning con arquitecturas de última generación (MobileNetV2, ResNet)</li>
-                        <li>Pipeline de aumentación y balanceo de datos desbalanceados</li>
-                        <li>Optimización de inferencia para CPU/GPU en borde (Edge AI)</li>
-                    </ul>
                 </div>
                 <div class="domain-tags">
                     <span class="tag-pill">TensorFlow</span>
                     <span class="tag-pill">Keras</span>
-                    <span class="tag-pill">Deep Learning</span>
                     <span class="tag-pill">Healthcare AI</span>
                 </div>
             </div>
 
-            <!-- SERVICIO 4: Ingeniería de Datos -->
             <div class="service-card">
                 <div>
                     <div class="service-icon-box">📊</div>
-                    <h3>Ingeniería de Datos & KDD</h3>
+                    <h3>Ingeniería de Datos</h3>
                     <p>
-                        Construcción de almacenes analíticos y pipelines ETL robustos que aseguran que tus modelos y dashboards reciban datos limpios, consistentes y enriquecidos.
+                        Arquitectura Medallion (Bronze/Silver/Gold), minería KDD de datos masivos y optimización de bases relacionales PostgreSQL.
                     </p>
-                    <ul class="service-checklist">
-                        <li>Modelado de datos bajo arquitectura Medallion (Bronze/Silver/Gold)</li>
-                        <li>Minería avanzada del ciclo KDD (Knowledge Discovery in Databases)</li>
-                        <li>Detección de fraude, anomalías y patrones atípicos</li>
-                        <li>Bases relacionales y optimización de consultas SQL complejas</li>
-                    </ul>
                 </div>
                 <div class="domain-tags">
-                    <span class="tag-pill">Medallion Arch</span>
+                    <span class="tag-pill">Medallion</span>
                     <span class="tag-pill">PostgreSQL</span>
-                    <span class="tag-pill">Pandas</span>
-                    <span class="tag-pill">Data Quality</span>
+                    <span class="tag-pill">KDD</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SECCIÓN 2: METODOLOGÍA DE TRABAJO EN 4 FASES -->
-    <section class="glass-panel" style="padding: 2.4rem 2rem;">
-        <h2 class="section-title">
-            <span>🧭 Cómo Trabajamos: Metodología Ágil y Rigor Científico</span>
-        </h2>
-        <p class="section-desc">
-            Reducimos la incertidumbre y maximizamos el retorno de inversión implementando proyectos de IA bajo un proceso claro y estructurado en cuatro fases:
-        </p>
-
-        <div class="process-grid">
-            <!-- FASE 1 -->
-            <div class="process-step">
-                <div class="step-badge">01</div>
-                <h3>Diagnóstico & Viabilidad</h3>
-                <p>
-                    Evaluamos la madurez de tus datos, el caso de uso estratégico y estimamos el impacto en costos o ingresos antes de iniciar el desarrollo técnico.
-                </p>
-            </div>
-
-            <!-- FASE 2 -->
-            <div class="process-step">
-                <div class="step-badge">02</div>
-                <h3>Prueba de Concepto (PoC)</h3>
-                <p>
-                    Desarrollamos un prototipo funcional en pocas semanas para validar empíricamente la viabilidad algorítmica y el rendimiento con datos reales.
-                </p>
-            </div>
-
-            <!-- FASE 3 -->
-            <div class="process-step">
-                <div class="step-badge">03</div>
-                <h3>Ingeniería & MLOps</h3>
-                <p>
-                    Refactorizamos a código modular, añadimos pruebas unitarias automatizadas (pytest), empaquetamos en contenedores Docker y configuramos CI/CD.
-                </p>
-            </div>
-
-            <!-- FASE 4 -->
-            <div class="process-step">
-                <div class="step-badge">04</div>
-                <h3>Despliegue & Monitoreo</h3>
-                <p>
-                    Desplegamos APIs seguras en la nube o en tus servidores locales, con monitoreo de deriva de datos (data drift), latencia y documentación completa.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- PROYECTOS DESTACADOS SELECCIONADOS (PREVIEW) -->
+    <!-- PREVIEW DE PROYECTOS DESTACADOS -->
     <section class="glass-panel" style="padding: 2.2rem 2rem;">
         <div class="featured-header-strip">
             <div>
                 <h2 class="section-title" style="margin-bottom: 0.2rem;">
                     <span>⭐ Soluciones Emblemáticas Desarrolladas</span>
                 </h2>
-                <p style="color: var(--text-muted); font-size: 0.95rem;">Una muestra representativa de desarrollos técnicos y empresariales:</p>
+                <p style="color: var(--text-muted); font-size: 0.95rem;">Muestra de desarrollos técnicos listos para producción:</p>
             </div>
             <a href="proyectos.html" class="btn btn-outline">
                 Ver Catálogo Completo (10) &rarr;
@@ -373,14 +303,13 @@
                         <h3><a href="https://github.com/RACM-IA-DataScience/churn-mlops-project" target="_blank" rel="noopener noreferrer">Telecom Churn MLOps Pipeline</a></h3>
                     </div>
                     <p class="card-desc">
-                        Pipeline productivo de extremo a extremo para predicción y mitigación de abandono de clientes. Integra versionado con <strong>DVC</strong>, trazabilidad en <strong>MLflow</strong>, API REST en <strong>FastAPI</strong> y despliegue en <strong>Docker</strong> con pruebas automatizadas.
+                        Pipeline productivo para mitigación de fuga de clientes con <strong>DVC</strong>, <strong>MLflow</strong>, <strong>FastAPI</strong> y <strong>Docker</strong> con pruebas automatizadas.
                     </p>
                     <div class="card-techs">
                         <span class="tech-pill">FastAPI</span>
                         <span class="tech-pill">Docker</span>
                         <span class="tech-pill">MLflow</span>
                         <span class="tech-pill">DVC</span>
-                        <span class="tech-pill">Scikit-Learn</span>
                     </div>
                 </div>
                 <div class="card-actions">
@@ -396,13 +325,12 @@
                         <h3><a href="https://github.com/RACM-IA-DataScience/agente_ventas" target="_blank" rel="noopener noreferrer">Agente Inteligente con LangGraph</a></h3>
                     </div>
                     <p class="card-desc">
-                        Agente comercial autónomo orquestado con grafos de estado adaptativos (<strong>LangGraph</strong>), el modelo <strong>Google Gemini Pro</strong>, ejecución de herramientas para inventario y persistencia de memoria contextual en <strong>PostgreSQL</strong>.
+                        Agente comercial autónomo orquestado con grafos adaptativos (<strong>LangGraph</strong>), <strong>Google Gemini Pro</strong> y persistencia en <strong>PostgreSQL</strong>.
                     </p>
                     <div class="card-techs">
                         <span class="tech-pill">LangGraph</span>
-                        <span class="tech-pill">Google Gemini</span>
+                        <span class="tech-pill">Gemini</span>
                         <span class="tech-pill">PostgreSQL</span>
-                        <span class="tech-pill">Tool Calling</span>
                     </div>
                 </div>
                 <div class="card-actions">
@@ -415,16 +343,15 @@
                 <div>
                     <div class="card-header">
                         <span class="card-categoria cat-genai">IA Generativa & RAG</span>
-                        <h3><a href="https://github.com/RACM-IA-DataScience/DocuMind_AI" target="_blank" rel="noopener noreferrer">DocuMind AI: Motor RAG Empresarial</a></h3>
+                        <h3><a href="https://github.com/RACM-IA-DataScience/DocuMind_AI" target="_blank" rel="noopener noreferrer">DocuMind AI: Motor RAG</a></h3>
                     </div>
                     <p class="card-desc">
-                        Sistema RAG empresarial para interrogación de documentos con backend en <strong>FastAPI</strong>, base vectorial <strong>FAISS</strong> persistente en disco y frontend interactivo en <strong>Streamlit</strong> con citas por archivo y número de página exacto.
+                        Motor RAG empresarial con backend en <strong>FastAPI</strong>, base vectorial <strong>FAISS</strong> persistente y frontend en <strong>Streamlit</strong> con citas exactas por página.
                     </p>
                     <div class="card-techs">
                         <span class="tech-pill">FastAPI</span>
                         <span class="tech-pill">FAISS</span>
-                        <span class="tech-pill">Google Gemini</span>
-                        <span class="tech-pill">Streamlit</span>
+                        <span class="tech-pill">Gemini</span>
                     </div>
                 </div>
                 <div class="card-actions">
@@ -434,91 +361,32 @@
         </div>
     </section>
 
-    <!-- SECCIÓN 3: SOBRE LA EMPRESA & LIDERAZGO TÉCNICO -->
-    <section class="glass-panel" style="padding: 2.4rem 2rem;">
-        <h2 class="section-title">
-            <span>🏢 Sobre RACM & Dirección Técnica</span>
-        </h2>
-        <div class="founder-banner">
+    <!-- PREVIEW SOBRE NOSOTROS & DIRECCIÓN TÉCNICA -->
+    <section class="glass-panel" style="padding: 2.2rem 2rem;">
+        <div class="founder-banner" style="padding: 1rem 0;">
             <div class="founder-info">
                 <div class="founder-pill-tag">
                     <span>Liderazgo & Respaldo Científico</span>
                 </div>
                 <h3 style="font-size: 1.8rem; color: #ffffff; margin-bottom: 0.6rem;">
-                    Roberto Alejandro Chagra Martínez
+                    Sobre RACM & Dirección Técnica
                 </h3>
-                <p style="color: var(--accent-cyan); font-weight: 600; margin-bottom: 1rem; font-size: 1.05rem;">
-                    Fundador & Director de Ingeniería de IA — Licenciado en Inteligencia Artificial y Ciencia de Datos (UdeG)
+                <p style="color: var(--text-secondary); line-height: 1.65; margin-bottom: 1.2rem;">
+                    Fundada y dirigida técnicamente por <strong>Roberto Alejandro Chagra Martínez</strong>, Licenciado en Inteligencia Artificial y Ciencia de Datos por la Universidad de Guadalajara (UdeG). Construimos soluciones confiables, reproducibles y seguras preparadas para producción.
                 </p>
-                <p style="color: var(--text-secondary); line-height: 1.65; margin-bottom: 1rem;">
-                    <strong>RACM Inteligencia Artificial & Ciencia de Datos</strong> surge con el propósito de cerrar la brecha entre la investigación teórica en IA y la implementación de sistemas robustos en la industria. Combinamos fundamentos matemáticos sólidos con estándares de ingeniería de software para construir soluciones que generen tracción real en las empresas.
-                </p>
-                <div class="founder-quote">
-                    "La verdadera inteligencia artificial no es la que se queda en un notebook de experimentación, sino la que resuelve un problema crítico en producción, de manera confiable, segura y escalable."
-                </div>
-                <div class="founder-badges">
-                    <span class="header-pill">🎓 Egresado UdeG</span>
-                    <span class="header-pill">⚡ Especialista MLOps</span>
-                    <span class="header-pill">🤖 Arquitecto de Agentes</span>
-                    <span class="header-pill">💼 Consultor Técnico</span>
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <a href="nosotros.html" class="btn btn-outline">
+                        Conoce Más en Nosotros (Misión & FAQ) &rarr;
+                    </a>
+                    <a href="contacto.html" class="btn btn-primary">
+                        Contactar al Equipo
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SECCIÓN 4: PREGUNTAS FRECUENTES (FAQ EMPRESARIAL) -->
-    <section class="glass-panel" style="padding: 2.4rem 2rem;">
-        <h2 class="section-title">
-            <span>❓ Preguntas Frecuentes para Empresas</span>
-        </h2>
-        <p class="section-desc">
-            Respuestas a las dudas más comunes sobre la contratación, integración y seguridad de nuestras soluciones de IA:
-        </p>
-
-        <div class="faq-list">
-            <div class="faq-item">
-                <button class="faq-question">
-                    <span>¿Cómo garantizan la privacidad y confidencialidad de nuestros datos al usar IA?</span>
-                    <span class="faq-icon">+</span>
-                </button>
-                <div class="faq-answer">
-                    Trabajamos bajo estrictos protocolos de seguridad y acuerdos de confidencialidad (NDA). Implementamos arquitecturas locales o en nubes privadas dedicadas donde los datos de tu empresa nunca son utilizados para entrenar modelos públicos de terceros ni compartidos fuera de tu infraestructura.
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question">
-                    <span>¿Cuánto tiempo toma desarrollar una Prueba de Concepto (PoC) o proyecto completo?</span>
-                    <span class="faq-icon">+</span>
-                </button>
-                <div class="faq-answer">
-                    Una Prueba de Concepto (PoC) funcional suele entregarse entre 2 y 4 semanas, permitiendo validar la hipótesis con tus propios datos antes de comprometer mayores recursos. Un proyecto integral de producción (MLOps, integración con APIs y pruebas) suele abarcar de 6 a 12 semanas según la complejidad.
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question">
-                    <span>¿Se pueden integrar estas soluciones con nuestros sistemas actuales (ERP, CRM, BDs)?</span>
-                    <span class="faq-icon">+</span>
-                </button>
-                <div class="faq-answer">
-                    Totalmente. Todas nuestras soluciones se diseñan con arquitectura de microservicios contenerizados en Docker y APIs REST en FastAPI, lo que facilita una integración directa y sin fricción con cualquier stack tecnológico (PostgreSQL, MySQL, Salesforce, SAP, aplicaciones móviles o plataformas web).
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question">
-                    <span>¿Ofrecen mantenimiento y soporte continuo una vez desplegado el sistema?</span>
-                    <span class="faq-icon">+</span>
-                </button>
-                <div class="faq-answer">
-                    Sí. Proporcionamos planes de soporte técnico, monitoreo de métricas operativas, detección proactiva de degradación de datos (data drift) y reentrenamiento periódico de modelos para asegurar que el sistema mantenga su precisión y valor a lo largo del tiempo.
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECCIÓN 5: CALL TO ACTION FINAL -->
+    <!-- CALL TO ACTION FINAL -->
     <section class="cta-banner">
         <h2>¿Listo para impulsar tu empresa con Inteligencia Artificial?</h2>
         <p>
@@ -528,8 +396,8 @@
             <a href="contacto.html" class="btn btn-primary" style="padding: 0.9rem 2rem; font-size: 1.05rem;">
                 <span>Agendar Sesión de Diagnóstico</span> &rarr;
             </a>
-            <a href="proyectos.html" class="btn btn-outline" style="padding: 0.9rem 1.8rem; font-size: 1.05rem;">
-                Explorar Catálogo de Proyectos
+            <a href="servicios.html" class="btn btn-outline" style="padding: 0.9rem 1.8rem; font-size: 1.05rem;">
+                Explorar Nuestros Servicios
             </a>
         </div>
     </section>

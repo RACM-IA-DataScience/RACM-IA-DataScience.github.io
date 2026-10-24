@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nosotros & Liderazgo | RACM Inteligencia Artificial & Ciencia de Datos</title>
+    <meta name="description" content="Conoce a RACM Inteligencia Artificial & Ciencia de Datos, nuestra misión, visión, estándares de ingeniería y la dirección técnica liderada por Roberto Alejandro Chagra Martínez.">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .about-header-box {
+            text-align: center;
+            padding: 3rem 2rem 2.2rem;
+        }
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        .pillar-card {
+            background: rgba(11, 18, 33, 0.7);
+            border: 1px solid var(--border-glass);
+            border-radius: var(--radius-md);
+            padding: 1.8rem;
+            transition: var(--transition);
+        }
+        .pillar-card:hover {
+            border-color: var(--accent-cyan);
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4), var(--shadow-glow);
+        }
+        .pillar-icon {
+            font-size: 2rem;
+            margin-bottom: 0.8rem;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+
+<!-- HEADER CORPORATIVO UNIFICADO -->
+<header class="site-header">
+    <div class="avatar-wrapper">
+        <img src="img/perfil.jpg" alt="Logotipo oficial de RACM Inteligencia Artificial & Ciencia de Datos" class="foto-perfil">
+    </div>
+    <h1 class="site-title">RACM Inteligencia Artificial & Ciencia de Datos</h1>
+    <p class="site-subtitle">Consultoría, Ingeniería de Software & Soluciones de Inteligencia Artificial</p>
+    <p class="site-affiliation">Impulsamos empresas mediante Agentes Autónomos, MLOps, RAG Empresarial, Visión por Computadora y Arquitecturas de Datos de Alto Rendimiento.</p>
+    
+    <div class="header-badges">
+        <span class="header-pill">🤖 Agentes & LLMs</span>
+        <span class="header-pill">⚙️ MLOps & APIs</span>
+        <span class="header-pill">👁️ Deep Learning / CV</span>
+        <span class="header-pill">📊 Data Engineering</span>
+        <span class="header-pill">🚀 Soluciones Empresariales</span>
+    </div>
+</header>
+
+<!-- NAVEGACIÓN -->
+<nav class="site-nav">
+    <a href="index.html">⚡ Inicio</a>
+    <a href="servicios.html">🛠️ Servicios</a>
+    <a href="proyectos.html">💼 Proyectos</a>
+    <a href="nosotros.html" class="active">🏢 Nosotros</a>
+    <a href="contacto.html">📬 Contacto</a>
+</nav>
+
+<main class="container">
+
+    <!-- INTRODUCCIÓN A NOSOTROS -->
+    <section class="glass-panel about-header-box">
+        <div class="hero-badge-tag">
+            <span>🏢 Identidad, Filosofía & Liderazgo</span>
+        </div>
+        <h2 class="site-title" style="font-size: 2.2rem; margin-bottom: 0.8rem;">
+            Cerrando la Brecha Entre la Investigación y la Industria
+        </h2>
+        <p style="color: var(--text-secondary); max-width: 750px; margin: 0 auto 1.5rem; font-size: 1.05rem; line-height: 1.65;">
+            <strong>RACM Inteligencia Artificial & Ciencia de Datos</strong> es una firma de consultoría y desarrollo tecnológico creada para materializar el potencial de la IA en soluciones operativas que aumenten la productividad, reduzcan costos y generen ventajas competitivas reales.
+        </p>
+        <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+            <a href="servicios.html" class="btn btn-primary">
+                <span>Conoce Nuestros Servicios</span> &rarr;
+            </a>
+            <a href="contacto.html" class="btn btn-outline">
+                Contactar al Equipo
+            </a>
+        </div>
+    </section>
+
+    <!-- PILARES DE LA EMPRESA -->
+    <section class="glass-panel" style="padding: 2.4rem 2rem;">
+        <h2 class="section-title">
+            <span>🎯 Nuestros Pilares de Trabajo</span>
+        </h2>
+        <p class="section-desc">
+            Principios que rigen cada desarrollo, arquitectura y línea de código que entregamos a nuestros clientes:
+        </p>
+
+        <div class="pillars-grid">
+            <div class="pillar-card">
+                <span class="pillar-icon">🔬</span>
+                <h3 style="color: #ffffff; font-size: 1.2rem; margin-bottom: 0.6rem;">Rigor Académico y Científico</h3>
+                <p style="color: var(--text-secondary); font-size: 0.92rem; line-height: 1.6;">
+                    Diseñamos soluciones basadas en fundamentos matemáticos sólidos y metodologías comprobadas (KDD, Transfer Learning, grafos cíclicos adaptativos), asegurando que los modelos no sean cajas negras sino sistemas explicables y medibles.
+                </p>
+            </div>
+
+            <div class="pillar-card">
+                <span class="pillar-icon">⚙️</span>
+                <h3 style="color: #ffffff; font-size: 1.2rem; margin-bottom: 0.6rem;">Foco Total en Producción (MLOps)</h3>
+                <p style="color: var(--text-secondary); font-size: 0.92rem; line-height: 1.6;">
+                    No entregamos scripts aislados ni experimentos sin soporte. Cada solución se empaqueta en contenedores Docker reproducibles con APIs REST en FastAPI, trazabilidad con MLflow y versionado con DVC lista para producción.
+                </p>
+            </div>
+
+            <div class="pillar-card">
+                <span class="pillar-icon">🔒</span>
+                <h3 style="color: #ffffff; font-size: 1.2rem; margin-bottom: 0.6rem;">Seguridad y Privacidad Empresarial</h3>
+                <p style="color: var(--text-secondary); font-size: 0.92rem; line-height: 1.6;">
+                    Tus activos de datos son confidenciales. Priorizamos arquitecturas que protegen la información sensible mediante bases vectoriales locales o nubes privadas dedicadas, evitando fugas hacia modelos públicos de terceros.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- DIRECCIÓN TÉCNICA Y FUNDADOR -->
+    <section class="glass-panel" style="padding: 2.4rem 2rem;">
+        <h2 class="section-title">
+            <span>👤 Dirección Técnica & Liderazgo</span>
+        </h2>
+        <div class="founder-banner">
+            <div class="founder-info">
+                <div class="founder-pill-tag">
+                    <span>Fundador & Lead AI Engineer</span>
+                </div>
+                <h3 style="font-size: 1.85rem; color: #ffffff; margin-bottom: 0.5rem;">
+                    Roberto Alejandro Chagra Martínez
+                </h3>
+                <p style="color: var(--accent-cyan); font-weight: 600; margin-bottom: 1.2rem; font-size: 1.05rem;">
+                    Licenciado en Inteligencia Artificial y Ciencia de Datos — Universidad de Guadalajara (UdeG)
+                </p>
+                <p style="color: var(--text-secondary); line-height: 1.65; margin-bottom: 1rem;">
+                    Con una formación integral en ciencias computacionales, matemáticas y estadística aplicada, Roberto lidera la visión técnica y de arquitectura en <strong>RACM Inteligencia Artificial & Ciencia de Datos</strong>. Cuenta con experiencia en el ciclo de vida completo de proyectos de Machine Learning, pipelines de MLOps con Docker, agentes adaptativos con LangGraph y visión por computadora aplicada a la salud y la industria.
+                </p>
+                <div class="founder-quote">
+                    "La verdadera inteligencia artificial no es la que se queda en un notebook de experimentación, sino la que resuelve un problema crítico en producción, de manera confiable, segura y escalable."
+                </div>
+                <div class="founder-badges">
+                    <span class="header-pill">🎓 Egresado UdeG</span>
+                    <span class="header-pill">⚡ Especialista MLOps</span>
+                    <span class="header-pill">🤖 Arquitecto de Agentes</span>
+                    <span class="header-pill">📊 Data Engineering</span>
+                    <span class="header-pill">💼 Consultoría de IA</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PREGUNTAS FRECUENTES (FAQ) -->
+    <section class="glass-panel" style="padding: 2.4rem 2rem;">
+        <h2 class="section-title">
+            <span>❓ Preguntas Frecuentes para Empresas (FAQ)</span>
+        </h2>
+        <p class="section-desc">
+            Respuestas a las preguntas habituales que nos hacen directores y líderes de tecnología antes de iniciar un proyecto:
+        </p>
+
+        <div class="faq-list">
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>¿Cómo garantizan la privacidad y confidencialidad de nuestros datos al usar IA?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    Trabajamos bajo estrictos protocolos de seguridad y acuerdos de confidencialidad (NDA). Implementamos arquitecturas locales o en nubes privadas dedicadas donde los datos de tu empresa nunca son utilizados para entrenar modelos públicos de terceros ni compartidos fuera de tu infraestructura.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>¿Cuánto tiempo toma desarrollar una Prueba de Concepto (PoC) o proyecto completo?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    Una Prueba de Concepto (PoC) funcional suele entregarse entre 2 y 4 semanas, permitiendo validar la hipótesis con tus propios datos antes de comprometer mayores recursos. Un proyecto integral de producción (MLOps, integración con APIs y pruebas) suele abarcar de 6 a 12 semanas según la complejidad.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>¿Se pueden integrar estas soluciones con nuestros sistemas actuales (ERP, CRM, BDs)?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    Totalmente. Todas nuestras soluciones se diseñan con arquitectura de microservicios contenerizados en Docker y APIs REST en FastAPI, lo que facilita una integración directa y sin fricción con cualquier stack tecnológico (PostgreSQL, MySQL, Salesforce, SAP, aplicaciones móviles o plataformas web).
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>¿Ofrecen mantenimiento y soporte continuo una vez desplegado el sistema?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    Sí. Proporcionamos planes de soporte técnico, monitoreo de métricas operativas, detección proactiva de degradación de datos (data drift) y reentrenamiento periódico de modelos para asegurar que el sistema mantenga su precisión y valor a lo largo del tiempo.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BANNER FINAL CTA -->
+    <section class="cta-banner">
+        <h2>Impulsa la transformación analítica de tu organización</h2>
+        <p>
+            Estamos listos para evaluar tus retos de datos y estructurar un plan de desarrollo ajustado a tus metas.
+        </p>
+        <div class="cta-actions">
+            <a href="contacto.html" class="btn btn-primary" style="padding: 0.9rem 2rem; font-size: 1.05rem;">
+                <span>Agendar Sesión de Diagnóstico</span> &rarr;
+            </a>
+            <a href="servicios.html" class="btn btn-outline" style="padding: 0.9rem 1.8rem; font-size: 1.05rem;">
+                Ver Catálogo de Servicios
+            </a>
+        </div>
+    </section>
+
+</main>
+
+<!-- FOOTER CORPORATIVO UNIFICADO -->
+<footer class="site-footer">
+    <p>&copy; 2026 RACM Inteligencia Artificial & Ciencia de Datos. Todos los derechos reservados.</p>
+    <div class="footer-links">
+        <a href="https://github.com/RACM-IA-DataScience" target="_blank" rel="noopener noreferrer">GitHub: @RACM-IA-DataScience</a>
+        <span>•</span>
+        <a href="https://www.linkedin.com/in/racm-ia-datascience/" target="_blank" rel="noopener noreferrer">LinkedIn Oficial</a>
+        <span>•</span>
+        <a href="https://www.facebook.com/racm.ia.datascience" target="_blank" rel="noopener noreferrer">Facebook Oficial</a>
+    </div>
+    <p style="font-size: 0.82rem; color: #64748b; margin-top: 0.4rem;">
+        Dirección Técnica: Roberto Alejandro Chagra Martínez • Licenciado en Inteligencia Artificial y Ciencia de Datos (UdeG)
+    </p>
+    <p style="font-size: 0.78rem; color: #475569;">
+        Desplegado en GitHub Pages • Código abierto y arquitectura de alto rendimiento.
+    </p>
+</footer>
+
+<!-- SCRIPTS -->
+<script src="js/neural-canvas.js"></script>
+<script>
+    // Acordeón de FAQ interactivo
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    faqQuestions.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const item = btn.closest('.faq-item');
+            const isActive = item.classList.contains('active');
+            
+            document.querySelectorAll('.faq-item').forEach(other => {
+                if (other !== item) other.classList.remove('active');
+            });
+            
+            if (isActive) {
+                item.classList.remove('active');
+            } else {
+                item.classList.add('active');
+            }
+        });
+    });
+</script>
+</body>
+</html>

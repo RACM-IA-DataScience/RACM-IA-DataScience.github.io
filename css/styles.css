@@ -241,7 +241,8 @@ nav.site-nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1.8rem;
+    flex-wrap: wrap;
+    gap: 1.2rem;
 }
 
 nav.site-nav a {
