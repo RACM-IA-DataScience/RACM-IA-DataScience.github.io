@@ -3,88 +3,470 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyectos | RACM Inteligencia Artificial & Ciencia de Datos</title>
+    <title>Proyectos | Roberto Alejandro Chagra Martínez - IA & Data Science</title>
+    <meta name="description" content="Portafolio de proyectos de Inteligencia Artificial, Machine Learning, MLOps, Visión por Computadora e Ingeniería de Datos de Roberto Alejandro Chagra Martínez.">
+    <link rel="stylesheet" href="css/styles.css">
     <style>
-        :root { --primary-color: #2c3e50; --secondary-color: #3498db; --bg-color: #f8f9fa; --text-color: #333333; }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background-color: var(--bg-color); color: var(--text-color); line-height: 1.6; }
-        header { background-image: linear-gradient(rgba(26, 37, 47, 0.85), rgba(26, 37, 47, 0.85)), url('img/banner-tecnico.jpg'); background-size: cover; background-position: center; color: white; text-align: center; padding: 4rem 1rem; border-bottom: 4px solid var(--secondary-color); }
-        .foto-perfil { width: 150px; height: 150px; border-radius: 50%; border: 3px solid white; object-fit: cover; margin-bottom: 1rem; box-shadow: 0 4px 8px rgba(0,0,0,0.3); }
-        nav { background-color: var(--primary-color); padding: 1rem; text-align: center; }
-        nav a { color: white; margin: 0 1rem; text-decoration: none; font-weight: bold; transition: color 0.3s; }
-        nav a:hover { color: var(--secondary-color); }
-        main { max-width: 800px; margin: 2rem auto; padding: 2rem; background: white; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
-        h2 { color: var(--primary-color); margin-bottom: 1rem; border-bottom: 2px solid var(--secondary-color); padding-bottom: 0.5rem; }
-        .proyecto { background-color: var(--bg-color); padding: 1.5rem; border-radius: 6px; margin-bottom: 1.5rem; border-left: 4px solid var(--secondary-color); }
-        .proyecto h3 { color: var(--primary-color); margin-bottom: 0.5rem; }
-        .tecnologias { font-size: 0.85rem; font-weight: bold; color: var(--secondary-color); display: block; margin-top: 0.5rem; }
-        footer { text-align: center; padding: 1.5rem; margin-top: 3rem; color: #666; }
+        .seccion-intro-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+        .seccion-intro-texto {
+            flex: 1 1 550px;
+        }
     </style>
 </head>
 <body>
-<header>
-    <img src="img/perfil.jpg" alt="Foto de Roberto Alejandro" class="foto-perfil">
-    <h1>RACM Inteligencia Artificial & Ciencia de Datos</h1>
-    <p>Roberto Alejandro Chagra Martinez
-        Lic. en Inteligencia Artificial y Ciencia de Datos</p>
-</header>
-<nav>
-    <a href="index.html">Inicio</a>
-    <a href="proyectos.html">Proyectos</a>
-    <a href="contacto.html">Contacto</a>
-</nav>
-<main>
-    <h2>Mis Proyectos</h2>
-    <div id="repositorios" class="repo-grid">
-        <p>Cargando proyectos...</p>
+
+<!-- HEADER UNIFICADO -->
+<header class="site-header">
+    <div class="avatar-wrapper">
+        <img src="img/perfil.jpg" alt="Foto de Roberto Alejandro Chagra Martínez" class="foto-perfil">
     </div>
+    <h1 class="site-title">Roberto Alejandro Chagra Martínez</h1>
+    <p class="site-subtitle">Lic. en Inteligencia Artificial y Ciencia de Datos</p>
+    <p class="site-affiliation">Universidad de Guadalajara • Modelos Predictivos, MLOps, IA Generativa (LLMs/RAG) y Visión por Computadora.</p>
+    
+    <div class="header-badges">
+        <span class="header-pill">🤖 Agentes & LLMs</span>
+        <span class="header-pill">⚙️ MLOps & APIs</span>
+        <span class="header-pill">👁️ Deep Learning / CV</span>
+        <span class="header-pill">📊 Data Engineering</span>
+        <span class="header-pill">🚀 Docker & Cloud</span>
+    </div>
+</header>
+
+<!-- NAVEGACIÓN -->
+<nav class="site-nav">
+    <a href="index.html">⚡ Inicio</a>
+    <a href="proyectos.html" class="active">💼 Proyectos</a>
+    <a href="contacto.html">📬 Contacto</a>
+</nav>
+
+<main class="container">
+    <!-- RESUMEN / HERO DE PROYECTOS -->
+    <section class="glass-panel seccion-intro-flex">
+        <div class="seccion-intro-texto">
+            <h2 class="section-title">
+                <span>💼 Portafolio de Proyectos Técnicos</span>
+            </h2>
+            <p style="color: var(--text-secondary); font-size: 0.98rem; line-height: 1.6;">
+                Selección de proyectos de grado técnico y empresarial desarrollados con buenas prácticas de ingeniería de software, reproducibilidad, pruebas unitarias y contenedores. Diseñados para resolver problemas reales en salud, finanzas, automatización y analítica a gran escala.
+            </p>
+        </div>
+        <div>
+            <a href="https://github.com/RACM-IA-DataScience" target="_blank" rel="noopener noreferrer" class="btn btn-github">
+                <svg height="20" width="20" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+                </svg>
+                <span>Perfil en GitHub: RACM-IA-DataScience</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- BARRA DE BÚSQUEDA Y FILTROS -->
+    <section class="controles-proyectos">
+        <div class="search-box">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="buscadorProyectos" placeholder="Buscar por tecnología o concepto (ej. Docker, LangGraph, TensorFlow, KDD, MLOps, FastAPI, FAISS)...">
+        </div>
+        <div class="filtro-tabs">
+            <button class="filtro-btn active" data-categoria="todos">Todos los Destacados (10)</button>
+            <button class="filtro-btn" data-categoria="mlops">MLOps & Producción</button>
+            <button class="filtro-btn" data-categoria="genai">IA Generativa & Agentes</button>
+            <button class="filtro-btn" data-categoria="cv">Visión por Computadora & Salud</button>
+            <button class="filtro-btn" data-categoria="data">Ingeniería de Datos & KDD</button>
+        </div>
+    </section>
+
+    <!-- GRID DE PROYECTOS DESTACADOS SELECCIONADOS -->
+    <section class="proyectos-grid" id="gridDestacados">
+
+        <!-- PROYECTO 1: MLOps Churn -->
+        <article class="proyecto-card" data-categoria="mlops" data-keywords="python fastapi docker mlops dvc mlflow scikit-learn telecomunicaciones ci/cd pytest produccion">
+            <div>
+                <div class="card-header">
+                    <span class="card-categoria cat-mlops">MLOps & Producción</span>
+                    <h3><a href="https://github.com/RACM-IA-DataScience/churn-mlops-project" target="_blank" rel="noopener noreferrer">Telecom Churn MLOps Pipeline</a></h3>
+                </div>
+                <p class="card-desc">
+                    Pipeline productivo y modular para predicción de abandono de clientes en telecomunicaciones. Integra versionado de datos con <strong>DVC</strong>, experiment tracking con <strong>MLflow</strong>, pipeline de CI/CD con <strong>pytest/pre-commit</strong> y una API REST en <strong>FastAPI</strong> empaquetada en contenedor <strong>Docker</strong>.
+                </p>
+                <div class="card-techs">
+                    <span class="tech-pill">Python</span>
+                    <span class="tech-pill">FastAPI</span>
+                    <span class="tech-pill">Docker</span>
+                    <span class="tech-pill">MLflow</span>
+                    <span class="tech-pill">DVC</span>
+                    <span class="tech-pill">Scikit-Learn</span>
+                    <span class="tech-pill">CI/CD</span>
+                </div>
+            </div>
+            <div class="card-actions">
+                <a href="https://github.com/RACM-IA-DataScience/churn-mlops-project" target="_blank" rel="noopener noreferrer" class="btn-card btn-card-primary">Ver Repositorio &rarr;</a>
+            </div>
+        </article>
+
+        <!-- PROYECTO 2: Agente Ventas LangGraph -->
+        <article class="proyecto-card" data-categoria="genai" data-keywords="python langgraph gemini postgresql agentic ai agentes llm tool calling ai studio">
+            <div>
+                <div class="card-header">
+                    <span class="card-categoria cat-genai">IA Generativa & Agentes</span>
+                    <h3><a href="https://github.com/RACM-IA-DataScience/agente_ventas" target="_blank" rel="noopener noreferrer">Agente Inteligente de Ventas con LangGraph</a></h3>
+                </div>
+                <p class="card-desc">
+                    Agente conversacional autónomo para prospección comercial y ventas guiadas. Orquestado con grafos de estado adaptativos (<strong>LangGraph</strong>), el modelo <strong>Google Gemini Pro</strong>, ejecución autónoma de herramientas (Tool Calling) y persistencia de memoria contextual en <strong>PostgreSQL</strong>.
+                </p>
+                <div class="card-techs">
+                    <span class="tech-pill">LangGraph</span>
+                    <span class="tech-pill">Google Gemini</span>
+                    <span class="tech-pill">PostgreSQL</span>
+                    <span class="tech-pill">Tool Calling</span>
+                    <span class="tech-pill">Agentic AI</span>
+                    <span class="tech-pill">Python</span>
+                </div>
+            </div>
+            <div class="card-actions">
+                <a href="https://github.com/RACM-IA-DataScience/agente_ventas" target="_blank" rel="noopener noreferrer" class="btn-card btn-card-primary">Ver Repositorio &rarr;</a>
+            </div>
+        </article>
+
+        <!-- PROYECTO 3: DocuMind AI RAG -->
+        <article class="proyecto-card" data-categoria="genai" data-keywords="python rag gemini faiss fastapi streamlit embeddings llm documentos pdf vector db">
+            <div>
+                <div class="card-header">
+                    <span class="card-categoria cat-genai">IA Generativa & RAG</span>
+                    <h3><a href="https://github.com/RACM-IA-DataScience/DocuMind_AI" target="_blank" rel="noopener noreferrer">DocuMind AI: Motor RAG Empresarial</a></h3>
+                </div>
+                <p class="card-desc">
+                    Sistema avanzado de Retrieval-Augmented Generation (<strong>RAG</strong>) para extracción de conocimiento en documentos (PDF, DOCX, TXT). Arquitectura desacoplada con backend en <strong>FastAPI</strong>, base vectorial <strong>FAISS</strong> persistente en disco y frontend interactivo en <strong>Streamlit</strong> con citas por archivo y página.
+                </p>
+                <div class="card-techs">
+                    <span class="tech-pill">Google Gemini</span>
+                    <span class="tech-pill">FastAPI</span>
+                    <span class="tech-pill">FAISS</span>
+                    <span class="tech-pill">Streamlit</span>
+                    <span class="tech-pill">RAG Pipeline</span>
+                    <span class="tech-pill">Python</span>
+                </div>
+            </div>
+            <div class="card-actions">
+                <a href="https://github.com/RACM-IA-DataScience/DocuMind_AI" target="_blank" rel="noopener noreferrer" class="btn-card btn-card-primary">Ver Repositorio &rarr;</a>
+            </div>
+        </article>
+
+        <!-- PROYECTO 4: Sistema Clínico & Airflow -->
+        <article class="proyecto-card" data-categoria="mlops" data-keywords="python apache airflow postgresql docker fastapi streamlit scikit-learn salud clinica random forest wsl2">
+            <div>
+                <div class="card-header">
+                    <span class="card-categoria cat-mlops">MLOps & Salud Predictiva</span>
+                    <h3><a href="https://github.com/RACM-IA-DataScience/Sistema_Predictivo_de_Respuesta_Metabolica_y_Nutricion_Clinica" target="_blank" rel="noopener noreferrer">Plataforma Predictiva Metabólica & Clínica</a></h3>
+                </div>
+                <p class="card-desc">
+                    Plataforma End-to-End para predecir cuadros clínicos gastrointestinales a partir de biomarcadores y métricas nutricionales. Integra base relacional normalizada en <strong>PostgreSQL 16</strong>, orquestación de reentrenamientos periódicos con <strong>Apache Airflow</strong> en <strong>Docker</strong> y servicio de inferencia en <strong>FastAPI</strong>.
+                </p>
+                <div class="card-techs">
+                    <span class="tech-pill">Apache Airflow</span>
+                    <span class="tech-pill">PostgreSQL 16</span>
+                    <span class="tech-pill">Docker</span>
+                    <span class="tech-pill">FastAPI</span>
+                    <span class="tech-pill">Random Forest</span>
+                    <span class="tech-pill">Streamlit</span>
+                </div>
+            </div>
+            <div class="card-actions">
+                <a href="https://github.com/RACM-IA-DataScience/Sistema_Predictivo_de_Respuesta_Metabolica_y_Nutricion_Clinica" target="_blank" rel="noopener noreferrer" class="btn-card btn-card-primary">Ver Repositorio &rarr;</a>
+            </div>
+        </article>
+
+        <!-- PROYECTO 5: Lung Pathology AI -->
+        <article class="proyecto-card" data-categoria="cv" data-keywords="tensorflow keras mobilenetv2 deep learning computer vision transfer learning streamlit rayos x neumonia covid-19 salud">
+            <div>
+                <div class="card-header">
+                    <span class="card-categoria cat-cv">Visión por Computadora & Salud</span>
+                    <h3><a href="https://github.com/RACM-IA-DataScience/lung-pathology-ai" target="_blank" rel="noopener noreferrer">Lung Pathology AI: Detección Torácica</a></h3>
+                </div>
+                <p class="card-desc">
+                    Diagnóstico asistido por Deep Learning en radiografías de tórax (X-Rays). Clasifica entre tejido pulmonar sano, neumonía bacteriana, viral y COVID-19 utilizando arquitectura convolucional <strong>MobileNetV2</strong> con <strong>Transfer Learning</strong> y despliegue interactivo en <strong>Streamlit</strong>.
+                </p>
+                <div class="card-techs">
+                    <span class="tech-pill">TensorFlow</span>
+                    <span class="tech-pill">Keras</span>
+                    <span class="tech-pill">MobileNetV2</span>
+                    <span class="tech-pill">Transfer Learning</span>
+                    <span class="tech-pill">Streamlit</span>
+                    <span class="tech-pill">Deep Learning</span>
+                </div>
+            </div>
+            <div class="card-actions">
+                <a href="https://github.com/RACM-IA-DataScience/lung-pathology-ai" target="_blank" rel="noopener noreferrer" class="btn-card btn-card-primary">Ver Repositorio &rarr;</a>
+            </div>
+        </article>
+
+        <!-- PROYECTO 6: Clasificador de Mastografías -->
+        <article class="proyecto-card" data-categoria="cv" data-keywords="computer vision deep learning keras tensorflow python mastografias calcificaciones salud oncologia">
+            <div>
+                <div class="card-header">
+                    <span class="card-categoria cat-cv">Visión por Computadora & Oncología</span>
+                    <h3><a href="https://github.com/RACM-IA-DataScience/mammogram-abnormality-classifier" target="_blank" rel="noopener noreferrer">Clasificador de Anomalías en Mastografías</a></h3>
+                </div>
+                <p class="card-desc">
+                    Sistema de visión computacional especializado en procesamiento de mastografías para detección, segmentación y clasificación automatizada de calcificaciones, masas sospechosas y tejido mamario normal para soporte en tamizaje preventivo.
+                </p>
+                <div class="card-techs">
+                    <span class="tech-pill">TensorFlow</span>
+                    <span class="tech-pill">Keras</span>
+                    <span class="tech-pill">Computer Vision</span>
+                    <span class="tech-pill">Healthcare AI</span>
+                    <span class="tech-pill">Python</span>
+                </div>
+            </div>
+            <div class="card-actions">
+                <a href="https://github.com/RACM-IA-DataScience/mammogram-abnormality-classifier" target="_blank" rel="noopener noreferrer" class="btn-card btn-card-primary">Ver Repositorio &rarr;</a>
+            </div>
+        </article>
+
+        <!-- PROYECTO 7: Fraude Bancario KDD -->
+        <article class="proyecto-card" data-categoria="data" data-keywords="python kdd fraude bancario anomalias machine learning finanzas reglas de decision jupyter">
+            <div>
+                <div class="card-header">
+                    <span class="card-categoria cat-data">Fintech & Detección de Fraude</span>
+                    <h3><a href="https://github.com/RACM-IA-DataScience/Deteccion_Automatizada_de_Fraude_Descubrimiento_de_Anomalias_y_Reglas_de_Decision_Tiempo_Real" target="_blank" rel="noopener noreferrer">Detección de Fraude y Reglas KDD</a></h3>
+                </div>
+                <p class="card-desc">
+                    Implementación rigurosa de las 7 etapas del ciclo de vida <strong>KDD (Knowledge Discovery in Databases)</strong> sobre transacciones financieras masivas. Incluye aislamiento de anomalías estadísticas, balanceo de clases extremas y generación de reglas heurísticas accionables.
+                </p>
+                <div class="card-techs">
+                    <span class="tech-pill">KDD Lifecycle</span>
+                    <span class="tech-pill">Anomaly Detection</span>
+                    <span class="tech-pill">Data Mining</span>
+                    <span class="tech-pill">Machine Learning</span>
+                    <span class="tech-pill">Python</span>
+                </div>
+            </div>
+            <div class="card-actions">
+                <a href="https://github.com/RACM-IA-DataScience/Deteccion_Automatizada_de_Fraude_Descubrimiento_de_Anomalias_y_Reglas_de_Decision_Tiempo_Real" target="_blank" rel="noopener noreferrer" class="btn-card btn-card-primary">Ver Repositorio &rarr;</a>
+            </div>
+        </article>
+
+        <!-- PROYECTO 8: Movie Data Medallion Architecture -->
+        <article class="proyecto-card" data-categoria="data" data-keywords="python medallion data engineering raw bronze silver gold etl data pipeline big data">
+            <div>
+                <div class="card-header">
+                    <span class="card-categoria cat-data">Ingeniería de Datos & Big Data</span>
+                    <h3><a href="https://github.com/RACM-IA-DataScience/movie-data-engineering-medallion" target="_blank" rel="noopener noreferrer">Pipeline Medallion Architecture (100k Records)</a></h3>
+                </div>
+                <p class="card-desc">
+                    Pipeline de ingeniería de datos estructurado bajo la <strong>Arquitectura Medallion</strong> (Raw → Bronze → Silver → Gold → ML). Diseñado para ingesta, curaduría, deduplicación, validación de esquemas y generación de capas analíticas optimizadas para modelado predictivo.
+                </p>
+                <div class="card-techs">
+                    <span class="tech-pill">Medallion Arch</span>
+                    <span class="tech-pill">ETL / ELT</span>
+                    <span class="tech-pill">Data Modeling</span>
+                    <span class="tech-pill">Data Quality</span>
+                    <span class="tech-pill">Python</span>
+                </div>
+            </div>
+            <div class="card-actions">
+                <a href="https://github.com/RACM-IA-DataScience/movie-data-engineering-medallion" target="_blank" rel="noopener noreferrer" class="btn-card btn-card-primary">Ver Repositorio &rarr;</a>
+            </div>
+        </article>
+
+        <!-- PROYECTO 9: Evolución de Chatbots -->
+        <article class="proyecto-card" data-categoria="genai" data-keywords="python langchain langgraph qdrant flask ollama chatbots rag state graph">
+            <div>
+                <div class="card-header">
+                    <span class="card-categoria cat-genai">IA Conversacional & Grafos</span>
+                    <h3><a href="https://github.com/RACM-IA-DataScience/Desarrollo-de-Chatbots" target="_blank" rel="noopener noreferrer">Evolución de Chatbots: Reglas a LangGraph</a></h3>
+                </div>
+                <p class="card-desc">
+                    Suite arquitectónica que ilustra la evolución conversacional completa: motores deterministas difusos (`difflib`), flujos declarativos en YAML, pipelines RAG con bases vectoriales <strong>Qdrant</strong> y máquinas de estado complejas en <strong>LangGraph</strong> con gateway en <strong>Flask</strong>.
+                </p>
+                <div class="card-techs">
+                    <span class="tech-pill">LangChain</span>
+                    <span class="tech-pill">LangGraph</span>
+                    <span class="tech-pill">Qdrant Vector DB</span>
+                    <span class="tech-pill">Flask</span>
+                    <span class="tech-pill">Ollama</span>
+                </div>
+            </div>
+            <div class="card-actions">
+                <a href="https://github.com/RACM-IA-DataScience/Desarrollo-de-Chatbots" target="_blank" rel="noopener noreferrer" class="btn-card btn-card-primary">Ver Repositorio &rarr;</a>
+            </div>
+        </article>
+
+        <!-- PROYECTO 10: CleanData AI Platform -->
+        <article class="proyecto-card" data-categoria="data" data-keywords="javascript typescript react vite full-stack saas eda data cleaning estadistica csv">
+            <div>
+                <div class="card-header">
+                    <span class="card-categoria cat-data">Full-Stack SaaS para Datos</span>
+                    <h3><a href="https://github.com/RACM-IA-DataScience/cleandata-ai-platform" target="_blank" rel="noopener noreferrer">CleanData AI Platform: SaaS de Limpieza & EDA</a></h3>
+                </div>
+                <p class="card-desc">
+                    Plataforma SaaS moderna para automatizar la estandarización, imputación estadística (media/moda), acotamiento de valores atípicos mediante rango intercuartílico (IQR) y visualización exploratoria instantánea de datasets tabulares sin escribir código.
+                </p>
+                <div class="card-techs">
+                    <span class="tech-pill">TypeScript</span>
+                    <span class="tech-pill">React</span>
+                    <span class="tech-pill">Vite</span>
+                    <span class="tech-pill">EDA Automation</span>
+                    <span class="tech-pill">SaaS UI</span>
+                </div>
+            </div>
+            <div class="card-actions">
+                <a href="https://github.com/RACM-IA-DataScience/cleandata-ai-platform" target="_blank" rel="noopener noreferrer" class="btn-card btn-card-primary">Ver Repositorio &rarr;</a>
+            </div>
+        </article>
+
+    </section>
+
+    <!-- SECCIÓN DINÁMICA DE GITHUB: EXPLORADOR EN VIVO -->
+    <section class="glass-panel">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 0.5rem;">
+            <h3 class="section-title" style="margin-bottom: 0;">
+                <span>🌐 Explorador de Repositorios en Tiempo Real</span>
+            </h3>
+            <a href="https://github.com/RACM-IA-DataScience?tab=repositories" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="font-size: 0.85rem; padding: 0.4rem 0.9rem;">
+                Ver todos los repositorios en GitHub &rarr;
+            </a>
+        </div>
+        <p style="color: var(--text-muted); font-size: 0.92rem; margin-bottom: 1.8rem;">
+            Repositorios sincronizados directamente con la API pública de GitHub (<a href="https://github.com/RACM-IA-DataScience" target="_blank" rel="noopener noreferrer" style="color: var(--accent-cyan); text-decoration: none;">@RACM-IA-DataScience</a>).
+        </p>
+        
+        <div id="repositorios" class="repo-grid">
+            <div class="loading-state">
+                <div class="spinner"></div>
+                <p>Cargando repositorios públicos desde GitHub...</p>
+            </div>
+        </div>
+    </section>
 </main>
 
+<!-- FOOTER UNIFICADO -->
+<footer class="site-footer">
+    <p>&copy; 2026 Roberto Alejandro Chagra Martínez — Licenciado en Inteligencia Artificial y Ciencia de Datos.</p>
+    <div class="footer-links">
+        <a href="https://github.com/RACM-IA-DataScience" target="_blank" rel="noopener noreferrer">GitHub Oficial: @RACM-IA-DataScience</a>
+        <span>•</span>
+        <a href="https://www.linkedin.com/in/racm-ia-datascience/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <span>•</span>
+        <a href="https://www.facebook.com/racm.ia.datascience" target="_blank" rel="noopener noreferrer">Facebook</a>
+    </div>
+    <p style="font-size: 0.8rem; color: #64748b;">
+        Alojado en GitHub Pages • Actualización continua con GitHub Actions.
+    </p>
+</footer>
+
+<!-- SCRIPTS -->
+<script src="js/neural-canvas.js"></script>
 <script>
-    const githubUsername = '\n' + 'RACM-IA-DataScience';
-    const apiUrl = `https://api.github.com/users/${githubUsername}/repos?sort=updated`;
+    // 1. FILTRADO Y BÚSQUEDA INTERACTIVA DE PROYECTOS DESTACADOS
+    const searchInput = document.getElementById('buscadorProyectos');
+    const filterButtons = document.querySelectorAll('.filtro-btn');
+    const cards = document.querySelectorAll('.proyecto-card');
+
+    let activeCategory = 'todos';
+    let searchQuery = '';
+
+    function filterProjects() {
+        cards.forEach(card => {
+            const cardCategory = card.getAttribute('data-categoria');
+            const cardKeywords = (card.getAttribute('data-keywords') || '') + ' ' + card.innerText.toLowerCase();
+            
+            const matchesCategory = (activeCategory === 'todos' || cardCategory === activeCategory);
+            const matchesSearch = searchQuery === '' || cardKeywords.includes(searchQuery);
+
+            if (matchesCategory && matchesSearch) {
+                card.style.display = 'flex';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
+
+    filterButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            filterButtons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            activeCategory = btn.getAttribute('data-categoria');
+            filterProjects();
+        });
+    });
+
+    searchInput.addEventListener('input', (e) => {
+        searchQuery = e.target.value.toLowerCase().trim();
+        filterProjects();
+    });
+
+    // 2. EXPLORADOR DINÁMICO DE GITHUB
+    const githubUsername = 'RACM-IA-DataScience';
+    const apiUrl = `https://api.github.com/users/${githubUsername}/repos?sort=updated&per_page=12`;
 
     async function fetchRepos() {
         const container = document.getElementById('repositorios');
 
         try {
             const response = await fetch(apiUrl);
-            if (!response.ok) throw new Error('Error al obtener los datos');
+            if (!response.ok) throw new Error('HTTP status ' + response.status);
 
             const repos = await response.json();
-
-            // Limpiar el mensaje de "Cargando..."
             container.innerHTML = '';
 
-            // Filtrar repositorios (opcional: quitar forks) y mostrar los primeros 6
-            const reposAMostrar = repos.filter(repo => !repo.fork).slice(0, 6);
+            // Filtrar forks y excluir el repo de perfil
+            const reposAMostrar = repos
+                .filter(repo => !repo.fork && repo.name.toLowerCase() !== githubUsername.toLowerCase())
+                .slice(0, 9);
+
+            if (reposAMostrar.length === 0) {
+                container.innerHTML = '<p class="empty-state">No se encontraron repositorios adicionales disponibles.</p>';
+                return;
+            }
 
             reposAMostrar.forEach(repo => {
                 const card = document.createElement('div');
                 card.className = 'repo-card';
 
+                const desc = repo.description || 'Repositorio de código abierto en IA y Ciencia de Datos.';
+                const lang = repo.language || 'Python / AI';
+                const stars = repo.stargazers_count || 0;
+                const formattedDate = new Date(repo.updated_at).toLocaleDateString('es-ES', {
+                    year: 'numeric',
+                    month: 'short'
+                });
+
                 card.innerHTML = `
-                        <a href="${repo.html_url}" class="repo-name" target="_blank">${repo.name}</a>
-                        <p class="repo-desc">${repo.description || 'Sin descripción disponible.'}</p>
-                        <span class="repo-lang">💻 ${repo.language || 'Múltiples lenguajes'}</span>
-                    `;
+                    <div>
+                        <a href="${repo.html_url}" class="repo-name" target="_blank" rel="noopener noreferrer">${repo.name}</a>
+                        <p class="repo-desc">${desc}</p>
+                    </div>
+                    <div class="repo-meta">
+                        <span class="repo-lang">💻 ${lang}</span>
+                        <span title="Última actualización: ${formattedDate}">📅 ${formattedDate}</span>
+                        <span class="repo-stars" title="Estrellas: ${stars}">⭐ ${stars}</span>
+                    </div>
+                `;
 
                 container.appendChild(card);
             });
 
         } catch (error) {
-            container.innerHTML = '<p>Hubo un error al cargar los repositorios. Por favor, visita mi perfil directamente.</p>';
-            console.error(error);
+            console.warn('Nota: No se pudo obtener la lista dinámica de GitHub (límite de peticiones de GitHub API).', error);
+            container.innerHTML = `
+                <div class="empty-state">
+                    <p style="margin-bottom: 1rem; color: #cbd5e1;">Consulta el catálogo completo de código y experimentos directamente en mi cuenta oficial:</p>
+                    <a href="https://github.com/${githubUsername}?tab=repositories" target="_blank" rel="noopener noreferrer" class="btn btn-github">
+                        Explorar los 26+ Repositorios en GitHub &rarr;
+                    </a>
+                </div>
+            `;
         }
     }
 
-    // Ejecutar la función al cargar la página
     fetchRepos();
 </script>
-</main>
-<footer>
-    <p>&copy; 2026 RACM Inteligencia Artificial & Ciencia de Datos. Construido y alojado con GitHub Pages.</p>
-</footer>
 </body>
 </html>

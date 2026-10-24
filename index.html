@@ -3,91 +3,391 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio | RACM-IA-DataScience.github.io</title>
+    <title>Roberto Alejandro Chagra Martínez | Inteligencia Artificial & Ciencia de Datos</title>
+    <meta name="description" content="Portafolio profesional de Roberto Alejandro Chagra Martínez, Licenciado en Inteligencia Artificial y Ciencia de Datos (UdeG). Especialista en MLOps, Agentes con LangGraph, LLMs/RAG, Visión por Computadora y Data Engineering.">
+    <link rel="stylesheet" href="css/styles.css">
     <style>
-        :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #3498db;
-            --bg-color: #f8f9fa;
-            --text-color: #333333;
+        .hero-panel {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            padding: 3rem 2.2rem;
         }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.6;
+        .hero-text-content {
+            flex: 1 1 540px;
         }
-        header {
-            background-image: linear-gradient(rgba(26, 37, 47, 0.85), rgba(26, 37, 47, 0.85)), url('img/banner.jpg');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            text-align: center;
-            padding: 4rem 1rem;
-            border-bottom: 4px solid var(--secondary-color);
+        .hero-badge-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(56, 189, 248, 0.1);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            color: var(--accent-cyan);
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            padding: 0.35rem 0.9rem;
+            border-radius: var(--radius-full);
+            margin-bottom: 1.2rem;
         }
-        .foto-perfil {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            border: 3px solid white;
-            object-fit: cover;
+        .hero-headline {
+            font-size: 2.3rem;
+            font-weight: 800;
+            line-height: 1.25;
             margin-bottom: 1rem;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            color: #ffffff;
         }
-        nav {
-            background-color: var(--primary-color);
-            padding: 1rem;
-            text-align: center;
+        .typewriter-wrapper {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #93c5fd;
+            min-height: 2rem;
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.2rem;
         }
-        nav a {
-            color: white;
-            margin: 0 1rem;
-            text-decoration: none;
+        .typewriter-cursor {
+            color: var(--accent-cyan);
+            animation: blink 0.9s infinite;
             font-weight: bold;
-            transition: color 0.3s;
+            margin-left: 2px;
         }
-        nav a:hover {
-            color: var(--secondary-color);
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
         }
-        main {
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 2rem;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        .hero-lead {
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            line-height: 1.65;
+            margin-bottom: 1.8rem;
+            max-width: 650px;
         }
-        h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
-        h2 {
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-            border-bottom: 2px solid var(--secondary-color);
-            padding-bottom: 0.5rem;
+        .hero-ctas {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            align-items: center;
         }
-        p { margin-bottom: 1.5rem; }
-        footer { text-align: center; padding: 1.5rem; margin-top: 3rem; color: #666; }
+        .featured-header-strip {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
     </style>
 </head>
 <body>
-<header>
-    <img src="img/perfil.jpg" alt="Foto de Roberto Alejandro" class="foto-perfil">
-    <h1>RACM Inteligencia Artificial & Ciencia de Datos</h1>
-    <p>Roberto Alejandro Chagra Martinez
-        Lic. en Inteligencia Artificial y Ciencia de Datos</p>
+
+<!-- HEADER UNIFICADO -->
+<header class="site-header">
+    <div class="avatar-wrapper">
+        <img src="img/perfil.jpg" alt="Foto de Roberto Alejandro Chagra Martínez" class="foto-perfil">
+    </div>
+    <h1 class="site-title">Roberto Alejandro Chagra Martínez</h1>
+    <p class="site-subtitle">Lic. en Inteligencia Artificial y Ciencia de Datos</p>
+    <p class="site-affiliation">Universidad de Guadalajara • Modelos Predictivos, MLOps, IA Generativa (LLMs/RAG) y Visión por Computadora.</p>
+    
+    <div class="header-badges">
+        <span class="header-pill">🤖 Agentes & LLMs</span>
+        <span class="header-pill">⚙️ MLOps & APIs</span>
+        <span class="header-pill">👁️ Deep Learning / CV</span>
+        <span class="header-pill">📊 Data Engineering</span>
+        <span class="header-pill">🚀 Docker & Cloud</span>
+    </div>
 </header>
-<nav>
-    <a href="index.html">Inicio</a>
-    <a href="proyectos.html">Proyectos</a>
-    <a href="contacto.html">Contacto</a>
+
+<!-- NAVEGACIÓN PRINCIPAL -->
+<nav class="site-nav">
+    <a href="index.html" class="active">⚡ Inicio</a>
+    <a href="proyectos.html">💼 Proyectos</a>
+    <a href="contacto.html">📬 Contacto</a>
 </nav>
-<main>
-    <h2>Bienvenido</h2>
-    <p>Este es mi sitio web. Aquí podrás encontrar la documentación de mis proyectos tanto de Machine Learning, desarrollos con Python y experimentación con redes neuronales y RAG.</p>
+
+<main class="container">
+
+    <!-- HERO SECTION DE ALTO IMPACTO -->
+    <section class="glass-panel hero-panel">
+        <div class="hero-text-content">
+            <div class="hero-badge-tag">
+                <span>⚡ Portafolio Profesional de IA</span>
+            </div>
+            <h2 class="hero-headline">
+                Soluciones de IA de Extremo a Extremo: Del Algoritmo a la Producción.
+            </h2>
+            <div class="typewriter-wrapper">
+                <span id="typewriter-text"></span><span class="typewriter-cursor">|</span>
+            </div>
+            <p class="hero-lead">
+                Ingeniería de software aplicada al Machine Learning: diseño arquitecturas con datos estructurados y no estructurados, orquesto agentes autónomos adaptativos, implemento pipelines reproducibles con MLOps y despliego modelos en APIs escalables mediante contenedores Docker.
+            </p>
+            <div class="hero-ctas">
+                <a href="proyectos.html" class="btn btn-primary">
+                    <span>Ver Proyectos Destacados (10)</span> &rarr;
+                </a>
+                <a href="contacto.html" class="btn btn-glow-cyan">
+                    <span>Contactar / Networking</span>
+                </a>
+                <a href="https://github.com/RACM-IA-DataScience" target="_blank" rel="noopener noreferrer" class="btn btn-github">
+                    <svg height="18" width="18" viewBox="0 0 16 16" fill="currentColor">
+                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+                    </svg>
+                    <span>@RACM-IA-DataScience</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- METRICAS DE IMPACTO ANIMADAS -->
+    <section class="metrics-grid">
+        <div class="metric-card">
+            <div class="metric-number" data-target="10" data-suffix="+">0</div>
+            <div class="metric-label">Proyectos Productivos</div>
+        </div>
+        <div class="metric-card">
+            <div class="metric-number" data-target="26" data-suffix="+">0</div>
+            <div class="metric-label">Repositorios Públicos</div>
+        </div>
+        <div class="metric-card">
+            <div class="metric-number" data-target="4" data-suffix="">0</div>
+            <div class="metric-label">Áreas de Especialización</div>
+        </div>
+        <div class="metric-card">
+            <div class="metric-number" data-target="100" data-suffix="%">0</div>
+            <div class="metric-label">Código Abierto & Reproducible</div>
+        </div>
+    </section>
+
+    <!-- SANDBOX / TERMINAL INTERACTIVA DE INFERENCIA -->
+    <section class="glass-panel" style="padding: 2.2rem 2rem;">
+        <h2 class="section-title">
+            <span>🔬 Terminal Interactiva de Inferencia de IA</span>
+        </h2>
+        <p class="section-desc">
+            Prueba cómo interactúan mis arquitecturas de IA en tiempo real. Selecciona un pipeline para simular una llamada a la API, la búsqueda vectorial o la máquina de estados del agente:
+        </p>
+
+        <div class="terminal-window">
+            <div class="terminal-header">
+                <div class="terminal-dots">
+                    <span class="terminal-dot dot-red"></span>
+                    <span class="terminal-dot dot-yellow"></span>
+                    <span class="terminal-dot dot-green"></span>
+                </div>
+                <div class="terminal-title">fastapi-mlops: infer --model churn_rf_v2</div>
+                <div style="font-size: 0.75rem; color: #64748b;">bash v5.2</div>
+            </div>
+            <div class="terminal-actions-bar">
+                <span style="font-size: 0.8rem; color: #94a3b8; font-weight: 600; margin-right: 0.5rem;">Ejecutar Pipeline:</span>
+                <button class="terminal-btn active" data-demo="churn">
+                    <span>⚡ 1. MLOps Churn (FastAPI)</span>
+                </button>
+                <button class="terminal-btn" data-demo="rag">
+                    <span>🧠 2. DocuMind RAG (FAISS + Gemini)</span>
+                </button>
+                <button class="terminal-btn" data-demo="langgraph">
+                    <span>🤖 3. Agente Autónomo (LangGraph)</span>
+                </button>
+            </div>
+            <pre class="terminal-body" id="terminal-content"></pre>
+        </div>
+    </section>
+
+    <!-- DOMINIOS CLAVE Y STACK TECNOLÓGICO -->
+    <section>
+        <h2 class="section-title">
+            <span>🎯 Áreas de Dominio Técnico</span>
+        </h2>
+        <p class="section-desc">
+            Conjunto de competencias teóricas y prácticas aplicadas al desarrollo de software y sistemas inteligentes:
+        </p>
+
+        <div class="domains-grid">
+            <!-- DOMINIO 1: MLOps -->
+            <div class="domain-card domain-mlops">
+                <div>
+                    <span class="domain-icon">⚙️</span>
+                    <h3>MLOps & Producción</h3>
+                    <p>
+                        Diseño de pipelines de ciclo de vida completo: versionado de datos con DVC, seguimiento de experimentos en MLflow, pruebas automatizadas en CI/CD y despliegue contenerizado en Docker con APIs de alto rendimiento en FastAPI.
+                    </p>
+                </div>
+                <div class="domain-tags">
+                    <span class="tag-pill">Docker</span>
+                    <span class="tag-pill">FastAPI</span>
+                    <span class="tag-pill">MLflow</span>
+                    <span class="tag-pill">DVC</span>
+                    <span class="tag-pill">Apache Airflow</span>
+                    <span class="tag-pill">CI/CD</span>
+                </div>
+            </div>
+
+            <!-- DOMINIO 2: GenAI & Agentes -->
+            <div class="domain-card domain-genai">
+                <div>
+                    <span class="domain-icon">🤖</span>
+                    <h3>IA Generativa & Agentes</h3>
+                    <p>
+                        Construcción de agentes conversacionales y reactivos orquestados con grafos cíclicos en LangGraph, arquitecturas RAG híbridas sobre bases de datos vectoriales (FAISS, Qdrant) y modelos de última generación como Google Gemini Pro.
+                    </p>
+                </div>
+                <div class="domain-tags">
+                    <span class="tag-pill">LangGraph</span>
+                    <span class="tag-pill">Google Gemini</span>
+                    <span class="tag-pill">FAISS</span>
+                    <span class="tag-pill">Qdrant</span>
+                    <span class="tag-pill">RAG</span>
+                    <span class="tag-pill">Tool Calling</span>
+                </div>
+            </div>
+
+            <!-- DOMINIO 3: Computer Vision & Salud -->
+            <div class="domain-card domain-cv">
+                <div>
+                    <span class="domain-icon">👁️</span>
+                    <h3>Deep Learning & Visión</h3>
+                    <p>
+                        Entrenamiento y ajuste fino (Transfer Learning) de redes neuronales convolucionales con TensorFlow y Keras aplicadas al análisis biomédico: diagnóstico asistido en radiografías pulmonares y detección de calcificaciones en mastografías.
+                    </p>
+                </div>
+                <div class="domain-tags">
+                    <span class="tag-pill">TensorFlow</span>
+                    <span class="tag-pill">Keras</span>
+                    <span class="tag-pill">MobileNetV2</span>
+                    <span class="tag-pill">Computer Vision</span>
+                    <span class="tag-pill">Healthcare AI</span>
+                </div>
+            </div>
+
+            <!-- DOMINIO 4: Data Engineering & KDD -->
+            <div class="domain-card domain-data">
+                <div>
+                    <span class="domain-icon">📊</span>
+                    <h3>Ingeniería de Datos & KDD</h3>
+                    <p>
+                        Modelado de datos bajo arquitectura Medallion (Bronze/Silver/Gold), descubrimiento de conocimiento en bases de datos masivas (metodología KDD), aislamiento de anomalías en transacciones financieras y bases relacionales PostgreSQL.
+                    </p>
+                </div>
+                <div class="domain-tags">
+                    <span class="tag-pill">KDD Lifecycle</span>
+                    <span class="tag-pill">Medallion Arch</span>
+                    <span class="tag-pill">PostgreSQL</span>
+                    <span class="tag-pill">Pandas</span>
+                    <span class="tag-pill">Data Quality</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROYECTOS DESTACADOS SELECCIONADOS (PREVIEW) -->
+    <section class="glass-panel" style="padding: 2.2rem 2rem;">
+        <div class="featured-header-strip">
+            <div>
+                <h2 class="section-title" style="margin-bottom: 0.2rem;">
+                    <span>⭐ Proyectos Emblemáticos</span>
+                </h2>
+                <p style="color: var(--text-muted); font-size: 0.95rem;">Una muestra rápida de los desarrollos más representativos del portafolio:</p>
+            </div>
+            <a href="proyectos.html" class="btn btn-outline">
+                Ver Catálogo Completo (10) &rarr;
+            </a>
+        </div>
+
+        <div class="proyectos-grid" style="margin-bottom: 1rem;">
+            <!-- CARD 1: Telecom Churn MLOps -->
+            <article class="proyecto-card">
+                <div>
+                    <div class="card-header">
+                        <span class="card-categoria cat-mlops">MLOps & Producción</span>
+                        <h3><a href="https://github.com/RACM-IA-DataScience/churn-mlops-project" target="_blank" rel="noopener noreferrer">Telecom Churn MLOps Pipeline</a></h3>
+                    </div>
+                    <p class="card-desc">
+                        Pipeline productivo de extremo a extremo para predicción de fuga de clientes. Versionado con <strong>DVC</strong>, experiment tracking en <strong>MLflow</strong>, API REST en <strong>FastAPI</strong> y contenedor <strong>Docker</strong> con pruebas unitarias.
+                    </p>
+                    <div class="card-techs">
+                        <span class="tech-pill">FastAPI</span>
+                        <span class="tech-pill">Docker</span>
+                        <span class="tech-pill">MLflow</span>
+                        <span class="tech-pill">DVC</span>
+                        <span class="tech-pill">Scikit-Learn</span>
+                    </div>
+                </div>
+                <div class="card-actions">
+                    <a href="https://github.com/RACM-IA-DataScience/churn-mlops-project" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="flex: 1; text-align: center;">Ver en GitHub</a>
+                </div>
+            </article>
+
+            <!-- CARD 2: Agente Ventas LangGraph -->
+            <article class="proyecto-card">
+                <div>
+                    <div class="card-header">
+                        <span class="card-categoria cat-genai">IA Generativa & Agentes</span>
+                        <h3><a href="https://github.com/RACM-IA-DataScience/agente_ventas" target="_blank" rel="noopener noreferrer">Agente Inteligente con LangGraph</a></h3>
+                    </div>
+                    <p class="card-desc">
+                        Agente autónomo de prospección comercial orquestado con grafos de estado adaptativos (<strong>LangGraph</strong>), el modelo <strong>Google Gemini Pro</strong>, ejecución de herramientas y persistencia de memoria contextual en <strong>PostgreSQL</strong>.
+                    </p>
+                    <div class="card-techs">
+                        <span class="tech-pill">LangGraph</span>
+                        <span class="tech-pill">Google Gemini</span>
+                        <span class="tech-pill">PostgreSQL</span>
+                        <span class="tech-pill">Tool Calling</span>
+                    </div>
+                </div>
+                <div class="card-actions">
+                    <a href="https://github.com/RACM-IA-DataScience/agente_ventas" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="flex: 1; text-align: center;">Ver en GitHub</a>
+                </div>
+            </article>
+
+            <!-- CARD 3: DocuMind AI RAG -->
+            <article class="proyecto-card">
+                <div>
+                    <div class="card-header">
+                        <span class="card-categoria cat-genai">IA Generativa & RAG</span>
+                        <h3><a href="https://github.com/RACM-IA-DataScience/DocuMind_AI" target="_blank" rel="noopener noreferrer">DocuMind AI: Motor RAG Empresarial</a></h3>
+                    </div>
+                    <p class="card-desc">
+                        Sistema RAG empresarial para interrogación de documentos con backend en <strong>FastAPI</strong>, base vectorial <strong>FAISS</strong> persistente en disco y frontend interactivo en <strong>Streamlit</strong> con citas por archivo y número de página.
+                    </p>
+                    <div class="card-techs">
+                        <span class="tech-pill">FastAPI</span>
+                        <span class="tech-pill">FAISS</span>
+                        <span class="tech-pill">Google Gemini</span>
+                        <span class="tech-pill">Streamlit</span>
+                    </div>
+                </div>
+                <div class="card-actions">
+                    <a href="https://github.com/RACM-IA-DataScience/DocuMind_AI" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="flex: 1; text-align: center;">Ver en GitHub</a>
+                </div>
+            </article>
+        </div>
+    </section>
+
 </main>
-<footer>
-    <p>&copy; 2026  `https://api.github.com/users/${githubUsername}/rep. Construido con GitHub Pages.</p>
+
+<!-- FOOTER UNIFICADO -->
+<footer class="site-footer">
+    <p>&copy; 2026 Roberto Alejandro Chagra Martínez — Licenciado en Inteligencia Artificial y Ciencia de Datos.</p>
+    <div class="footer-links">
+        <a href="https://github.com/RACM-IA-DataScience" target="_blank" rel="noopener noreferrer">GitHub: @RACM-IA-DataScience</a>
+        <span>•</span>
+        <a href="https://www.linkedin.com/in/racm-ia-datascience/" target="_blank" rel="noopener noreferrer">LinkedIn Oficial</a>
+        <span>•</span>
+        <a href="https://www.facebook.com/racm.ia.datascience" target="_blank" rel="noopener noreferrer">Facebook Oficial</a>
+    </div>
+    <p style="font-size: 0.8rem; color: #64748b;">
+        Desplegado y alojado en GitHub Pages • Código abierto y arquitectura estática de alto rendimiento.
+    </p>
 </footer>
+
+<!-- SCRIPTS DE INTERACTIVIDAD -->
+<script src="js/neural-canvas.js"></script>
+<script src="js/home-interactive.js"></script>
+
 </body>
 </html>
