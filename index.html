@@ -72,14 +72,6 @@
             gap: 1rem;
             align-items: center;
         }
-        .featured-header-strip {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-        }
     </style>
 </head>
 <body>
@@ -130,7 +122,7 @@
             </p>
             <div class="hero-ctas">
                 <a href="servicios.html" class="btn btn-primary">
-                    <span>Nuestros Servicios</span> &rarr;
+                    <span>Explorar Servicios</span> &rarr;
                 </a>
                 <a href="proyectos.html" class="btn btn-outline">
                     Ver Proyectos (10)
@@ -203,189 +195,6 @@
         </div>
     </section>
 
-    <!-- PREVIEW DE SERVICIOS EMPRESARIALES -->
-    <section class="glass-panel" style="padding: 2.4rem 2rem;">
-        <div class="featured-header-strip">
-            <div>
-                <h2 class="section-title" style="margin-bottom: 0.2rem;">
-                    <span>🛠️ Servicios y Soluciones Principales</span>
-                </h2>
-                <p style="color: var(--text-muted); font-size: 0.95rem;">Ingeniería de software aplicada para resolver retos complejos de datos e IA:</p>
-            </div>
-            <a href="servicios.html" class="btn btn-outline">
-                Ver Catálogo & Metodología en Servicios &rarr;
-            </a>
-        </div>
-
-        <div class="services-grid">
-            <div class="service-card">
-                <div>
-                    <div class="service-icon-box">🤖</div>
-                    <h3>Agentes Autónomos & RAG</h3>
-                    <p>
-                        Grafos de decisión en LangGraph, motores de búsqueda vectorial con FAISS y LLMs líderes para consultar datos corporativos con total privacidad.
-                    </p>
-                </div>
-                <div class="domain-tags">
-                    <span class="tag-pill">LangGraph</span>
-                    <span class="tag-pill">Gemini</span>
-                    <span class="tag-pill">FAISS</span>
-                </div>
-            </div>
-
-            <div class="service-card">
-                <div>
-                    <div class="service-icon-box">⚙️</div>
-                    <h3>MLOps & Producción</h3>
-                    <p>
-                        APIs REST de alta concurrencia con FastAPI, contenedores Docker reproducibles, experiment tracking en MLflow y versionado con DVC.
-                    </p>
-                </div>
-                <div class="domain-tags">
-                    <span class="tag-pill">FastAPI</span>
-                    <span class="tag-pill">Docker</span>
-                    <span class="tag-pill">MLflow</span>
-                </div>
-            </div>
-
-            <div class="service-card">
-                <div>
-                    <div class="service-icon-box">👁️</div>
-                    <h3>Computer Vision</h3>
-                    <p>
-                        Redes neuronales convolucionales con TensorFlow y Keras aplicadas a inspección visual automatizada y diagnóstico biomédico asistido.
-                    </p>
-                </div>
-                <div class="domain-tags">
-                    <span class="tag-pill">TensorFlow</span>
-                    <span class="tag-pill">Keras</span>
-                    <span class="tag-pill">Healthcare AI</span>
-                </div>
-            </div>
-
-            <div class="service-card">
-                <div>
-                    <div class="service-icon-box">📊</div>
-                    <h3>Ingeniería de Datos</h3>
-                    <p>
-                        Arquitectura Medallion (Bronze/Silver/Gold), minería KDD de datos masivos y optimización de bases relacionales PostgreSQL.
-                    </p>
-                </div>
-                <div class="domain-tags">
-                    <span class="tag-pill">Medallion</span>
-                    <span class="tag-pill">PostgreSQL</span>
-                    <span class="tag-pill">KDD</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PREVIEW DE PROYECTOS DESTACADOS -->
-    <section class="glass-panel" style="padding: 2.2rem 2rem;">
-        <div class="featured-header-strip">
-            <div>
-                <h2 class="section-title" style="margin-bottom: 0.2rem;">
-                    <span>⭐ Soluciones Emblemáticas Desarrolladas</span>
-                </h2>
-                <p style="color: var(--text-muted); font-size: 0.95rem;">Muestra de desarrollos técnicos listos para producción:</p>
-            </div>
-            <a href="proyectos.html" class="btn btn-outline">
-                Ver Catálogo Completo (10) &rarr;
-            </a>
-        </div>
-
-        <div class="proyectos-grid" style="margin-bottom: 1rem;">
-            <!-- CARD 1: Telecom Churn MLOps -->
-            <article class="proyecto-card">
-                <div>
-                    <div class="card-header">
-                        <span class="card-categoria cat-mlops">MLOps & Producción</span>
-                        <h3><a href="https://github.com/RACM-IA-DataScience/churn-mlops-project" target="_blank" rel="noopener noreferrer">Telecom Churn MLOps Pipeline</a></h3>
-                    </div>
-                    <p class="card-desc">
-                        Pipeline productivo para mitigación de fuga de clientes con <strong>DVC</strong>, <strong>MLflow</strong>, <strong>FastAPI</strong> y <strong>Docker</strong> con pruebas automatizadas.
-                    </p>
-                    <div class="card-techs">
-                        <span class="tech-pill">FastAPI</span>
-                        <span class="tech-pill">Docker</span>
-                        <span class="tech-pill">MLflow</span>
-                        <span class="tech-pill">DVC</span>
-                    </div>
-                </div>
-                <div class="card-actions">
-                    <a href="https://github.com/RACM-IA-DataScience/churn-mlops-project" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="flex: 1; text-align: center;">Ver en GitHub</a>
-                </div>
-            </article>
-
-            <!-- CARD 2: Agente Ventas LangGraph -->
-            <article class="proyecto-card">
-                <div>
-                    <div class="card-header">
-                        <span class="card-categoria cat-genai">IA Generativa & Agentes</span>
-                        <h3><a href="https://github.com/RACM-IA-DataScience/agente_ventas" target="_blank" rel="noopener noreferrer">Agente Inteligente con LangGraph</a></h3>
-                    </div>
-                    <p class="card-desc">
-                        Agente comercial autónomo orquestado con grafos adaptativos (<strong>LangGraph</strong>), <strong>Google Gemini Pro</strong> y persistencia en <strong>PostgreSQL</strong>.
-                    </p>
-                    <div class="card-techs">
-                        <span class="tech-pill">LangGraph</span>
-                        <span class="tech-pill">Gemini</span>
-                        <span class="tech-pill">PostgreSQL</span>
-                    </div>
-                </div>
-                <div class="card-actions">
-                    <a href="https://github.com/RACM-IA-DataScience/agente_ventas" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="flex: 1; text-align: center;">Ver en GitHub</a>
-                </div>
-            </article>
-
-            <!-- CARD 3: DocuMind AI RAG -->
-            <article class="proyecto-card">
-                <div>
-                    <div class="card-header">
-                        <span class="card-categoria cat-genai">IA Generativa & RAG</span>
-                        <h3><a href="https://github.com/RACM-IA-DataScience/DocuMind_AI" target="_blank" rel="noopener noreferrer">DocuMind AI: Motor RAG</a></h3>
-                    </div>
-                    <p class="card-desc">
-                        Motor RAG empresarial con backend en <strong>FastAPI</strong>, base vectorial <strong>FAISS</strong> persistente y frontend en <strong>Streamlit</strong> con citas exactas por página.
-                    </p>
-                    <div class="card-techs">
-                        <span class="tech-pill">FastAPI</span>
-                        <span class="tech-pill">FAISS</span>
-                        <span class="tech-pill">Gemini</span>
-                    </div>
-                </div>
-                <div class="card-actions">
-                    <a href="https://github.com/RACM-IA-DataScience/DocuMind_AI" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="flex: 1; text-align: center;">Ver en GitHub</a>
-                </div>
-            </article>
-        </div>
-    </section>
-
-    <!-- PREVIEW SOBRE NOSOTROS & DIRECCIÓN TÉCNICA -->
-    <section class="glass-panel" style="padding: 2.2rem 2rem;">
-        <div class="founder-banner" style="padding: 1rem 0;">
-            <div class="founder-info">
-                <div class="founder-pill-tag">
-                    <span>Liderazgo & Respaldo Científico</span>
-                </div>
-                <h3 style="font-size: 1.8rem; color: #ffffff; margin-bottom: 0.6rem;">
-                    Sobre RACM & Dirección Técnica
-                </h3>
-                <p style="color: var(--text-secondary); line-height: 1.65; margin-bottom: 1.2rem;">
-                    Fundada y dirigida técnicamente por <strong>Roberto Alejandro Chagra Martínez</strong>, Licenciado en Inteligencia Artificial y Ciencia de Datos por la Universidad de Guadalajara (UdeG). Construimos soluciones confiables, reproducibles y seguras preparadas para producción.
-                </p>
-                <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-                    <a href="nosotros.html" class="btn btn-outline">
-                        Conoce Más en Nosotros (Misión & FAQ) &rarr;
-                    </a>
-                    <a href="contacto.html" class="btn btn-primary">
-                        Contactar al Equipo
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- CALL TO ACTION FINAL -->
     <section class="cta-banner">
         <h2>¿Listo para impulsar tu empresa con Inteligencia Artificial?</h2>
@@ -398,6 +207,9 @@
             </a>
             <a href="servicios.html" class="btn btn-outline" style="padding: 0.9rem 1.8rem; font-size: 1.05rem;">
                 Explorar Nuestros Servicios
+            </a>
+            <a href="proyectos.html" class="btn btn-outline" style="padding: 0.9rem 1.8rem; font-size: 1.05rem;">
+                Ver Catálogo de Proyectos
             </a>
         </div>
     </section>
