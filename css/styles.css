@@ -157,13 +157,13 @@ body::after {
    ========================================================================== */
 header.site-header {
     position: relative;
-    background-image: linear-gradient(180deg, rgba(6, 9, 17, 0.92) 0%, rgba(10, 15, 29, 0.96) 100%), url('../img/banner.jpg');
+    background-image: radial-gradient(ellipse at 50% 30%, rgba(5, 9, 22, 0.55) 0%, rgba(3, 7, 18, 0.84) 100%), url('../img/banner.jpg');
     background-size: cover;
-    background-position: center;
+    background-position: center center;
     border-bottom: 1px solid var(--border-glass);
-    padding: 3.5rem 1.5rem 2.8rem;
+    padding: 3.8rem 1.5rem 3rem;
     text-align: center;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6);
     overflow: hidden;
 }
 
