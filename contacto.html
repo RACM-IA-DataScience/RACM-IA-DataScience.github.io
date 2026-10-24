@@ -3,16 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto | Roberto Alejandro Chagra Martínez - IA & Data Science</title>
-    <meta name="description" content="Conecta con Roberto Alejandro Chagra Martínez, especialista en Inteligencia Artificial, MLOps y Ciencia de Datos. Canales de contacto profesional y redes oficiales.">
+    <title>Contacto & Consultoría | RACM Inteligencia Artificial & Ciencia de Datos</title>
+    <meta name="description" content="Conéctate con RACM Inteligencia Artificial & Ciencia de Datos. Consultoría empresarial, desarrollo de soluciones con LLMs/RAG, MLOps e ingeniería de datos a medida.">
     <link rel="stylesheet" href="css/styles.css">
     <style>
         .composer-box {
-            background: rgba(7, 11, 20, 0.7);
+            background: rgba(7, 11, 20, 0.75);
             border: 1px solid var(--border-glass);
             border-radius: var(--radius-md);
-            padding: 1.8rem;
+            padding: 2rem;
             margin-top: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        }
+        .form-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.2rem;
+            margin-bottom: 1.2rem;
         }
         .composer-form-group {
             margin-bottom: 1.2rem;
@@ -24,25 +31,68 @@
             color: var(--text-secondary);
             margin-bottom: 0.5rem;
         }
-        .composer-select, .composer-textarea {
+        .composer-select, .composer-input, .composer-textarea {
             width: 100%;
-            background: rgba(15, 23, 42, 0.8);
+            background: rgba(15, 23, 42, 0.85);
             border: 1px solid var(--border-glass);
             border-radius: var(--radius-sm);
             color: var(--text-primary);
-            padding: 0.75rem 1rem;
+            padding: 0.8rem 1rem;
             font-size: 0.95rem;
             font-family: inherit;
             outline: none;
             transition: var(--transition);
+            box-sizing: border-box;
         }
-        .composer-select:focus, .composer-textarea:focus {
+        .composer-select:focus, .composer-input:focus, .composer-textarea:focus {
             border-color: var(--accent-cyan);
             box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
+            background: rgba(15, 23, 42, 0.95);
         }
         .composer-textarea {
             resize: vertical;
-            min-height: 110px;
+            min-height: 125px;
+        }
+        .form-status-alert {
+            display: none;
+            padding: 1rem 1.4rem;
+            border-radius: var(--radius-sm);
+            margin-top: 1.2rem;
+            font-size: 0.95rem;
+            font-weight: 500;
+            line-height: 1.5;
+            animation: fadeIn 0.3s ease;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .form-status-alert.success {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: rgba(16, 185, 129, 0.15);
+            border: 1px solid rgba(16, 185, 129, 0.4);
+            color: #6ee7b7;
+        }
+        .form-status-alert.error {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: rgba(239, 68, 68, 0.15);
+            border: 1px solid rgba(239, 68, 68, 0.4);
+            color: #fca5a5;
+        }
+        .btn-spinner {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: #ffffff;
+            animation: spin 0.8s linear infinite;
+            margin-right: 0.5rem;
+            vertical-align: middle;
         }
         .copy-toast {
             display: inline-flex;
@@ -62,21 +112,21 @@
 </head>
 <body>
 
-<!-- HEADER UNIFICADO -->
+<!-- HEADER CORPORATIVO UNIFICADO -->
 <header class="site-header">
     <div class="avatar-wrapper">
-        <img src="img/perfil.jpg" alt="Foto de Roberto Alejandro Chagra Martínez" class="foto-perfil">
+        <img src="img/perfil.jpg" alt="Logotipo oficial de RACM Inteligencia Artificial & Ciencia de Datos" class="foto-perfil">
     </div>
-    <h1 class="site-title">Roberto Alejandro Chagra Martínez</h1>
-    <p class="site-subtitle">Lic. en Inteligencia Artificial y Ciencia de Datos</p>
-    <p class="site-affiliation">Universidad de Guadalajara • Modelos Predictivos, MLOps, IA Generativa (LLMs/RAG) y Visión por Computadora.</p>
+    <h1 class="site-title">RACM Inteligencia Artificial & Ciencia de Datos</h1>
+    <p class="site-subtitle">Consultoría, Ingeniería de Software & Soluciones de Inteligencia Artificial</p>
+    <p class="site-affiliation">Impulsamos empresas mediante Agentes Autónomos, MLOps, RAG Empresarial, Visión por Computadora y Arquitecturas de Datos de Alto Rendimiento.</p>
     
     <div class="header-badges">
         <span class="header-pill">🤖 Agentes & LLMs</span>
         <span class="header-pill">⚙️ MLOps & APIs</span>
         <span class="header-pill">👁️ Deep Learning / CV</span>
         <span class="header-pill">📊 Data Engineering</span>
-        <span class="header-pill">🚀 Docker & Cloud</span>
+        <span class="header-pill">🚀 Soluciones Empresariales</span>
     </div>
 </header>
 
@@ -93,14 +143,14 @@
     <section class="glass-panel" style="text-align: center; padding: 3rem 2rem;">
         <div class="contact-status-badge">
             <span class="status-dot-pulse"></span>
-            <span>Disponible para Proyectos, Consultoría & Colaboración Técnica en IA</span>
+            <span>Disponibles para Proyectos, Consultoría Empresarial & Diagnóstico de IA</span>
         </div>
 
         <h2 class="site-title" style="font-size: 2.2rem; margin-bottom: 0.8rem;">
-            Construyamos Soluciones con IA
+            Construyamos Soluciones con IA para tu Organización
         </h2>
         <p style="color: var(--text-secondary); max-width: 680px; margin: 0 auto 2rem; font-size: 1.05rem; line-height: 1.65;">
-            Si deseas colaborar en un proyecto de Ciencia de Datos, discutir arquitecturas de Inteligencia Artificial (LLMs, MLOps, Visión Computacional) o tienes una propuesta profesional, te invito a conectar conmigo a través de mis canales oficiales.
+            Si deseas implementar un sistema de Inteligencia Artificial, diseñar arquitecturas con modelos de lenguaje (LLMs/RAG), optimizar tus flujos de MLOps o evaluar la viabilidad técnica de un nuevo producto, en <strong>RACM Inteligencia Artificial & Ciencia de Datos</strong> estamos listos para colaborar contigo.
         </p>
 
         <!-- TARJETAS DE CONEXIÓN PRINCIPAL -->
@@ -110,8 +160,8 @@
             <div class="contact-card">
                 <div>
                     <span class="contact-icon">💼</span>
-                    <h3>LinkedIn Profesional</h3>
-                    <p>Conéctate en mi red principal para colaboraciones, networking, trayectoria y oportunidades profesionales.</p>
+                    <h3>LinkedIn Oficial</h3>
+                    <p>Conéctate en nuestra red profesional corporativa para alianzas comerciales, actualizaciones tecnológicas y networking empresarial.</p>
                 </div>
                 <a href="https://www.linkedin.com/in/racm-ia-datascience/" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width: 100%;">
                     <span>Visitar LinkedIn</span> &rarr;
@@ -123,7 +173,7 @@
                 <div>
                     <span class="contact-icon">💻</span>
                     <h3>GitHub Oficial</h3>
-                    <p>Revisa mis 26+ repositorios de código abierto, contribuciones, implementaciones en Docker y notebooks técnicos.</p>
+                    <p>Explora nuestros 26+ repositorios de código abierto, arquitecturas con Docker, pipelines de MLOps y código reproducible.</p>
                 </div>
                 <a href="https://github.com/RACM-IA-DataScience" target="_blank" rel="noopener noreferrer" class="btn btn-github" style="width: 100%;">
                     <span>Explorar @RACM-IA-DataScience</span> &rarr;
@@ -135,7 +185,7 @@
                 <div>
                     <span class="contact-icon">🌐</span>
                     <h3>Facebook Oficial</h3>
-                    <p>Canal complementario para divulgación, proyectos y actualización en temas de Inteligencia Artificial y Datos.</p>
+                    <p>Canal complementario para noticias del ecosistema, divulgación de tecnología y contacto directo con nuestro equipo.</p>
                 </div>
                 <a href="https://www.facebook.com/racm.ia.datascience" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="width: 100%;">
                     <span>Ir a Página Oficial</span> &rarr;
@@ -144,99 +194,132 @@
 
         </div>
 
-        <!-- GENERADOR INTERACTIVO DE MENSAJE / CORREO RÁPIDO -->
+        <!-- FORMULARIO DIRECTO DE CONTACTO Y SOLICITUD DE PROYECTO -->
         <div class="composer-box" style="text-align: left;">
             <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.2rem;">
-                <h3 style="font-size: 1.2rem; color: var(--text-primary); display: flex; align-items: center; gap: 0.5rem;">
-                    <span>✉️ Compositor Rápido de Mensaje</span>
+                <h3 style="font-size: 1.25rem; color: var(--text-primary); display: flex; align-items: center; gap: 0.5rem;">
+                    <span>✉️ Envía tu Solicitud de Proyecto Directamente</span>
                 </h3>
-                <span style="font-size: 0.8rem; color: var(--accent-cyan); font-weight: 600;">Generador Directo de Correo</span>
+                <span style="font-size: 0.8rem; color: var(--accent-cyan); font-weight: 600; background: rgba(56, 189, 248, 0.1); padding: 0.25rem 0.75rem; border-radius: var(--radius-full); border: 1px solid rgba(56, 189, 248, 0.25);">
+                    Envío Directo y Confidencial
+                </span>
             </div>
-            <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1.2rem;">
-                Selecciona el motivo de tu mensaje para cargar una plantilla prediseñada o personaliza el contenido antes de enviarlo:
+            <p style="font-size: 0.92rem; color: var(--text-secondary); margin-bottom: 1.5rem;">
+                Completa el formulario a continuación para comunicarte directamente con el equipo de ingeniería de RACM. Recibirás respuesta técnica directamente a tu correo.
             </p>
 
-            <div class="composer-form-group">
-                <label for="selectMotivo">Motivo de contacto:</label>
-                <select id="selectMotivo" class="composer-select">
-                    <option value="colaboracion">🤝 Colaboración en Proyecto de IA / MLOps</option>
-                    <option value="consultoria">⚙️ Consultoría Técnica / Asesoría en Modelos</option>
-                    <option value="empleo">💼 Propuesta Profesional / Oportunidad Laboral</option>
-                    <option value="charla">🎤 Charla / Seminario / Divulgación Académica</option>
-                    <option value="otro">💬 Consulta General</option>
-                </select>
-            </div>
+            <form id="contactForm">
+                <!-- Honeypot anti-spam (invisible para usuarios reales) -->
+                <input type="text" name="_honey" style="display: none;" tabindex="-1" autocomplete="off">
 
-            <div class="composer-form-group">
-                <label for="asuntoMensaje">Asunto preconfigurado:</label>
-                <input type="text" id="asuntoMensaje" class="composer-select" value="Propuesta de Colaboración en Proyecto de IA">
-            </div>
+                <div class="form-row">
+                    <div class="composer-form-group" style="margin-bottom: 0;">
+                        <label for="senderName">Tu Nombre o Empresa <span style="color: var(--accent-cyan);">*</span></label>
+                        <input type="text" id="senderName" name="name" class="composer-input" placeholder="Ej. Carlos Mendoza / TechCorp" required>
+                    </div>
+                    <div class="composer-form-group" style="margin-bottom: 0;">
+                        <label for="senderEmail">Tu Correo Electrónico <span style="color: var(--accent-cyan);">*</span></label>
+                        <input type="email" id="senderEmail" name="email" class="composer-input" placeholder="tu-correo@empresa.com" required>
+                    </div>
+                </div>
 
-            <div class="composer-form-group">
-                <label for="cuerpoMensaje">Mensaje:</label>
-                <textarea id="cuerpoMensaje" class="composer-textarea">Hola Roberto, me pongo en contacto contigo tras revisar tu portafolio en RACM-IA-DataScience. Me gustaría discutir la viabilidad de colaborar en un proyecto relacionado con Inteligencia Artificial y Machine Learning.</textarea>
-            </div>
+                <div class="composer-form-group">
+                    <label for="selectMotivo">Motivo o Área de Interés:</label>
+                    <select id="selectMotivo" name="motivo" class="composer-select">
+                        <option value="colaboracion">🤝 Proyecto de IA / Prueba de Concepto (PoC)</option>
+                        <option value="consultoria">⚙️ Consultoría Técnica / Auditoría de MLOps</option>
+                        <option value="rag">🧠 Implementación de Agentes Autónomos / RAG Empresarial</option>
+                        <option value="vision">👁️ Solución de Visión por Computadora / Deep Learning</option>
+                        <option value="otro">💬 Consulta General o Alianza Estratégica</option>
+                    </select>
+                </div>
 
-            <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 1rem; margin-top: 1.5rem;">
-                <button type="button" id="btnEnviarCorreo" class="btn btn-primary">
-                    <span>Abrir en mi Cliente de Correo</span> &rarr;
-                </button>
-                <button type="button" id="btnCopiarMensaje" class="btn btn-outline">
-                    <span>📋 Copiar Asunto y Mensaje</span>
-                </button>
-                <span id="copyToast" class="copy-toast">✓ ¡Copiado al portapapeles!</span>
-            </div>
+                <div class="composer-form-group">
+                    <label for="asuntoMensaje">Asunto:</label>
+                    <input type="text" id="asuntoMensaje" name="_subject" class="composer-input" value="Solicitud de Proyecto de IA / PoC - RACM">
+                </div>
+
+                <div class="composer-form-group">
+                    <label for="cuerpoMensaje">Detalles de tu Solicitud o Mensaje <span style="color: var(--accent-cyan);">*</span></label>
+                    <textarea id="cuerpoMensaje" name="message" class="composer-textarea" required>Hola equipo de RACM Inteligencia Artificial & Ciencia de Datos, nos ponemos en contacto tras conocer sus desarrollos técnicos. Nos gustaría evaluar la viabilidad de implementar una solución de Inteligencia Artificial para nuestra organización.</textarea>
+                </div>
+
+                <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 1rem; margin-top: 1.5rem;">
+                    <button type="submit" id="btnSubmitForm" class="btn btn-primary" style="padding: 0.85rem 1.8rem; font-size: 0.98rem;">
+                        <span id="btnText">Enviar Mensaje Directo</span> &rarr;
+                    </button>
+                    <button type="button" id="btnCopiarMensaje" class="btn btn-outline">
+                        <span>📋 Copiar Mensaje</span>
+                    </button>
+                    <span id="copyToast" class="copy-toast">✓ ¡Copiado al portapapeles!</span>
+                </div>
+
+                <!-- Notificaciones de estado -->
+                <div id="statusSuccess" class="form-status-alert success">
+                    <span>✓</span>
+                    <div>
+                        <strong>¡Mensaje enviado con éxito!</strong> Tu requerimiento ha sido recibido directamente por nuestro equipo. Nos pondremos en contacto contigo a la brevedad.
+                    </div>
+                </div>
+                <div id="statusError" class="form-status-alert error">
+                    <span>⚠️</span>
+                    <div>
+                        <strong>No se pudo enviar el mensaje.</strong> Por favor verifica tu conexión o contáctanos directamente a través de nuestro LinkedIn oficial.
+                    </div>
+                </div>
+            </form>
         </div>
 
     </section>
 
 </main>
 
-<!-- FOOTER UNIFICADO -->
+<!-- FOOTER CORPORATIVO UNIFICADO -->
 <footer class="site-footer">
-    <p>&copy; 2026 Roberto Alejandro Chagra Martínez — Licenciado en Inteligencia Artificial y Ciencia de Datos.</p>
+    <p>&copy; 2026 RACM Inteligencia Artificial & Ciencia de Datos. Todos los derechos reservados.</p>
     <div class="footer-links">
         <a href="https://github.com/RACM-IA-DataScience" target="_blank" rel="noopener noreferrer">GitHub: @RACM-IA-DataScience</a>
         <span>•</span>
-        <a href="https://www.linkedin.com/in/racm-ia-datascience/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/racm-ia-datascience/" target="_blank" rel="noopener noreferrer">LinkedIn Oficial</a>
         <span>•</span>
-        <a href="https://www.facebook.com/racm.ia.datascience" target="_blank" rel="noopener noreferrer">Facebook</a>
+        <a href="https://www.facebook.com/racm.ia.datascience" target="_blank" rel="noopener noreferrer">Facebook Oficial</a>
     </div>
-    <p style="font-size: 0.8rem; color: #64748b;">
-        Construido y alojado con GitHub Pages.
+    <p style="font-size: 0.82rem; color: #64748b; margin-top: 0.4rem;">
+        Dirección Técnica: Roberto Alejandro Chagra Martínez • Licenciado en Inteligencia Artificial y Ciencia de Datos (UdeG)
+    </p>
+    <p style="font-size: 0.78rem; color: #475569;">
+        Desplegado en GitHub Pages • Código abierto y arquitectura de alto rendimiento.
     </p>
 </footer>
 
 <!-- SCRIPTS -->
 <script src="js/neural-canvas.js"></script>
 <script>
+    // 1. PLANTILLAS SEGÚN MOTIVO DE CONTACTO
     const selectMotivo = document.getElementById('selectMotivo');
     const inputAsunto = document.getElementById('asuntoMensaje');
     const textareaCuerpo = document.getElementById('cuerpoMensaje');
-    const btnEnviar = document.getElementById('btnEnviarCorreo');
-    const btnCopiar = document.getElementById('btnCopiarMensaje');
-    const copyToast = document.getElementById('copyToast');
 
     const TEMPLATES = {
         colaboracion: {
-            asunto: 'Propuesta de Colaboración en Proyecto de IA - [Tu Nombre]',
-            cuerpo: 'Hola Roberto, me pongo en contacto contigo tras revisar tu portafolio en RACM-IA-DataScience. Me gustaría discutir la viabilidad de colaborar en un desarrollo relacionado con Inteligencia Artificial y Machine Learning.'
+            asunto: 'Solicitud de Proyecto de IA / PoC - RACM',
+            cuerpo: 'Hola equipo de RACM Inteligencia Artificial & Ciencia de Datos, nos ponemos en contacto tras conocer sus desarrollos técnicos. Nos gustaría evaluar la viabilidad de implementar una solución de Inteligencia Artificial para nuestra organización en el área de...'
         },
         consultoria: {
-            asunto: 'Consulta sobre Asesoría Técnica en IA / MLOps - [Empresa/Organización]',
-            cuerpo: 'Hola Roberto, tenemos un reto técnico en nuestro flujo de datos y nos gustaría explorar una asesoría técnica en arquitecturas de MLOps, despliegue de modelos o integración de RAG.'
+            asunto: 'Consulta sobre Consultoría Técnica en MLOps & Arquitectura - RACM',
+            cuerpo: 'Hola equipo de RACM, tenemos un reto técnico en nuestro flujo de datos y nos gustaría explorar una asesoría técnica en arquitecturas de MLOps, contenerización de modelos con Docker y despliegue de APIs en producción.'
         },
-        empleo: {
-            asunto: 'Oportunidad Profesional en IA & Data Science - [Empresa]',
-            cuerpo: 'Hola Roberto, revisamos tu perfil y portafolio técnico en IA y nos parece un perfil idóneo para una posición en nuestro equipo de Ciencia de Datos e Inteligencia Artificial.'
+        rag: {
+            asunto: 'Requerimiento de Agentes Autónomos / Motor RAG Privado - RACM',
+            cuerpo: 'Hola equipo de RACM, estamos interesados en evaluar la integración de un sistema RAG empresarial con base de conocimiento confidencial y agentes orquestados con LangGraph para optimizar nuestros procesos internos.'
         },
-        charla: {
-            asunto: 'Invitación a Charla / Espacio Técnico sobre IA - [Evento/Comunidad]',
-            cuerpo: 'Hola Roberto, queremos extenderte una invitación para compartir tu experiencia técnica en desarrollo de agentes o MLOps en nuestro próximo evento o espacio académico.'
+        vision: {
+            asunto: 'Proyecto de Visión por Computadora / Deep Learning - RACM',
+            cuerpo: 'Hola equipo de RACM, requerimos una solución de Computer Vision aplicada a inspección visual, clasificación de imágenes o análisis biomédico. Nos gustaría agendar una llamada exploratoria.'
         },
         otro: {
-            asunto: 'Contacto desde RACM-IA-DataScience - [Nombre]',
-            cuerpo: 'Hola Roberto, te escribo para conectar y conversar sobre...'
+            asunto: 'Contacto con RACM Inteligencia Artificial & Ciencia de Datos',
+            cuerpo: 'Hola equipo de RACM, les escribo para conversar sobre una oportunidad de colaboración referente a...'
         }
     };
 
@@ -248,17 +331,77 @@
         }
     });
 
-    // Acción de enviar correo vía mailto
-    btnEnviar.addEventListener('click', () => {
-        const asunto = encodeURIComponent(inputAsunto.value);
-        const cuerpo = encodeURIComponent(textareaCuerpo.value);
-        // Usar mailto sin dirección fija o fallback
-        window.location.href = `mailto:?subject=${asunto}&body=${cuerpo}`;
+    // 2. ENVÍO SEGURO Y ASÍNCRONO DEL FORMULARIO SIN EXPONER CORREO
+    const contactForm = document.getElementById('contactForm');
+    const btnSubmit = document.getElementById('btnSubmitForm');
+    const btnText = document.getElementById('btnText');
+    const statusSuccess = document.getElementById('statusSuccess');
+    const statusError = document.getElementById('statusError');
+
+    // Desofuscación en memoria al momento del envío (no expuesto en HTML en texto plano)
+    const _0xkey = 'cm9iZXJ0by5jaGFncmE4OUBnbWFpbC5jb20=';
+    const getTargetEndpoint = () => {
+        return 'https://formsubmit.co/ajax/' + atob(_0xkey);
+    };
+
+    contactForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        // Ocultar mensajes previos
+        statusSuccess.style.display = 'none';
+        statusError.style.display = 'none';
+
+        // Estado cargando
+        btnSubmit.disabled = true;
+        const originalContent = btnSubmit.innerHTML;
+        btnSubmit.innerHTML = '<span class="btn-spinner"></span> Enviando a RACM...';
+
+        const payload = {
+            name: document.getElementById('senderName').value.trim(),
+            email: document.getElementById('senderEmail').value.trim(),
+            motivo: selectMotivo.options[selectMotivo.selectedIndex].text,
+            _subject: inputAsunto.value.trim() || 'Nuevo mensaje desde RACM IA & Data Science',
+            message: textareaCuerpo.value.trim(),
+            _template: 'table',
+            _captcha: 'false'
+        };
+
+        try {
+            const response = await fetch(getTargetEndpoint(), {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(payload)
+            });
+
+            if (response.ok) {
+                statusSuccess.style.display = 'flex';
+                contactForm.reset();
+                // Restaurar asunto por defecto
+                inputAsunto.value = TEMPLATES.colaboracion.asunto;
+                textareaCuerpo.value = TEMPLATES.colaboracion.cuerpo;
+            } else {
+                throw new Error('Error en la respuesta del servidor');
+            }
+        } catch (error) {
+            console.error('Error al enviar el formulario:', error);
+            statusError.style.display = 'flex';
+        } finally {
+            btnSubmit.disabled = false;
+            btnSubmit.innerHTML = originalContent;
+        }
     });
 
-    // Acción de copiar al portapapeles
+    // 3. COPIAR MENSAJE AL PORTAPAPELES
+    const btnCopiar = document.getElementById('btnCopiarMensaje');
+    const copyToast = document.getElementById('copyToast');
+
     btnCopiar.addEventListener('click', async () => {
-        const textoCompleto = `Asunto: ${inputAsunto.value}\n\n${textareaCuerpo.value}`;
+        const remitente = document.getElementById('senderName').value.trim();
+        const correo = document.getElementById('senderEmail').value.trim();
+        const textoCompleto = `De: ${remitente || 'No especificado'} (${correo || 'Sin correo'})\nAsunto: ${inputAsunto.value}\n\n${textareaCuerpo.value}`;
         try {
             await navigator.clipboard.writeText(textoCompleto);
             copyToast.classList.add('visible');
@@ -266,7 +409,6 @@
                 copyToast.classList.remove('visible');
             }, 2500);
         } catch (err) {
-            // Fallback en caso de que navigator.clipboard no esté disponible
             const dummy = document.createElement('textarea');
             dummy.value = textoCompleto;
             document.body.appendChild(dummy);

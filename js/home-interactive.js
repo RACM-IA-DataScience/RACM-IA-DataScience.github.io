@@ -167,4 +167,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Cargar demo inicial
     loadDemo('churn');
+
+    // 4. ACORDEÓN DE PREGUNTAS FRECUENTES (FAQ)
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    faqQuestions.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const item = btn.closest('.faq-item');
+            const isActive = item.classList.contains('active');
+            
+            // Cerrar todos los demás
+            document.querySelectorAll('.faq-item').forEach(other => {
+                if (other !== item) other.classList.remove('active');
+            });
+            
+            // Alternar actual
+            if (isActive) {
+                item.classList.remove('active');
+            } else {
+                item.classList.add('active');
+            }
+        });
+    });
 });
