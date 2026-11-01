@@ -257,6 +257,27 @@
             align-items: center;
             gap: 0.4rem;
         }
+        .calendar-embed-wrapper {
+            margin-top: 1.6rem;
+            margin-bottom: 1.2rem;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            border: 1px solid rgba(56, 189, 248, 0.35);
+            background: #ffffff;
+            box-shadow: 0 12px 35px -5px rgba(0, 0, 0, 0.6), 0 0 25px -5px rgba(56, 189, 248, 0.2);
+            position: relative;
+        }
+        .calendar-embed-iframe {
+            width: 100%;
+            height: 720px;
+            border: 0;
+            display: block;
+        }
+        @media (max-width: 768px) {
+            .calendar-embed-iframe {
+                height: 640px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -349,13 +370,23 @@
                 </div>
             </div>
 
-            <div class="booking-cta-bar">
-                <a href="https://calendar.app.google/H9tx4iwBHj5k2FGi7" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="btnGoogleCalendar" style="padding: 0.95rem 2.2rem; font-size: 1.02rem;">
-                    <span>📅 Ver Horarios Disponibles y Agendar</span> &rarr;
-                </a>
+            <!-- CALENDARIO INTERACTIVO EMBEBIDO (GOOGLE CALENDAR APPOINTMENT SCHEDULING) -->
+            <div class="calendar-embed-wrapper">
+                <iframe 
+                    src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0hFRfmploLhK5WIONzIEJiRLLBLAJd0HOs2HZkeV8w-XyggoopDAgs6HPPm4vPJNEeCzj6Y_Vg?gv=true" 
+                    class="calendar-embed-iframe"
+                    title="Calendario de Disponibilidad y Reservas - RACM"
+                    loading="lazy">
+                </iframe>
+            </div>
+
+            <div class="booking-cta-bar" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
                 <span class="booking-hint">
-                    🔒 Conexión directa mediante Google Calendar Appointment Scheduling
+                    🔒 Disponibilidad en vivo sincronizada con Google Calendar • Videollamada automática por Google Meet
                 </span>
+                <a href="https://calendar.app.google/H9tx4iwBHj5k2FGi7" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="font-size: 0.85rem; padding: 0.5rem 1rem;">
+                    <span>Abrir en ventana completa</span> ↗
+                </a>
             </div>
         </div>
 
