@@ -57,7 +57,7 @@
             min-height: 125px;
         }
         .form-status-alert {
-            display: none;
+            display: none !important;
             padding: 1rem 1.4rem;
             border-radius: var(--radius-sm);
             margin-top: 1.2rem;
@@ -70,18 +70,17 @@
             from { opacity: 0; transform: translateY(-5px); }
             to { opacity: 1; transform: translateY(0); }
         }
-        .form-status-alert.success {
-            display: flex;
+        .form-status-alert.show {
+            display: flex !important;
             align-items: center;
             gap: 0.75rem;
+        }
+        .form-status-alert.success {
             background: rgba(16, 185, 129, 0.15);
             border: 1px solid rgba(16, 185, 129, 0.4);
             color: #6ee7b7;
         }
         .form-status-alert.error {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
             background: rgba(239, 68, 68, 0.15);
             border: 1px solid rgba(239, 68, 68, 0.4);
             color: #fca5a5;
@@ -110,6 +109,153 @@
         }
         .copy-toast.visible {
             opacity: 1;
+        }
+
+        /* ==========================================================================
+           TARJETA DESTACADA DE RESERVAS DE GOOGLE CALENDAR
+           ========================================================================== */
+        .booking-card-featured {
+            scroll-margin-top: 95px;
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.92) 0%, rgba(30, 41, 59, 0.85) 100%);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+            border-radius: var(--radius-lg);
+            padding: 2.2rem;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.5), 0 0 25px -5px rgba(56, 189, 248, 0.2);
+            position: relative;
+            overflow: hidden;
+            text-align: left;
+            transition: var(--transition);
+        }
+        .booking-card-featured:hover {
+            border-color: var(--accent-cyan);
+            box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.6), 0 0 35px -5px rgba(56, 189, 248, 0.3);
+        }
+        .booking-card-featured::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--gradient-primary);
+        }
+        @keyframes targetPulse {
+            0% { box-shadow: 0 0 0 0 rgba(56, 189, 248, 0.7); }
+            70% { box-shadow: 0 0 0 18px rgba(56, 189, 248, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(56, 189, 248, 0); }
+        }
+        .booking-card-featured:target {
+            animation: targetPulse 1.6s ease-out;
+            border-color: var(--accent-cyan);
+        }
+        .booking-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 1.2rem;
+        }
+        .booking-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--accent-cyan);
+            padding: 0.35rem 0.85rem;
+            border-radius: var(--radius-full);
+            font-size: 0.82rem;
+            font-weight: 700;
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+        .booking-badge-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--accent-cyan);
+            box-shadow: 0 0 8px var(--accent-cyan);
+            animation: pulse-dot 2s infinite ease-in-out;
+        }
+        @keyframes pulse-dot {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.4; transform: scale(0.85); }
+        }
+        .booking-tag-free {
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: #34d399;
+            background: rgba(16, 185, 129, 0.12);
+            padding: 0.3rem 0.75rem;
+            border-radius: var(--radius-full);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+        .booking-title {
+            font-size: 1.55rem;
+            color: var(--text-primary);
+            font-family: var(--font-heading);
+            font-weight: 700;
+            margin-bottom: 0.6rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+        .booking-desc {
+            font-size: 0.98rem;
+            color: var(--text-secondary);
+            line-height: 1.65;
+            margin-bottom: 1.5rem;
+            max-width: 850px;
+        }
+        .booking-features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1.8rem;
+        }
+        .booking-feature-item {
+            background: rgba(10, 15, 29, 0.6);
+            border: 1px solid var(--border-glass);
+            border-radius: var(--radius-sm);
+            padding: 1rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+        }
+        .booking-feature-icon {
+            font-size: 1.35rem;
+            line-height: 1;
+            flex-shrink: 0;
+            margin-top: 0.1rem;
+        }
+        .booking-feature-text h4 {
+            font-size: 0.92rem;
+            color: var(--text-primary);
+            margin: 0 0 0.25rem 0;
+            font-weight: 600;
+        }
+        .booking-feature-text p {
+            font-size: 0.83rem;
+            color: var(--text-muted);
+            margin: 0;
+            line-height: 1.45;
+        }
+        .booking-cta-bar {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+            padding-top: 1.2rem;
+            border-top: 1px solid var(--border-glass);
+        }
+        .booking-hint {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
         }
     </style>
 </head>
@@ -160,6 +306,58 @@
         <p style="color: var(--text-secondary); max-width: 680px; margin: 0 auto 2rem; font-size: 1.05rem; line-height: 1.65;">
             Si deseas implementar un sistema de Inteligencia Artificial, diseñar arquitecturas con modelos de lenguaje (LLMs/RAG), optimizar tus flujos de MLOps o evaluar la viabilidad técnica de un nuevo producto, en <strong>RACM Inteligencia Artificial & Ciencia de Datos</strong> estamos listos para colaborar contigo.
         </p>
+
+        <!-- SECCIÓN DESTACADA: AGENDAR SESIÓN DE DIAGNÓSTICO EN GOOGLE CALENDAR -->
+        <div id="agendar" class="booking-card-featured">
+            <div class="booking-header">
+                <div class="booking-badge">
+                    <span class="booking-badge-dot"></span>
+                    <span>Google Calendar & Meet • Disponibilidad en Vivo</span>
+                </div>
+                <span class="booking-tag-free">Sesión Gratuita 1 a 1</span>
+            </div>
+
+            <h3 class="booking-title">
+                <span>📅 Agendar Sesión de Diagnóstico Técnico de IA</span>
+            </h3>
+
+            <p class="booking-desc">
+                Reserva una sesión exploratoria técnica directa con el equipo de RACM a través de Google Meet. Podrás ver en tiempo real los días y horarios libres de nuestro calendario, seleccionar el que mejor se adapte a tu agenda y recibir la confirmación y enlace de reunión de forma automática.
+            </p>
+
+            <div class="booking-features-grid">
+                <div class="booking-feature-item">
+                    <span class="booking-feature-icon">🕒</span>
+                    <div class="booking-feature-text">
+                        <h4>Disponibilidad en Tiempo Real</h4>
+                        <p>Visualiza únicamente los horarios y días libres actualizados automáticamente desde Google Calendar.</p>
+                    </div>
+                </div>
+                <div class="booking-feature-item">
+                    <span class="booking-feature-icon">📹</span>
+                    <div class="booking-feature-text">
+                        <h4>Google Meet Automático</h4>
+                        <p>Recibe de inmediato la invitación oficial a tu correo con el enlace de videoconferencia generado al instante.</p>
+                    </div>
+                </div>
+                <div class="booking-feature-item">
+                    <span class="booking-feature-icon">🧠</span>
+                    <div class="booking-feature-text">
+                        <h4>Diagnóstico Técnico 1 a 1</h4>
+                        <p>Analizamos viabilidad técnica, datos, arquitecturas de IA / MLOps y retorno de inversión para tu caso.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="booking-cta-bar">
+                <a href="https://calendar.app.google/H9tx4iwBHj5k2FGi7" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="btnGoogleCalendar" style="padding: 0.95rem 2.2rem; font-size: 1.02rem;">
+                    <span>📅 Ver Horarios Disponibles y Agendar</span> &rarr;
+                </a>
+                <span class="booking-hint">
+                    🔒 Conexión directa mediante Google Calendar Appointment Scheduling
+                </span>
+            </div>
+        </div>
 
         <!-- TARJETAS DE CONEXIÓN PRINCIPAL -->
         <div class="contact-cards-grid" style="text-align: left;">
@@ -262,14 +460,14 @@
                     <span id="copyToast" class="copy-toast">✓ ¡Copiado al portapapeles!</span>
                 </div>
 
-                <!-- Notificaciones de estado -->
-                <div id="statusSuccess" class="form-status-alert success">
+                <!-- Notificaciones de estado (ocultas por defecto hasta que ocurra un evento) -->
+                <div id="statusSuccess" class="form-status-alert success" style="display: none;">
                     <span>✓</span>
                     <div>
                         <strong>¡Mensaje enviado con éxito!</strong> Tu requerimiento ha sido recibido directamente por nuestro equipo. Nos pondremos en contacto contigo a la brevedad.
                     </div>
                 </div>
-                <div id="statusError" class="form-status-alert error">
+                <div id="statusError" class="form-status-alert error" style="display: none;">
                     <span>⚠️</span>
                     <div>
                         <strong>No se pudo enviar el mensaje.</strong> Por favor verifica tu conexión o contáctanos directamente a través de nuestro LinkedIn oficial.
@@ -303,7 +501,19 @@
 <!-- SCRIPTS -->
 <script src="js/neural-canvas.js"></script>
 <script>
-    // 1. PLANTILLAS SEGÚN MOTIVO DE CONTACTO
+    // =========================================================================
+    // 1. CONFIGURACIÓN DE RESERVAS DE GOOGLE CALENDAR (APPOINTMENT SCHEDULING)
+    // =========================================================================
+    const GOOGLE_CALENDAR_URL = "https://calendar.app.google/H9tx4iwBHj5k2FGi7";
+
+    const btnGoogleCalendar = document.getElementById('btnGoogleCalendar');
+    if (btnGoogleCalendar && GOOGLE_CALENDAR_URL) {
+        btnGoogleCalendar.href = GOOGLE_CALENDAR_URL;
+    }
+
+    // =========================================================================
+    // 2. PLANTILLAS SEGÚN MOTIVO DE CONTACTO
+    // =========================================================================
     const selectMotivo = document.getElementById('selectMotivo');
     const inputAsunto = document.getElementById('asuntoMensaje');
     const textareaCuerpo = document.getElementById('cuerpoMensaje');
@@ -339,12 +549,20 @@
         }
     });
 
-    // 2. ENVÍO SEGURO Y ASÍNCRONO DEL FORMULARIO SIN EXPONER CORREO
+    // =========================================================================
+    // 3. ENVÍO SEGURO Y ASÍNCRONO DEL FORMULARIO SIN EXPONER CORREO
+    // =========================================================================
     const contactForm = document.getElementById('contactForm');
     const btnSubmit = document.getElementById('btnSubmitForm');
     const btnText = document.getElementById('btnText');
     const statusSuccess = document.getElementById('statusSuccess');
     const statusError = document.getElementById('statusError');
+
+    // Asegurar estado oculto al inicio
+    statusSuccess.style.display = 'none';
+    statusSuccess.classList.remove('show');
+    statusError.style.display = 'none';
+    statusError.classList.remove('show');
 
     // Desofuscación en memoria al momento del envío (no expuesto en HTML en texto plano)
     const _0xkey = 'cm9iZXJ0by5jaGFncmE4OUBnbWFpbC5jb20=';
@@ -355,9 +573,11 @@
     contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
 
-        // Ocultar mensajes previos
+        // Ocultar mensajes previos de forma estricta
         statusSuccess.style.display = 'none';
+        statusSuccess.classList.remove('show');
         statusError.style.display = 'none';
+        statusError.classList.remove('show');
 
         // Estado cargando
         btnSubmit.disabled = true;
@@ -384,10 +604,25 @@
                 body: JSON.stringify(payload)
             });
 
-            if (response.ok) {
+            let isSuccess = response.ok;
+            try {
+                const data = await response.json();
+                if (data && typeof data === 'object') {
+                    if (data.success === false || data.success === 'false') {
+                        isSuccess = false;
+                    }
+                }
+            } catch (_) {
+                // Si response.ok es true y no devuelve json, se mantiene true
+            }
+
+            if (isSuccess) {
+                statusError.style.display = 'none';
+                statusError.classList.remove('show');
                 statusSuccess.style.display = 'flex';
+                statusSuccess.classList.add('show');
                 contactForm.reset();
-                // Restaurar asunto por defecto
+                // Restaurar plantilla por defecto
                 inputAsunto.value = TEMPLATES.colaboracion.asunto;
                 textareaCuerpo.value = TEMPLATES.colaboracion.cuerpo;
             } else {
@@ -395,14 +630,19 @@
             }
         } catch (error) {
             console.error('Error al enviar el formulario:', error);
+            statusSuccess.style.display = 'none';
+            statusSuccess.classList.remove('show');
             statusError.style.display = 'flex';
+            statusError.classList.add('show');
         } finally {
             btnSubmit.disabled = false;
             btnSubmit.innerHTML = originalContent;
         }
     });
 
-    // 3. COPIAR MENSAJE AL PORTAPAPELES
+    // =========================================================================
+    // 4. COPIAR MENSAJE AL PORTAPAPELES
+    // =========================================================================
     const btnCopiar = document.getElementById('btnCopiarMensaje');
     const copyToast = document.getElementById('copyToast');
 
