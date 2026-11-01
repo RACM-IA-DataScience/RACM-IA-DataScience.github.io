@@ -110,174 +110,6 @@
         .copy-toast.visible {
             opacity: 1;
         }
-
-        /* ==========================================================================
-           TARJETA DESTACADA DE RESERVAS DE GOOGLE CALENDAR
-           ========================================================================== */
-        .booking-card-featured {
-            scroll-margin-top: 95px;
-            background: linear-gradient(135deg, rgba(15, 23, 42, 0.92) 0%, rgba(30, 41, 59, 0.85) 100%);
-            border: 1px solid rgba(56, 189, 248, 0.35);
-            border-radius: var(--radius-lg);
-            padding: 2.2rem;
-            margin-bottom: 2.5rem;
-            box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.5), 0 0 25px -5px rgba(56, 189, 248, 0.2);
-            position: relative;
-            overflow: hidden;
-            text-align: left;
-            transition: var(--transition);
-        }
-        .booking-card-featured:hover {
-            border-color: var(--accent-cyan);
-            box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.6), 0 0 35px -5px rgba(56, 189, 248, 0.3);
-        }
-        .booking-card-featured::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: var(--gradient-primary);
-        }
-        @keyframes targetPulse {
-            0% { box-shadow: 0 0 0 0 rgba(56, 189, 248, 0.7); }
-            70% { box-shadow: 0 0 0 18px rgba(56, 189, 248, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(56, 189, 248, 0); }
-        }
-        .booking-card-featured:target {
-            animation: targetPulse 1.6s ease-out;
-            border-color: var(--accent-cyan);
-        }
-        .booking-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 1rem;
-            margin-bottom: 1.2rem;
-        }
-        .booking-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            background: rgba(56, 189, 248, 0.12);
-            color: var(--accent-cyan);
-            padding: 0.35rem 0.85rem;
-            border-radius: var(--radius-full);
-            font-size: 0.82rem;
-            font-weight: 700;
-            border: 1px solid rgba(56, 189, 248, 0.3);
-            text-transform: uppercase;
-            letter-spacing: 0.04em;
-        }
-        .booking-badge-dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: var(--accent-cyan);
-            box-shadow: 0 0 8px var(--accent-cyan);
-            animation: pulse-dot 2s infinite ease-in-out;
-        }
-        @keyframes pulse-dot {
-            0%, 100% { opacity: 1; transform: scale(1); }
-            50% { opacity: 0.4; transform: scale(0.85); }
-        }
-        .booking-tag-free {
-            font-size: 0.82rem;
-            font-weight: 600;
-            color: #34d399;
-            background: rgba(16, 185, 129, 0.12);
-            padding: 0.3rem 0.75rem;
-            border-radius: var(--radius-full);
-            border: 1px solid rgba(16, 185, 129, 0.3);
-        }
-        .booking-title {
-            font-size: 1.55rem;
-            color: var(--text-primary);
-            font-family: var(--font-heading);
-            font-weight: 700;
-            margin-bottom: 0.6rem;
-            display: flex;
-            align-items: center;
-            gap: 0.6rem;
-        }
-        .booking-desc {
-            font-size: 0.98rem;
-            color: var(--text-secondary);
-            line-height: 1.65;
-            margin-bottom: 1.5rem;
-            max-width: 850px;
-        }
-        .booking-features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 1rem;
-            margin-bottom: 1.8rem;
-        }
-        .booking-feature-item {
-            background: rgba(10, 15, 29, 0.6);
-            border: 1px solid var(--border-glass);
-            border-radius: var(--radius-sm);
-            padding: 1rem;
-            display: flex;
-            align-items: flex-start;
-            gap: 0.75rem;
-        }
-        .booking-feature-icon {
-            font-size: 1.35rem;
-            line-height: 1;
-            flex-shrink: 0;
-            margin-top: 0.1rem;
-        }
-        .booking-feature-text h4 {
-            font-size: 0.92rem;
-            color: var(--text-primary);
-            margin: 0 0 0.25rem 0;
-            font-weight: 600;
-        }
-        .booking-feature-text p {
-            font-size: 0.83rem;
-            color: var(--text-muted);
-            margin: 0;
-            line-height: 1.45;
-        }
-        .booking-cta-bar {
-            display: flex;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 1.2rem;
-            padding-top: 1.2rem;
-            border-top: 1px solid var(--border-glass);
-        }
-        .booking-hint {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            display: flex;
-            align-items: center;
-            gap: 0.4rem;
-        }
-        .calendar-embed-wrapper {
-            margin-top: 1.6rem;
-            margin-bottom: 1.2rem;
-            border-radius: var(--radius-md);
-            overflow: hidden;
-            border: 1px solid rgba(56, 189, 248, 0.35);
-            background: #ffffff;
-            box-shadow: 0 12px 35px -5px rgba(0, 0, 0, 0.6), 0 0 25px -5px rgba(56, 189, 248, 0.2);
-            position: relative;
-        }
-        .calendar-embed-iframe {
-            width: 100%;
-            height: 720px;
-            border: 0;
-            display: block;
-        }
-        @media (max-width: 768px) {
-            .calendar-embed-iframe {
-                height: 640px;
-            }
-        }
     </style>
 </head>
 <body>
@@ -324,95 +156,74 @@
         <h2 class="site-title" style="font-size: 2.2rem; margin-bottom: 0.8rem;">
             Construyamos Soluciones con IA para tu Organización
         </h2>
-        <p style="color: var(--text-secondary); max-width: 680px; margin: 0 auto 2rem; font-size: 1.05rem; line-height: 1.65;">
+        <p style="color: var(--text-secondary); max-width: 680px; margin: 0 auto 1.5rem; font-size: 1.05rem; line-height: 1.65;">
             Si deseas implementar un sistema de Inteligencia Artificial, diseñar arquitecturas con modelos de lenguaje (LLMs/RAG), optimizar tus flujos de MLOps o evaluar la viabilidad técnica de un nuevo producto, en <strong>RACM Inteligencia Artificial & Ciencia de Datos</strong> estamos listos para colaborar contigo.
         </p>
 
-        <!-- SECCIÓN DESTACADA: AGENDAR SESIÓN DE DIAGNÓSTICO EN GOOGLE CALENDAR -->
-        <div id="agendar" class="booking-card-featured">
-            <div class="booking-header">
-                <div class="booking-badge">
-                    <span class="booking-badge-dot"></span>
-                    <span>Google Calendar & Meet • Disponibilidad en Vivo</span>
-                </div>
-                <span class="booking-tag-free">Sesión Gratuita 1 a 1</span>
-            </div>
-
-            <h3 class="booking-title">
-                <span>📅 Agendar Sesión de Diagnóstico Técnico de IA</span>
-            </h3>
-
-            <p class="booking-desc">
-                Reserva una sesión exploratoria técnica directa con el equipo de RACM a través de Google Meet. Podrás ver en tiempo real los días y horarios libres de nuestro calendario, seleccionar el que mejor se adapte a tu agenda y recibir la confirmación y enlace de reunión de forma automática.
-            </p>
-
-            <div class="booking-features-grid">
-                <div class="booking-feature-item">
-                    <span class="booking-feature-icon">🕒</span>
-                    <div class="booking-feature-text">
-                        <h4>Disponibilidad en Tiempo Real</h4>
-                        <p>Visualiza únicamente los horarios y días libres actualizados automáticamente desde Google Calendar.</p>
-                    </div>
-                </div>
-                <div class="booking-feature-item">
-                    <span class="booking-feature-icon">📹</span>
-                    <div class="booking-feature-text">
-                        <h4>Google Meet Automático</h4>
-                        <p>Recibe de inmediato la invitación oficial a tu correo con el enlace de videoconferencia generado al instante.</p>
-                    </div>
-                </div>
-                <div class="booking-feature-item">
-                    <span class="booking-feature-icon">🧠</span>
-                    <div class="booking-feature-text">
-                        <h4>Diagnóstico Técnico 1 a 1</h4>
-                        <p>Analizamos viabilidad técnica, datos, arquitecturas de IA / MLOps y retorno de inversión para tu caso.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- CALENDARIO INTERACTIVO EMBEBIDO (GOOGLE CALENDAR APPOINTMENT SCHEDULING) -->
-            <div class="calendar-embed-wrapper">
-                <iframe 
-                    src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0hFRfmploLhK5WIONzIEJiRLLBLAJd0HOs2HZkeV8w-XyggoopDAgs6HPPm4vPJNEeCzj6Y_Vg?gv=true" 
-                    class="calendar-embed-iframe"
-                    title="Calendario de Disponibilidad y Reservas - RACM"
-                    loading="lazy">
-                </iframe>
-            </div>
-
-            <div class="booking-cta-bar" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
-                <span class="booking-hint">
-                    🔒 Disponibilidad en vivo sincronizada con Google Calendar • Videollamada automática por Google Meet
-                </span>
-                <a href="https://calendar.app.google/H9tx4iwBHj5k2FGi7" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="font-size: 0.85rem; padding: 0.5rem 1rem;">
-                    <span>Abrir en ventana completa</span> ↗
-                </a>
-            </div>
+        <!-- LLAMADO SUTIL A AGENDAR SESIÓN DE DIAGNÓSTICO -->
+        <div style="display: inline-flex; align-items: center; justify-content: center; gap: 0.75rem; flex-wrap: wrap; background: rgba(56, 189, 248, 0.08); border: 1px solid rgba(56, 189, 248, 0.25); border-radius: var(--radius-full); padding: 0.5rem 1.2rem; margin-bottom: 2rem;">
+            <span style="font-size: 0.9rem; color: var(--text-secondary);">¿Prefieres agendar una llamada exploratoria en vivo?</span>
+            <a href="agendar.html" class="btn btn-primary" style="padding: 0.35rem 0.9rem; font-size: 0.84rem;">
+                <span>📅 Agendar Sesión de Diagnóstico</span> &rarr;
+            </a>
         </div>
 
-        <!-- TARJETAS DE CONEXIÓN PRINCIPAL -->
+        <!-- TARJETAS DE CONEXIÓN PRINCIPAL (REDES OFICIALES & WHATSAPP) -->
         <div class="contact-cards-grid" style="text-align: left;">
+
+            <!-- WHATSAPP BUSINESS -->
+            <div class="contact-card">
+                <div>
+                    <div class="social-icon-box whatsapp">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.63C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2ZM12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.59 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19.01L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.81 13.47 3.81 11.91C3.81 7.37 7.5 3.67 12.05 3.67ZM8.53 7.33C8.37 7.33 8.1 7.39 7.87 7.64C7.65 7.89 7.02 8.48 7.02 9.7C7.02 10.92 7.91 12.09 8.03 12.25C8.16 12.42 9.75 14.87 12.19 15.92C14.21 16.79 14.63 16.62 15.07 16.58C15.52 16.54 16.5 15.99 16.7 15.42C16.91 14.85 16.91 14.36 16.85 14.26C16.79 14.16 16.63 14.1 16.38 13.98C16.14 13.86 14.94 13.27 14.71 13.19C14.49 13.11 14.33 13.07 14.16 13.31C14 13.56 13.54 14.1 13.4 14.26C13.26 14.42 13.12 14.44 12.87 14.32C12.63 14.2 11.84 13.94 10.91 13.11C10.18 12.46 9.69 11.66 9.55 11.41C9.41 11.17 9.53 11.04 9.66 10.92C9.77 10.81 9.91 10.63 10.03 10.48C10.16 10.34 10.2 10.24 10.28 10.08C10.36 9.91 10.32 9.77 10.26 9.65C10.2 9.53 9.73 8.37 9.53 7.89C9.33 7.42 9.13 7.48 8.98 7.47C8.84 7.47 8.68 7.33 8.53 7.33Z"/>
+                        </svg>
+                    </div>
+                    <h3>WhatsApp Business Oficial</h3>
+                    <p>Canal de mensajería instantánea para atención técnica inmediata, cotizaciones rápidas o consultas comerciales con nuestro equipo.</p>
+                </div>
+                <a href="https://wa.me/525664903696?text=Hola%20RACM,%20me%20gustar%C3%ADa%20solicitar%20informaci%C3%B3n%20sobre%20sus%20servicios%20de%20Inteligencia%20Artificial%20y%20Ciencia%20de%20Datos." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" style="width: 100%;">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.63C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2ZM12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.59 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19.01L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.81 13.47 3.81 11.91C3.81 7.37 7.5 3.67 12.05 3.67ZM8.53 7.33C8.37 7.33 8.1 7.39 7.87 7.64C7.65 7.89 7.02 8.48 7.02 9.7C7.02 10.92 7.91 12.09 8.03 12.25C8.16 12.42 9.75 14.87 12.19 15.92C14.21 16.79 14.63 16.62 15.07 16.58C15.52 16.54 16.5 15.99 16.7 15.42C16.91 14.85 16.91 14.36 16.85 14.26C16.79 14.16 16.63 14.1 16.38 13.98C16.14 13.86 14.94 13.27 14.71 13.19C14.49 13.11 14.33 13.07 14.16 13.31C14 13.56 13.54 14.1 13.4 14.26C13.26 14.42 13.12 14.44 12.87 14.32C12.63 14.2 11.84 13.94 10.91 13.11C10.18 12.46 9.69 11.66 9.55 11.41C9.41 11.17 9.53 11.04 9.66 10.92C9.77 10.81 9.91 10.63 10.03 10.48C10.16 10.34 10.2 10.24 10.28 10.08C10.36 9.91 10.32 9.77 10.26 9.65C10.2 9.53 9.73 8.37 9.53 7.89C9.33 7.42 9.13 7.48 8.98 7.47C8.84 7.47 8.68 7.33 8.53 7.33Z"/>
+                    </svg>
+                    <span>Chat en WhatsApp (+52 56 6490 3696)</span> &rarr;
+                </a>
+            </div>
 
             <!-- LINKEDIN -->
             <div class="contact-card">
                 <div>
-                    <span class="contact-icon">💼</span>
+                    <div class="social-icon-box linkedin">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+                        </svg>
+                    </div>
                     <h3>LinkedIn Oficial</h3>
                     <p>Conéctate en nuestra red profesional corporativa para alianzas comerciales, actualizaciones tecnológicas y networking empresarial.</p>
                 </div>
-                <a href="https://www.linkedin.com/in/racm-ia-datascience/" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width: 100%;">
-                    <span>Visitar LinkedIn</span> &rarr;
+                <a href="https://www.linkedin.com/in/racm-ia-datascience/" target="_blank" rel="noopener noreferrer" class="btn btn-linkedin" style="width: 100%;">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+                    </svg>
+                    <span>Visitar LinkedIn Oficial</span> &rarr;
                 </a>
             </div>
 
             <!-- GITHUB -->
             <div class="contact-card">
                 <div>
-                    <span class="contact-icon">💻</span>
+                    <div class="social-icon-box github">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/>
+                        </svg>
+                    </div>
                     <h3>GitHub Oficial</h3>
                     <p>Explora nuestros 26+ repositorios de código abierto, arquitecturas con Docker, pipelines de MLOps y código reproducible.</p>
                 </div>
-                <a href="https://github.com/RACM-IA-DataScience" target="_blank" rel="noopener noreferrer" class="btn btn-github" style="width: 100%;">
+                <a href="https://github.com/RACM-IA-DataScience" target="_blank" rel="noopener noreferrer" class="btn btn-github-brand" style="width: 100%;">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/>
+                    </svg>
                     <span>Explorar @RACM-IA-DataScience</span> &rarr;
                 </a>
             </div>
@@ -420,11 +231,18 @@
             <!-- FACEBOOK -->
             <div class="contact-card">
                 <div>
-                    <span class="contact-icon">🌐</span>
+                    <div class="social-icon-box facebook">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                    </div>
                     <h3>Facebook Oficial</h3>
                     <p>Canal complementario para noticias del ecosistema, divulgación de tecnología y contacto directo con nuestro equipo.</p>
                 </div>
-                <a href="https://www.facebook.com/racm.ia.datascience" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="width: 100%;">
+                <a href="https://www.facebook.com/racm.ia.datascience" target="_blank" rel="noopener noreferrer" class="btn btn-facebook-brand" style="width: 100%;">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                    </svg>
                     <span>Ir a Página Oficial</span> &rarr;
                 </a>
             </div>
@@ -515,9 +333,11 @@
 <footer class="site-footer">
     <p>&copy; 2026 RACM Inteligencia Artificial & Ciencia de Datos. Todos los derechos reservados.</p>
     <div class="footer-links">
-        <a href="https://github.com/RACM-IA-DataScience" target="_blank" rel="noopener noreferrer">GitHub: @RACM-IA-DataScience</a>
+        <a href="https://wa.me/525664903696" target="_blank" rel="noopener noreferrer">WhatsApp Business</a>
         <span>•</span>
         <a href="https://www.linkedin.com/in/racm-ia-datascience/" target="_blank" rel="noopener noreferrer">LinkedIn Oficial</a>
+        <span>•</span>
+        <a href="https://github.com/RACM-IA-DataScience" target="_blank" rel="noopener noreferrer">GitHub: @RACM-IA-DataScience</a>
         <span>•</span>
         <a href="https://www.facebook.com/racm.ia.datascience" target="_blank" rel="noopener noreferrer">Facebook Oficial</a>
     </div>
@@ -533,17 +353,7 @@
 <script src="js/neural-canvas.js"></script>
 <script>
     // =========================================================================
-    // 1. CONFIGURACIÓN DE RESERVAS DE GOOGLE CALENDAR (APPOINTMENT SCHEDULING)
-    // =========================================================================
-    const GOOGLE_CALENDAR_URL = "https://calendar.app.google/H9tx4iwBHj5k2FGi7";
-
-    const btnGoogleCalendar = document.getElementById('btnGoogleCalendar');
-    if (btnGoogleCalendar && GOOGLE_CALENDAR_URL) {
-        btnGoogleCalendar.href = GOOGLE_CALENDAR_URL;
-    }
-
-    // =========================================================================
-    // 2. PLANTILLAS SEGÚN MOTIVO DE CONTACTO
+    // 1. PLANTILLAS SEGÚN MOTIVO DE CONTACTO
     // =========================================================================
     const selectMotivo = document.getElementById('selectMotivo');
     const inputAsunto = document.getElementById('asuntoMensaje');

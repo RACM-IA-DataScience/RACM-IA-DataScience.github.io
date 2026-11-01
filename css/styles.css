@@ -1782,3 +1782,294 @@ footer.site-footer a:hover {
     flex-wrap: wrap;
     gap: 1.2rem;
 }
+
+/* ==========================================================================
+   BOTONES E ICONOS DE REDES SOCIALES & WHATSAPP (PALETA RACM)
+   ========================================================================== */
+.social-icon-box {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-sm);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.2rem;
+    transition: var(--transition);
+}
+.social-icon-box svg {
+    width: 24px;
+    height: 24px;
+    display: block;
+}
+.social-icon-box.whatsapp {
+    background: rgba(16, 185, 129, 0.12);
+    border: 1px solid rgba(16, 185, 129, 0.35);
+    color: #34d399;
+}
+.social-icon-box.linkedin {
+    background: rgba(56, 189, 248, 0.12);
+    border: 1px solid rgba(56, 189, 248, 0.35);
+    color: var(--accent-cyan);
+}
+.social-icon-box.github {
+    background: rgba(241, 245, 249, 0.08);
+    border: 1px solid rgba(241, 245, 249, 0.2);
+    color: #f8fafc;
+}
+.social-icon-box.facebook {
+    background: rgba(96, 165, 250, 0.12);
+    border: 1px solid rgba(96, 165, 250, 0.3);
+    color: #93c5fd;
+}
+
+.contact-card:hover .social-icon-box.whatsapp {
+    box-shadow: 0 0 15px rgba(16, 185, 129, 0.4);
+    border-color: #34d399;
+    transform: scale(1.05);
+}
+.contact-card:hover .social-icon-box.linkedin {
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
+    border-color: var(--accent-cyan);
+    transform: scale(1.05);
+}
+.contact-card:hover .social-icon-box.github {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    border-color: #ffffff;
+    transform: scale(1.05);
+}
+.contact-card:hover .social-icon-box.facebook {
+    box-shadow: 0 0 15px rgba(96, 165, 250, 0.4);
+    border-color: #60a5fa;
+    transform: scale(1.05);
+}
+
+/* Botón WhatsApp */
+.btn-whatsapp {
+    background: linear-gradient(135deg, #059669 0%, #0d9488 100%);
+    color: #ffffff !important;
+    border: 1px solid rgba(52, 211, 153, 0.4);
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    font-weight: 600;
+}
+.btn-whatsapp:hover {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    box-shadow: 0 6px 20px rgba(16, 185, 129, 0.5), 0 0 20px rgba(16, 185, 129, 0.3);
+    color: #ffffff !important;
+    transform: translateY(-2px);
+}
+
+/* Botón LinkedIn */
+.btn-linkedin {
+    background: linear-gradient(135deg, #0284c7 0%, #1d4ed8 100%);
+    color: #ffffff !important;
+    border: 1px solid rgba(56, 189, 248, 0.4);
+    box-shadow: 0 4px 15px rgba(2, 132, 199, 0.3);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    font-weight: 600;
+}
+.btn-linkedin:hover {
+    background: linear-gradient(135deg, #38bdf8 0%, #0284c7 100%);
+    box-shadow: 0 6px 20px rgba(56, 189, 248, 0.5), 0 0 20px rgba(56, 189, 248, 0.3);
+    color: #ffffff !important;
+    transform: translateY(-2px);
+}
+
+/* Botón GitHub */
+.btn-github-brand {
+    background: #0f172a;
+    color: #f8fafc !important;
+    border: 1px solid rgba(148, 163, 184, 0.25);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    font-weight: 600;
+}
+.btn-github-brand:hover {
+    background: #1e293b;
+    border-color: var(--accent-cyan);
+    box-shadow: 0 4px 15px rgba(56, 189, 248, 0.3);
+    color: #ffffff !important;
+    transform: translateY(-2px);
+}
+
+/* Botón Facebook */
+.btn-facebook-brand {
+    background: rgba(30, 41, 59, 0.75);
+    color: #93c5fd !important;
+    border: 1px solid rgba(96, 165, 250, 0.3);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    font-weight: 600;
+}
+.btn-facebook-brand:hover {
+    background: rgba(30, 58, 138, 0.5);
+    border-color: #60a5fa;
+    color: #ffffff !important;
+    box-shadow: 0 4px 15px rgba(96, 165, 250, 0.35);
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   TARJETA Y EMBED DE RESERVAS (GOOGLE CALENDAR)
+   ========================================================================== */
+.booking-card-featured {
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.92) 0%, rgba(30, 41, 59, 0.85) 100%);
+    border: 1px solid rgba(56, 189, 248, 0.35);
+    border-radius: var(--radius-lg);
+    padding: 2.2rem;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.5), 0 0 25px -5px rgba(56, 189, 248, 0.2);
+    position: relative;
+    overflow: hidden;
+    text-align: left;
+    transition: var(--transition);
+}
+.booking-card-featured:hover {
+    border-color: var(--accent-cyan);
+    box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.6), 0 0 35px -5px rgba(56, 189, 248, 0.3);
+}
+.booking-card-featured::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--gradient-primary);
+}
+.booking-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+}
+.booking-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(56, 189, 248, 0.12);
+    color: var(--accent-cyan);
+    padding: 0.35rem 0.85rem;
+    border-radius: var(--radius-full);
+    font-size: 0.82rem;
+    font-weight: 700;
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.booking-badge-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent-cyan);
+    box-shadow: 0 0 8px var(--accent-cyan);
+    animation: pulse-dot 2s infinite ease-in-out;
+}
+.booking-tag-free {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #34d399;
+    background: rgba(16, 185, 129, 0.12);
+    padding: 0.3rem 0.75rem;
+    border-radius: var(--radius-full);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+}
+.booking-title {
+    font-size: 1.55rem;
+    color: var(--text-primary);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    margin-bottom: 0.6rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+.booking-desc {
+    font-size: 0.98rem;
+    color: var(--text-secondary);
+    line-height: 1.65;
+    margin-bottom: 1.5rem;
+    max-width: 850px;
+}
+.booking-features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.8rem;
+}
+.booking-feature-item {
+    background: rgba(10, 15, 29, 0.6);
+    border: 1px solid var(--border-glass);
+    border-radius: var(--radius-sm);
+    padding: 1rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+}
+.booking-feature-icon {
+    font-size: 1.35rem;
+    line-height: 1;
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+}
+.booking-feature-text h4 {
+    font-size: 0.92rem;
+    color: var(--text-primary);
+    margin: 0 0 0.25rem 0;
+    font-weight: 600;
+}
+.booking-feature-text p {
+    font-size: 0.83rem;
+    color: var(--text-muted);
+    margin: 0;
+    line-height: 1.45;
+}
+.calendar-embed-wrapper {
+    margin-top: 1.6rem;
+    margin-bottom: 1.2rem;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    border: 1px solid rgba(56, 189, 248, 0.35);
+    background: #ffffff;
+    box-shadow: 0 12px 35px -5px rgba(0, 0, 0, 0.6), 0 0 25px -5px rgba(56, 189, 248, 0.2);
+    position: relative;
+}
+.calendar-embed-iframe {
+    width: 100%;
+    height: 740px;
+    border: 0;
+    display: block;
+}
+@media (max-width: 768px) {
+    .calendar-embed-iframe {
+        height: 640px;
+    }
+}
+.booking-cta-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid var(--border-glass);
+}
+.booking-hint {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendar Sesión de Diagnóstico Técnico de IA | RACM</title>
+    <meta name="description" content="Agenda una sesión virtual 1 a 1 de diagnóstico técnico de IA con el equipo de RACM. Disponibilidad en tiempo real vía Google Calendar y Google Meet.">
+    
+    <!-- FAVICON -->
+    <link rel="icon" type="image/jpeg" href="img/logo.jpg">
+    <link rel="apple-touch-icon" href="img/logo.jpg">
+
+    <!-- ESTILOS UNIFICADOS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- CANVAS DE FONDO INTERACTIVO NEURONAL -->
+<canvas id="neuralCanvas"></canvas>
+
+<!-- HEADER CORPORATIVO UNIFICADO -->
+<header class="site-header">
+    <div class="avatar-wrapper">
+        <img src="img/logo.jpg" alt="Logotipo oficial de RACM Inteligencia Artificial & Ciencia de Datos" class="foto-perfil">
+    </div>
+    <h1 class="header-brand-title">
+        <span class="brand-name-main">RACM</span>
+        <span class="brand-name-sub">Inteligencia Artificial & Ciencia de Datos</span>
+    </h1>
+    <p class="site-subtitle">Consultoría, Ingeniería de Software & Soluciones de Inteligencia Artificial</p>
+    <p class="site-affiliation">Impulsamos empresas mediante Agentes Autónomos, MLOps, RAG Empresarial, Visión por Computadora y Arquitecturas de Datos de Alto Rendimiento.</p>
+    
+    <div class="header-badges">
+        <span class="header-pill">🤖 Agentes & LLMs</span>
+        <span class="header-pill">⚙️ MLOps & APIs</span>
+        <span class="header-pill">👁️ Deep Learning / CV</span>
+        <span class="header-pill">📊 Data Engineering</span>
+        <span class="header-pill">🚀 Soluciones Empresariales</span>
+    </div>
+</header>
+
+<!-- NAVEGACIÓN (SIN PESTAÑA DE AGENDAR, ACCESO EXCLUSIVO POR ACCIÓN DIRECTA) -->
+<nav class="site-nav">
+    <a href="index.html">⚡ Inicio</a>
+    <a href="servicios.html">🛠️ Servicios</a>
+    <a href="proyectos.html">💼 Proyectos</a>
+    <a href="nosotros.html">🏢 Nosotros</a>
+    <a href="contacto.html">📬 Contacto</a>
+</nav>
+
+<main class="container">
+
+    <!-- BARRA SUPERIOR DE RETORNO Y CONTACTO DIRECTO -->
+    <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;">
+        <div style="display: flex; align-items: center; gap: 0.8rem; flex-wrap: wrap;">
+            <a href="index.html" class="btn btn-outline" style="font-size: 0.88rem; padding: 0.45rem 1rem;">
+                &larr; Volver al Inicio
+            </a>
+            <a href="contacto.html" class="btn btn-outline" style="font-size: 0.88rem; padding: 0.45rem 1rem;">
+                Ir a Formulario de Contacto
+            </a>
+        </div>
+        <a href="https://wa.me/525664903696?text=Hola%20RACM,%20tengo%20una%20consulta%20antes%20de%20agendar%20mi%20sesi%C3%B3n%20de%20diagn%C3%B3stico." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" style="font-size: 0.88rem; padding: 0.45rem 1.1rem;">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.63C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2ZM12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.59 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19.01L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.81 13.47 3.81 11.91C3.81 7.37 7.5 3.67 12.05 3.67ZM8.53 7.33C8.37 7.33 8.1 7.39 7.87 7.64C7.65 7.89 7.02 8.48 7.02 9.7C7.02 10.92 7.91 12.09 8.03 12.25C8.16 12.42 9.75 14.87 12.19 15.92C14.21 16.79 14.63 16.62 15.07 16.58C15.52 16.54 16.5 15.99 16.7 15.42C16.91 14.85 16.91 14.36 16.85 14.26C16.79 14.16 16.63 14.1 16.38 13.98C16.14 13.86 14.94 13.27 14.71 13.19C14.49 13.11 14.33 13.07 14.16 13.31C14 13.56 13.54 14.1 13.4 14.26C13.26 14.42 13.12 14.44 12.87 14.32C12.63 14.2 11.84 13.94 10.91 13.11C10.18 12.46 9.69 11.66 9.55 11.41C9.41 11.17 9.53 11.04 9.66 10.92C9.77 10.81 9.91 10.63 10.03 10.48C10.16 10.34 10.2 10.24 10.28 10.08C10.36 9.91 10.32 9.77 10.26 9.65C10.2 9.53 9.73 8.37 9.53 7.89C9.33 7.42 9.13 7.48 8.98 7.47C8.84 7.47 8.68 7.33 8.53 7.33Z"/>
+            </svg>
+            <span>Atención Inmediata por WhatsApp</span>
+        </a>
+    </div>
+
+    <!-- SECCIÓN PRINCIPAL: CALENDARIO DE RESERVAS EMBEBIDO -->
+    <section class="booking-card-featured">
+        <div class="booking-header">
+            <div class="booking-badge">
+                <span class="booking-badge-dot"></span>
+                <span>Google Calendar & Meet • Disponibilidad en Vivo</span>
+            </div>
+            <span class="booking-tag-free">Sesión Gratuita 1 a 1</span>
+        </div>
+
+        <h2 class="booking-title" style="font-size: 2rem;">
+            <span>📅 Agendar Sesión de Diagnóstico Técnico de IA</span>
+        </h2>
+
+        <p class="booking-desc" style="font-size: 1.05rem;">
+            Selecciona directamente en el calendario interactivo a continuación el día y horario que mejor se adapte a tu agenda. La disponibilidad se consulta en tiempo real para evitar solapamientos. Al confirmar, recibirás de forma automática la invitación oficial a tu correo con el enlace de reunión de <strong>Google Meet</strong>.
+        </p>
+
+        <div class="booking-features-grid">
+            <div class="booking-feature-item">
+                <span class="booking-feature-icon">🕒</span>
+                <div class="booking-feature-text">
+                    <h4>Disponibilidad en Tiempo Real</h4>
+                    <p>Solo se muestran los horarios y días libres actualizados automáticamente desde Google Calendar.</p>
+                </div>
+            </div>
+            <div class="booking-feature-item">
+                <span class="booking-feature-icon">📹</span>
+                <div class="booking-feature-text">
+                    <h4>Google Meet Automático</h4>
+                    <p>Recibe al instante la confirmación con el link de videoconferencia para la sesión técnica 1 a 1.</p>
+                </div>
+            </div>
+            <div class="booking-feature-item">
+                <span class="booking-feature-icon">🧠</span>
+                <div class="booking-feature-text">
+                    <h4>Evaluación Técnica Personalizada</h4>
+                    <p>Analizamos viabilidad técnica, arquitectura de datos, stack de IA / MLOps y retorno de inversión.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- CALENDARIO INTERACTIVO EMBEBIDO (GOOGLE CALENDAR APPOINTMENT SCHEDULING) -->
+        <div class="calendar-embed-wrapper">
+            <iframe 
+                src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0hFRfmploLhK5WIONzIEJiRLLBLAJd0HOs2HZkeV8w-XyggoopDAgs6HPPm4vPJNEeCzj6Y_Vg?gv=true" 
+                class="calendar-embed-iframe"
+                title="Calendario de Disponibilidad y Reservas - RACM"
+                loading="lazy">
+            </iframe>
+        </div>
+
+        <div class="booking-cta-bar">
+            <span class="booking-hint">
+                🔒 Sincronizado en tiempo real con la agenda oficial de RACM Inteligencia Artificial & Ciencia de Datos.
+            </span>
+            <div style="display: flex; gap: 0.8rem; flex-wrap: wrap;">
+                <a href="https://calendar.app.google/H9tx4iwBHj5k2FGi7" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="font-size: 0.85rem; padding: 0.5rem 1rem;">
+                    <span>Abrir en ventana completa</span> ↗
+                </a>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<!-- FOOTER CORPORATIVO UNIFICADO -->
+<footer class="site-footer">
+    <p>&copy; 2026 RACM Inteligencia Artificial & Ciencia de Datos. Todos los derechos reservados.</p>
+    <div class="footer-links">
+        <a href="https://wa.me/525664903696" target="_blank" rel="noopener noreferrer">WhatsApp Business</a>
+        <span>•</span>
+        <a href="https://www.linkedin.com/in/racm-ia-datascience/" target="_blank" rel="noopener noreferrer">LinkedIn Oficial</a>
+        <span>•</span>
+        <a href="https://github.com/RACM-IA-DataScience" target="_blank" rel="noopener noreferrer">GitHub: @RACM-IA-DataScience</a>
+        <span>•</span>
+        <a href="https://www.facebook.com/racm.ia.datascience" target="_blank" rel="noopener noreferrer">Facebook Oficial</a>
+    </div>
+    <p style="font-size: 0.82rem; color: #64748b; margin-top: 0.4rem;">
+        Dirección Técnica: Roberto Alejandro Chagra Martínez • Licenciado en Inteligencia Artificial y Ciencia de Datos (UdeG)
+    </p>
+    <p style="font-size: 0.78rem; color: #475569;">
+        Desplegado en GitHub Pages • Código abierto y arquitectura de alto rendimiento.
+    </p>
+</footer>
+
+<!-- SCRIPTS -->
+<script src="js/neural-canvas.js"></script>
+</body>
+</html>
