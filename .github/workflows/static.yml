@@ -6,7 +6,6 @@ on:
   workflow_dispatch:
 
 permissions:
-  # Otorgo los permisos necesarios para leer el repositorio y publicar en Pages
   contents: read
   pages: write
   id-token: write
@@ -14,9 +13,6 @@ permissions:
 concurrency:
   group: "pages"
   cancel-in-progress: false
-
-env:
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 jobs:
   deploy:
@@ -26,20 +22,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v5
+        uses: actions/checkout@v4
 
       - name: Setup Pages
-        uses: actions/configure-pages@v6
+        uses: actions/configure-pages@v5
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          name: github-pages-${{ github.run_attempt }}
-          # Indico que tome todos los archivos desde la carpeta principal de mi repositorio
-          path: .
+          path: '.'
 
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v5
-        with:
-          artifact_name: github-pages-${{ github.run_attempt }}
+        uses: actions/deploy-pages@v4
