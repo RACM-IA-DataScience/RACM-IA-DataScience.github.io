@@ -37,10 +37,11 @@ jobs:
         uses: actions/configure-pages@v6
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-pages-artifact@v3
+        # Restrinjo la subida a un solo trabajo de la matriz para evitar artefactos duplicados.
+        if: matrix.os == 'ubuntu-latest'
         with:
-          # Sube el repositorio completo
-          path: '.'
+          path: ./public
 
       - name: Deploy to GitHub Pages
         id: deployment
