@@ -3,6 +3,10 @@
     "@actions/core": "^3.0.1"
   },
   "devDependencies": {
-    "@vercel/ncc": "^0.45.0"
+    "@vercel/ncc": "^0.45.0",
+    "esbuild": "^0.28.2"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true
   }
 }
