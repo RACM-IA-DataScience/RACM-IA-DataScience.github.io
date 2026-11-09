@@ -9,5 +9,4 @@ inputs:
 runs:
   using: 'node24'
   pre: 'dist/setup/index.js'       # El archivo YAML del que hablábamos es este
-  pre-name: 'Inicializando Setup'  # Nombre que saldrá en la interfaz de GitHub
   main: 'dist/index.js'            # Tu código principal
