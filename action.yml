@@ -8,5 +8,4 @@ inputs:
 
 runs:
   using: 'node24'
-  pre: 'dist/setup/index.js'       # El archivo YAML del que hablábamos es este
-  main: 'dist/index.js'            # Tu código principal
+  main: 'dist/index.js' # Mantenemos solo el main
