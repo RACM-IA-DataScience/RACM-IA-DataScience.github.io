@@ -30,10 +30,24 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v6
 
+      # Configuro Node.js para poder compilar el proyecto
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # Instalo las dependencias de mi proyecto y ejecuto el proceso de compilación
+      - name: Install dependencies and build
+        run: |
+          npm install
+          npm run build
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          # Especifico la carpeta exacta que resulta de la compilación (por defecto en Vite es ./dist, en Create React App es ./build)
+          path: ./dist
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
