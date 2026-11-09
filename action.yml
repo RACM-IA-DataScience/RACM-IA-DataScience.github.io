@@ -1,16 +1,13 @@
-name: 'Validador de GitHub Pages'
-description: 'Asegura que tu carpeta de producción tenga el archivo index.html'
+name: 'Mi Acción con Setup'
+description: 'Valida archivos y corre un script de configuración previo'
 
 inputs:
   build-folder:
-    description: 'La carpeta donde se compila tu sitio (ej. dist, build, o . para la raíz)'
-    required: false
+    description: 'Carpeta de compilación'
     default: '.'
-
-outputs:
-  validated-at:
-    description: 'Fecha y hora exacta en la que se validó el archivo'
 
 runs:
   using: 'node24'
-  main: 'dist/index.js' # Recuerda que debes empaquetar tu src/index.js aquí antes de subirlo
+  pre: 'dist/setup/index.js'       # El archivo YAML del que hablábamos es este
+  pre-name: 'Inicializando Setup'  # Nombre que saldrá en la interfaz de GitHub
+  main: 'dist/index.js'            # Tu código principal
