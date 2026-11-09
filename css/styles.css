@@ -1,9 +1,8 @@
 /* ==========================================================================
    RACM - IA & DATA SCIENCE | DESIGN SYSTEM & CORE STYLES
    Modern AI & Neo-Grotesque Typography System
+   Fonts preloaded asynchronously via HTML <head> for zero-render-blocking
    ========================================================================== */
-
-@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600;700&family=Geist:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 
 :root {
     /* Tipografías de Alta Fidelidad para IA & Tech */
