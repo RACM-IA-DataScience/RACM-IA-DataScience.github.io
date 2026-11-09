@@ -1,0 +1,16 @@
+name: 'Validador de GitHub Pages'
+description: 'Asegura que tu carpeta de producción tenga el archivo index.html'
+
+inputs:
+  build-folder:
+    description: 'La carpeta donde se compila tu sitio (ej. dist, build, o . para la raíz)'
+    required: false
+    default: '.'
+
+outputs:
+  validated-at:
+    description: 'Fecha y hora exacta en la que se validó el archivo'
+
+runs:
+  using: 'node24'
+  main: 'dist/index.js' # Recuerda que debes empaquetar tu src/index.js aquí antes de subirlo
