@@ -1,29 +1,23 @@
 name: Deploy static content to Pages
 
 on:
-  # Se ejecuta cada vez que envías código a la rama main
   push:
     branches: ["main"]
-  # Permite ejecutar este flujo de trabajo manualmente desde la pestaña Actions
   workflow_dispatch:
 
-# Otorga los permisos necesarios para publicar el sitio
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Permite solo un despliegue concurrente, saltando las ejecuciones en cola
 concurrency:
   group: "pages"
   cancel-in-progress: false
 
-# Forzar el motor de ejecución nativo a Node.js 24 sin advertencias de obsolescencia
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 jobs:
-  # Trabajo de despliegue único con Node 24
   deploy:
     environment:
       name: github-pages
@@ -38,8 +32,6 @@ jobs:
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
-        # I restrict the upload to a single matrix job to prevent three duplicate artifacts.
-        if: matrix.node-version == '20.x'
         with:
           path: ./public
 
