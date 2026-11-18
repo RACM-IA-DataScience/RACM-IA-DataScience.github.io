@@ -120,6 +120,32 @@
 
 <!-- HEADER CORPORATIVO UNIFICADO -->
 <header class="site-header">
+    <!-- SELECTOR DE IDIOMA GLOBAL (ES / EN) -->
+    <div class="lang-switcher" data-lang-switcher>
+        <button type="button" class="lang-switcher-btn" aria-haspopup="true" aria-expanded="false" aria-label="Cambiar idioma">
+            <svg class="lang-globe-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+            <span>ES</span>
+            <svg class="lang-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+        </button>
+        <div class="lang-dropdown" role="menu">
+            <a href="contacto.html" class="lang-option active" role="menuitem" hreflang="es">
+                <span class="lang-code">ES</span>
+                <span class="lang-name">Español</span>
+                <span class="lang-check">✓</span>
+            </a>
+            <a href="en/contact.html" class="lang-option" role="menuitem" hreflang="en">
+                <span class="lang-code">EN</span>
+                <span class="lang-name">English</span>
+            </a>
+        </div>
+    </div>
+
     <div class="avatar-wrapper">
         <img src="img/logo.jpg" alt="Logotipo oficial de RACM Inteligencia Artificial & Ciencia de Datos" class="foto-perfil">
     </div>
@@ -355,6 +381,7 @@
 
 <!-- SCRIPTS -->
 <script src="js/neural-canvas.js"></script>
+<script defer src="js/lang-switcher.js"></script>
 <script>
     // =========================================================================
     // 1. PLANTILLAS SEGÚN MOTIVO DE CONTACTO

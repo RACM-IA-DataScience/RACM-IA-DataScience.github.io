@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us & Leadership | RACM Artificial Intelligence & Data Science</title>
+    <meta name="description" content="Learn about RACM Artificial Intelligence & Data Science, our mission, vision, engineering standards, and technical direction led by Roberto Alejandro Chagra Martínez.">
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="../img/favicon.png">
+    <link rel="apple-touch-icon" href="../img/logo.jpg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600;700&family=Geist:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        .about-header-box {
+            text-align: center;
+            padding: clamp(1.8rem, 4vw, 3rem) clamp(1rem, 3vw, 2rem) 2.2rem;
+        }
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        .pillar-card {
+            background: rgba(11, 18, 33, 0.7);
+            border: 1px solid var(--border-glass);
+            border-radius: var(--radius-md);
+            padding: 1.8rem;
+            transition: var(--transition);
+        }
+        .pillar-card:hover {
+            border-color: var(--accent-cyan);
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4), var(--shadow-glow);
+        }
+        .pillar-icon {
+            font-size: 2rem;
+            margin-bottom: 0.8rem;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+
+<!-- UNIFIED CORPORATE HEADER -->
+<header class="site-header">
+    <!-- GLOBAL LANGUAGE SWITCHER -->
+    <div class="lang-switcher" data-lang-switcher>
+        <button type="button" class="lang-switcher-btn" aria-haspopup="true" aria-expanded="false" aria-label="Change language">
+            <svg class="lang-globe-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+            <span>EN</span>
+            <svg class="lang-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+        </button>
+        <div class="lang-dropdown" role="menu">
+            <a href="../nosotros.html" class="lang-option" role="menuitem" hreflang="es">
+                <span class="lang-code">ES</span>
+                <span class="lang-name">Español</span>
+            </a>
+            <a href="about.html" class="lang-option active" role="menuitem" hreflang="en">
+                <span class="lang-code">EN</span>
+                <span class="lang-name">English</span>
+                <span class="lang-check">✓</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="avatar-wrapper">
+        <img src="../img/logo.jpg" alt="Official logo of RACM Artificial Intelligence & Data Science" class="foto-perfil" width="100" height="100" fetchpriority="high">
+    </div>
+    <h1 class="header-brand-title">
+        <span class="brand-name-main">RACM</span>
+        <span class="brand-name-sub">Artificial Intelligence & Data Science</span>
+    </h1>
+    <p class="site-subtitle">Consulting, Software Engineering & Artificial Intelligence Solutions</p>
+    <p class="site-affiliation">Empowering organizations through Autonomous Agents, MLOps, Enterprise RAG, Computer Vision, and High-Performance Data Architectures.</p>
+    
+    <div class="header-badges">
+        <span class="header-pill">🤖 Agents & LLMs</span>
+        <span class="header-pill">⚙️ MLOps & APIs</span>
+        <span class="header-pill">👁️ Deep Learning / CV</span>
+        <span class="header-pill">📊 Data Engineering</span>
+        <span class="header-pill">🚀 Enterprise Solutions</span>
+    </div>
+</header>
+
+<!-- NAVIGATION -->
+<nav class="site-nav">
+    <a href="index.html">⚡ Home</a>
+    <a href="services.html">🛠️ Services</a>
+    <a href="projects.html">💼 Projects</a>
+    <a href="about.html" class="active">🏢 About Us</a>
+    <a href="contact.html">📬 Contact</a>
+</nav>
+
+<main class="container">
+
+    <!-- ABOUT INTRO -->
+    <section class="glass-panel about-header-box">
+        <div class="hero-badge-tag">
+            <span>🏢 Identity, Philosophy & Leadership</span>
+        </div>
+        <h2 class="site-title" style="font-size: 2.2rem; margin-bottom: 0.8rem;">
+            Bridging the Gap Between Research and Industry
+        </h2>
+        <p style="color: var(--text-secondary); max-width: 750px; margin: 0 auto 1.5rem; font-size: 1.05rem; line-height: 1.65;">
+            <strong>RACM Artificial Intelligence & Data Science</strong> is a consulting and software engineering firm created to turn the potential of AI into operational systems that increase productivity, cut costs, and build lasting competitive advantages.
+        </p>
+        <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+            <a href="services.html" class="btn btn-primary">
+                <span>Explore Our Services</span> &rarr;
+            </a>
+            <a href="contact.html" class="btn btn-outline">
+                Contact the Team
+            </a>
+        </div>
+    </section>
+
+    <!-- COMPANY PILLARS -->
+    <section class="glass-panel" style="padding: 2.4rem 2rem;">
+        <h2 class="section-title">
+            <span>🎯 Our Core Engineering Pillars</span>
+        </h2>
+        <p class="section-desc">
+            Principles that guide every architecture, model, and line of code we deliver to our clients:
+        </p>
+
+        <div class="pillars-grid">
+            <div class="pillar-card">
+                <span class="pillar-icon">🔬</span>
+                <h3 style="color: #ffffff; font-size: 1.2rem; margin-bottom: 0.6rem;">Scientific & Academic Rigor</h3>
+                <p style="color: var(--text-secondary); font-size: 0.92rem; line-height: 1.6;">
+                    We build on solid mathematical foundations and proven methodologies (KDD, Transfer Learning, adaptive cyclic graphs), ensuring models are explainable, measurable systems rather than opaque black boxes.
+                </p>
+            </div>
+
+            <div class="pillar-card">
+                <span class="pillar-icon">⚙️</span>
+                <h3 style="color: #ffffff; font-size: 1.2rem; margin-bottom: 0.6rem;">100% Production Focus (MLOps)</h3>
+                <p style="color: var(--text-secondary); font-size: 0.92rem; line-height: 1.6;">
+                    We don't hand over isolated scripts or unsupported notebooks. Every solution is packaged into reproducible Docker containers with FastAPI REST endpoints, MLflow traceability, and DVC versioning ready for production.
+                </p>
+            </div>
+
+            <div class="pillar-card">
+                <span class="pillar-icon">🔒</span>
+                <h3 style="color: #ffffff; font-size: 1.2rem; margin-bottom: 0.6rem;">Enterprise Security & Privacy</h3>
+                <p style="color: var(--text-secondary); font-size: 0.92rem; line-height: 1.6;">
+                    Your data assets are strictly confidential. We prioritize architectures that protect sensitive information using local vector stores or dedicated private clouds, preventing leakage into third-party public models.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TECHNICAL DIRECTION & FOUNDER -->
+    <section class="glass-panel" style="padding: 2.4rem 2rem;">
+        <h2 class="section-title">
+            <span>👤 Technical Direction & Leadership</span>
+        </h2>
+        <div class="founder-banner">
+            <div class="founder-info">
+                <div class="founder-pill-tag">
+                    <span>Founder & Lead AI Engineer</span>
+                </div>
+                <h3 style="font-size: 1.85rem; color: #ffffff; margin-bottom: 0.5rem;">
+                    Roberto Alejandro Chagra Martínez
+                </h3>
+                <p style="color: var(--accent-cyan); font-weight: 600; margin-bottom: 1.2rem; font-size: 1.05rem;">
+                    B.S. in Artificial Intelligence & Data Science — University of Guadalajara (UdeG)
+                </p>
+                <p style="color: var(--text-secondary); line-height: 1.65; margin-bottom: 1rem;">
+                    As a B.S. graduate in Artificial Intelligence and Data Science at <strong>RACM Artificial Intelligence & Data Science</strong>, Roberto leads the complete lifecycle of Machine Learning projects and Docker-based MLOps pipelines. His technical strengths span computer vision models in PyTorch, Generative AI ecosystems and adaptive agents using LangChain and Qdrant, and high-performance architectures deployed with FastAPI. This engineering specialization, combined with his analytical background in Nutrition Science and corporate management experience, ensures scalable technology solutions directly aligned with business outcomes.
+                </p>
+                <div class="founder-quote">
+                    "True artificial intelligence is not the one that stays trapped in an experimental notebook, but the one that solves a critical problem in production—reliably, securely, and at scale."
+                </div>
+                <div class="founder-badges">
+                    <span class="header-pill">🎓 UdeG Alumni</span>
+                    <span class="header-pill">⚡ MLOps Specialist</span>
+                    <span class="header-pill">🤖 Agent Architect</span>
+                    <span class="header-pill">📊 Data Engineering</span>
+                    <span class="header-pill">💼 AI Consulting</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ENTERPRISE FAQ -->
+    <section class="glass-panel" style="padding: 2.4rem 2rem;">
+        <h2 class="section-title">
+            <span>❓ Frequently Asked Questions for Businesses (FAQ)</span>
+        </h2>
+        <p class="section-desc">
+            Answers to the most common questions CTOs and technology leaders ask before kicking off an AI engagement:
+        </p>
+
+        <div class="faq-list">
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How do you guarantee data privacy and confidentiality when deploying AI?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    We operate under strict security protocols and Non-Disclosure Agreements (NDAs). We deploy local or dedicated private-cloud architectures so your company's data is never used to train external public models or shared outside your infrastructure.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How long does it take to build a Proof of Concept (PoC) or full production system?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    A working Proof of Concept (PoC) is typically delivered in 2 to 4 weeks, allowing you to validate hypotheses on your real data before committing larger budgets. A full production-grade system (MLOps, API integration, and automated testing) generally spans 6 to 12 weeks depending on scope.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Can these AI solutions integrate with our existing systems (ERP, CRM, Databases)?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    Absolutely. All our solutions are architected as Dockerized microservices with FastAPI REST APIs, enabling seamless, low-friction integration with any existing tech stack (PostgreSQL, MySQL, Salesforce, SAP, mobile apps, or web platforms).
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Do you offer ongoing maintenance and support after deployment?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    Yes. We provide technical support plans, operational telemetry monitoring, proactive data drift detection, and scheduled model retraining to ensure your system maintains peak accuracy and ROI over time.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA BANNER -->
+    <section class="cta-banner">
+        <h2>Accelerate your organization's analytical transformation</h2>
+        <p>
+            We are ready to evaluate your data challenges and craft a development roadmap tailored to your goals.
+        </p>
+        <div class="cta-actions">
+            <a href="schedule.html" class="btn btn-primary" style="padding: 0.9rem 2rem; font-size: 1.05rem;">
+                <span>Schedule Diagnostic Session</span> &rarr;
+            </a>
+            <a href="services.html" class="btn btn-outline" style="padding: 0.9rem 1.8rem; font-size: 1.05rem;">
+                View Services Catalog
+            </a>
+        </div>
+    </section>
+
+</main>
+
+<!-- UNIFIED CORPORATE FOOTER -->
+<footer class="site-footer">
+    <p>&copy; 2026 RACM Artificial Intelligence & Data Science. All rights reserved.</p>
+    <div class="footer-links">
+        <a href="https://wa.me/525664903696?text=Hello,%20I%20am%20interested%20in%20your%20services." target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        <span>•</span>
+        <a href="https://www.linkedin.com/in/racm-ia-datascience/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <span>•</span>
+        <a href="https://github.com/RACM-IA-DataScience" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <span>•</span>
+        <a href="https://www.facebook.com/racm.ia.datascience" target="_blank" rel="noopener noreferrer">Facebook</a>
+    </div>
+    <p style="font-size: 0.82rem; color: #64748b; margin-top: 0.4rem;">
+        Technical Direction: Roberto Alejandro Chagra Martínez • B.S. in Artificial Intelligence & Data Science (UdeG)
+    </p>
+    <p style="font-size: 0.78rem; color: #475569;">
+        Deployed on GitHub Pages • Open-source and high-performance architecture.
+    </p>
+</footer>
+
+<!-- SCRIPTS -->
+<script defer src="../js/neural-canvas.js"></script>
+<script defer src="../js/lang-switcher.js"></script>
+<script>
+    // Interactive FAQ accordion
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    faqQuestions.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const item = btn.closest('.faq-item');
+            const isActive = item.classList.contains('active');
+            
+            document.querySelectorAll('.faq-item').forEach(other => {
+                if (other !== item) other.classList.remove('active');
+            });
+            
+            if (isActive) {
+                item.classList.remove('active');
+            } else {
+                item.classList.add('active');
+            }
+        });
+    });
+</script>
+</body>
+</html>

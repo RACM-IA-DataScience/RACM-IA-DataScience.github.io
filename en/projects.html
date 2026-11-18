@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects & Case Studies | RACM Artificial Intelligence & Data Science</title>
+    <meta name="description" content="Catalog of enterprise-grade technical projects and AI solutions built by RACM Artificial Intelligence & Data Science: MLOps, RAG, Computer Vision, and Data Engineering.">
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="../img/favicon.png">
+    <link rel="apple-touch-icon" href="../img/logo.jpg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600;700&family=Geist:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        .seccion-intro-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+        .seccion-intro-texto {
+            flex: 1 1 550px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- UNIFIED CORPORATE HEADER -->
+<header class="site-header">
+    <!-- GLOBAL LANGUAGE SWITCHER -->
+    <div class="lang-switcher" data-lang-switcher>
+        <button type="button" class="lang-switcher-btn" aria-haspopup="true" aria-expanded="false" aria-label="Change language">
+            <svg class="lang-globe-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+            <span>EN</span>
+            <svg class="lang-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+        </button>
+        <div class="lang-dropdown" role="menu">
+            <a href="../proyectos.html" class="lang-option" role="menuitem" hreflang="es">
+                <span class="lang-code">ES</span>
+                <span class="lang-name">Español</span>
+            </a>
+            <a href="projects.html" class="lang-option active" role="menuitem" hreflang="en">
+                <span class="lang-code">EN</span>
+                <span class="lang-name">English</span>
+                <span class="lang-check">✓</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="avatar-wrapper">
+        <img src="../img/logo.jpg" alt="Official logo of RACM Artificial Intelligence & Data Science" class="foto-perfil" width="100" height="100" fetchpriority="high">
+    </div>
+    <h1 class="header-brand-title">
+        <span class="brand-name-main">RACM</span>
+        <span class="brand-name-sub">Artificial Intelligence & Data Science</span>
+    </h1>
+    <p class="site-subtitle">Consulting, Software Engineering & Artificial Intelligence Solutions</p>
+    <p class="site-affiliation">Empowering organizations through Autonomous Agents, MLOps, Enterprise RAG, Computer Vision, and High-Performance Data Architectures.</p>
+    
+    <div class="header-badges">
+        <span class="header-pill">🤖 Agents & LLMs</span>
+        <span class="header-pill">⚙️ MLOps & APIs</span>
+        <span class="header-pill">👁️ Deep Learning / CV</span>
+        <span class="header-pill">📊 Data Engineering</span>
+        <span class="header-pill">🚀 Enterprise Solutions</span>
+    </div>
+</header>
+
+<!-- NAVIGATION -->
+<nav class="site-nav">
+    <a href="index.html">⚡ Home</a>
+    <a href="services.html">🛠️ Services</a>
+    <a href="projects.html" class="active">💼 Projects</a>
+    <a href="about.html">🏢 About Us</a>
+    <a href="contact.html">📬 Contact</a>
+</nav>
+
+<main class="container">
+    <!-- PROJECTS HERO / SUMMARY -->
+    <section class="glass-panel seccion-intro-flex">
+        <div class="seccion-intro-texto">
+            <h2 class="section-title">
+                <span>💼 Solutions Catalog & Case Studies</span>
+            </h2>
+            <p style="color: var(--text-secondary); font-size: 0.98rem; line-height: 1.6;">
+                Curated selection of artificial intelligence and advanced analytics systems designed and implemented by <strong>RACM Artificial Intelligence & Data Science</strong> following software engineering best practices, reproducibility, automated testing, and Docker containerization to solve real-world challenges in healthcare, finance, and automation.
+            </p>
+        </div>
+        <div>
+            <a href="https://github.com/RACM-IA-DataScience" target="_blank" rel="noopener noreferrer" class="btn btn-github">
+                <svg height="20" width="20" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+                </svg>
+                <span>GitHub: RACM-IA-DataScience</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- SEARCH & FILTER BAR -->
+    <section class="controles-proyectos">
+        <div class="search-box">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="buscadorProyectos" placeholder="Search by technology or concept (e.g. Docker, LangGraph, TensorFlow, KDD, MLOps, FastAPI, FAISS)...">
+        </div>
+        <div class="filtro-tabs">
+            <button class="filtro-btn active" data-categoria="todos">All Featured (10)</button>
+            <button class="filtro-btn" data-categoria="mlops">MLOps & Production</button>
+            <button class="filtro-btn" data-categoria="genai">Generative AI & Agents</button>
+            <button class="filtro-btn" data-categoria="cv">Computer Vision & Health</button>
+            <button class="filtro-btn" data-categoria="data">Data Engineering & KDD</button>
+        </div>
+    </section>
+
+    <!-- FEATURED PROJECTS GRID -->
+    <section class="proyectos-grid" id="gridDestacados">
+
+        <!-- PROJECT 1: MLOps Churn -->
+        <article class="proyecto-card" data-categoria="mlops" data-keywords="python fastapi docker mlops dvc mlflow scikit-learn telecom ci/cd pytest production churn">
+            <div>
+                <div class="card-header">
+                    <span class="card-categoria cat-mlops">MLOps & Production</span>
+                    <h3><a href="https://github.com/RACM-IA-DataScience/churn-mlops-project" target="_blank" rel="noopener noreferrer">Telecom Churn MLOps Pipeline</a></h3>
+                </div>
+                <p class="card-desc">
+                    Modular production pipeline for telecom customer churn prediction. Integrates data versioning with <strong>DVC</strong>, experiment tracking via <strong>MLflow</strong>, automated CI/CD with <strong>pytest/pre-commit</strong>, and a REST API built with <strong>FastAPI</strong> packaged in a <strong>Docker</strong> container.
+                </p>
+                <div class="card-techs">
+                    <span class="tech-pill">Python</span>
+                    <span class="tech-pill">FastAPI</span>
+                    <span class="tech-pill">Docker</span>
+                    <span class="tech-pill">MLflow</span>
+                    <span class="tech-pill">DVC</span>
+                    <span class="tech-pill">Scikit-Learn</span>
+                    <span class="tech-pill">CI/CD</span>
+                </div>
+            </div>
+            <div class="card-actions">
+                <a href="https://github.com/RACM-IA-DataScience/churn-mlops-project" target="_blank" rel="noopener noreferrer" class="btn-card btn-card-primary">View Repository &rarr;</a>
+            </div>
+        </article>
+
+        <!-- PROJECT 2: LangGraph Sales Agent -->
+        <article class="proyecto-card" data-categoria="genai" data-keywords="python langgraph gemini postgresql agentic ai agents llm tool calling sales ai studio">
+            <div>
+                <div class="card-header">
+                    <span class="card-categoria cat-genai">Generative AI & Agents</span>
+                    <h3><a href="https://github.com/RACM-IA-DataScience/agente_ventas" target="_blank" rel="noopener noreferrer">Intelligent Sales Agent with LangGraph</a></h3>
+                </div>
+                <p class="card-desc">
+                    Autonomous conversational agent for commercial prospecting and guided sales. Orchestrated with adaptive state graphs (<strong>LangGraph</strong>), powered by <strong>Google Gemini Pro</strong>, autonomous Tool Calling, and contextual memory persistence in <strong>PostgreSQL</strong>.
+                </p>
+                <div class="card-techs">
+                    <span class="tech-pill">LangGraph</span>
+                    <span class="tech-pill">Google Gemini</span>
+                    <span class="tech-pill">PostgreSQL</span>
+                    <span class="tech-pill">Tool Calling</span>
+                    <span class="tech-pill">Agentic AI</span>
+                    <span class="tech-pill">Python</span>
+                </div>
+            </div>
+            <div class="card-actions">
+                <a href="https://github.com/RACM-IA-DataScience/agente_ventas" target="_blank" rel="noopener noreferrer" class="btn-card btn-card-primary">View Repository &rarr;</a>
+            </div>
+        </article>
+
+        <!-- PROJECT 3: DocuMind AI RAG -->
+        <article class="proyecto-card" data-categoria="genai" data-keywords="python rag gemini faiss fastapi streamlit embeddings llm documents pdf vector db">
+            <div>
+                <div class="card-header">
+                    <span class="card-categoria cat-genai">Generative AI & RAG</span>
+                    <h3><a href="https://github.com/RACM-IA-DataScience/DocuMind_AI" target="_blank" rel="noopener noreferrer">DocuMind AI: Enterprise RAG Engine</a></h3>
+                </div>
+                <p class="card-desc">
+                    Advanced Retrieval-Augmented Generation (<strong>RAG</strong>) system for knowledge extraction across documents (PDF, DOCX, TXT). Decoupled architecture featuring a <strong>FastAPI</strong> backend, disk-persisted <strong>FAISS</strong> vector store, and interactive <strong>Streamlit</strong> UI with file and page citations.
+                </p>
+                <div class="card-techs">
+                    <span class="tech-pill">Google Gemini</span>
+                    <span class="tech-pill">FastAPI</span>
+                    <span class="tech-pill">FAISS</span>
+                    <span class="tech-pill">Streamlit</span>
+                    <span class="tech-pill">RAG Pipeline</span>
+                    <span class="tech-pill">Python</span>
+                </div>
+            </div>
+            <div class="card-actions">
+                <a href="https://github.com/RACM-IA-DataScience/DocuMind_AI" target="_blank" rel="noopener noreferrer" class="btn-card btn-card-primary">View Repository &rarr;</a>
+            </div>
+        </article>
+
+        <!-- PROJECT 4: Clinical & Airflow System -->
+        <article class="proyecto-card" data-categoria="mlops" data-keywords="python apache airflow postgresql docker fastapi streamlit scikit-learn healthcare clinical random forest wsl2">
+            <div>
+                <div class="card-header">
+                    <span class="card-categoria cat-mlops">MLOps & Predictive Health</span>
+                    <h3><a href="https://github.com/RACM-IA-DataScience/Sistema_Predictivo_de_Respuesta_Metabolica_y_Nutricion_Clinica" target="_blank" rel="noopener noreferrer">Metabolic & Clinical Predictive Platform</a></h3>
+                </div>
+                <p class="card-desc">
+                    End-to-end platform predicting gastrointestinal clinical profiles from biomarkers and nutritional metrics. Integrates a normalized <strong>PostgreSQL 16</strong> database, scheduled retraining orchestration with <strong>Apache Airflow</strong> in <strong>Docker</strong>, and a <strong>FastAPI</strong> inference service.
+                </p>
+                <div class="card-techs">
+                    <span class="tech-pill">Apache Airflow</span>
+                    <span class="tech-pill">PostgreSQL 16</span>
+                    <span class="tech-pill">Docker</span>
+                    <span class="tech-pill">FastAPI</span>
+                    <span class="tech-pill">Random Forest</span>
+                    <span class="tech-pill">Streamlit</span>
+                </div>
+            </div>
+            <div class="card-actions">
+                <a href="https://github.com/RACM-IA-DataScience/Sistema_Predictivo_de_Respuesta_Metabolica_y_Nutricion_Clinica" target="_blank" rel="noopener noreferrer" class="btn-card btn-card-primary">View Repository &rarr;</a>
+            </div>
+        </article>
+
+        <!-- PROJECT 5: Lung Pathology AI -->
+        <article class="proyecto-card" data-categoria="cv" data-keywords="tensorflow keras mobilenetv2 deep learning computer vision transfer learning streamlit x-rays pneumonia covid-19 health">
+            <div>
+                <div class="card-header">
+                    <span class="card-categoria cat-cv">Computer Vision & Health</span>
+                    <h3><a href="https://github.com/RACM-IA-DataScience/lung-pathology-ai" target="_blank" rel="noopener noreferrer">Lung Pathology AI: Thoracic Detection</a></h3>
+                </div>
+                <p class="card-desc">
+                    Deep Learning-assisted diagnostics on chest radiographs (X-Rays). Classifies healthy lung tissue, bacterial pneumonia, viral pneumonia, and COVID-19 using a <strong>MobileNetV2</strong> convolutional architecture with <strong>Transfer Learning</strong> and interactive <strong>Streamlit</strong> deployment.
+                </p>
+                <div class="card-techs">
+                    <span class="tech-pill">TensorFlow</span>
+                    <span class="tech-pill">Keras</span>
+                    <span class="tech-pill">MobileNetV2</span>
+                    <span class="tech-pill">Transfer Learning</span>
+                    <span class="tech-pill">Streamlit</span>
+                    <span class="tech-pill">Deep Learning</span>
+                </div>
+            </div>
+            <div class="card-actions">
+                <a href="https://github.com/RACM-IA-DataScience/lung-pathology-ai" target="_blank" rel="noopener noreferrer" class="btn-card btn-card-primary">View Repository &rarr;</a>
+            </div>
+        </article>
+
+        <!-- PROJECT 6: Mammogram Classifier -->
+        <article class="proyecto-card" data-categoria="cv" data-keywords="computer vision deep learning keras tensorflow python mammogram calcifications healthcare oncology">
+            <div>
+                <div class="card-header">
+                    <span class="card-categoria cat-cv">Computer Vision & Oncology</span>
+                    <h3><a href="https://github.com/RACM-IA-DataScience/mammogram-abnormality-classifier" target="_blank" rel="noopener noreferrer">Mammogram Abnormality Classifier</a></h3>
+                </div>
+                <p class="card-desc">
+                    Computer vision system specialized in mammography image processing for automated detection, segmentation, and classification of calcifications, suspicious masses, and normal breast tissue to support preventive screening.
+                </p>
+                <div class="card-techs">
+                    <span class="tech-pill">TensorFlow</span>
+                    <span class="tech-pill">Keras</span>
+                    <span class="tech-pill">Computer Vision</span>
+                    <span class="tech-pill">Healthcare AI</span>
+                    <span class="tech-pill">Python</span>
+                </div>
+            </div>
+            <div class="card-actions">
+                <a href="https://github.com/RACM-IA-DataScience/mammogram-abnormality-classifier" target="_blank" rel="noopener noreferrer" class="btn-card btn-card-primary">View Repository &rarr;</a>
+            </div>
+        </article>
+
+        <!-- PROJECT 7: Fraud Detection KDD -->
+        <article class="proyecto-card" data-categoria="data" data-keywords="python kdd bank fraud anomaly detection machine learning finance decision rules jupyter">
+            <div>
+                <div class="card-header">
+                    <span class="card-categoria cat-data">Fintech & Fraud Detection</span>
+                    <h3><a href="https://github.com/RACM-IA-DataScience/Deteccion_Automatizada_de_Fraude_Descubrimiento_de_Anomalias_y_Reglas_de_Decision_Tiempo_Real" target="_blank" rel="noopener noreferrer">Fraud Detection & KDD Decision Rules</a></h3>
+                </div>
+                <p class="card-desc">
+                    Rigorous implementation of the 7 stages of the <strong>KDD (Knowledge Discovery in Databases)</strong> lifecycle on large-scale financial transactions. Includes statistical anomaly isolation, extreme class balancing, and actionable heuristic decision rules.
+                </p>
+                <div class="card-techs">
+                    <span class="tech-pill">KDD Lifecycle</span>
+                    <span class="tech-pill">Anomaly Detection</span>
+                    <span class="tech-pill">Data Mining</span>
+                    <span class="tech-pill">Machine Learning</span>
+                    <span class="tech-pill">Python</span>
+                </div>
+            </div>
+            <div class="card-actions">
+                <a href="https://github.com/RACM-IA-DataScience/Deteccion_Automatizada_de_Fraude_Descubrimiento_de_Anomalias_y_Reglas_de_Decision_Tiempo_Real" target="_blank" rel="noopener noreferrer" class="btn-card btn-card-primary">View Repository &rarr;</a>
+            </div>
+        </article>
+
+        <!-- PROJECT 8: Movie Data Medallion Architecture -->
+        <article class="proyecto-card" data-categoria="data" data-keywords="python medallion data engineering raw bronze silver gold etl data pipeline big data">
+            <div>
+                <div class="card-header">
+                    <span class="card-categoria cat-data">Data Engineering & Big Data</span>
+                    <h3><a href="https://github.com/RACM-IA-DataScience/movie-data-engineering-medallion" target="_blank" rel="noopener noreferrer">Medallion Architecture Pipeline (100k Records)</a></h3>
+                </div>
+                <p class="card-desc">
+                    Data engineering pipeline structured under the <strong>Medallion Architecture</strong> (Raw → Bronze → Silver → Gold → ML). Engineered for ingestion, curation, deduplication, schema validation, and analytical layers optimized for predictive modeling.
+                </p>
+                <div class="card-techs">
+                    <span class="tech-pill">Medallion Arch</span>
+                    <span class="tech-pill">ETL / ELT</span>
+                    <span class="tech-pill">Data Modeling</span>
+                    <span class="tech-pill">Data Quality</span>
+                    <span class="tech-pill">Python</span>
+                </div>
+            </div>
+            <div class="card-actions">
+                <a href="https://github.com/RACM-IA-DataScience/movie-data-engineering-medallion" target="_blank" rel="noopener noreferrer" class="btn-card btn-card-primary">View Repository &rarr;</a>
+            </div>
+        </article>
+
+        <!-- PROJECT 9: Chatbot Evolution -->
+        <article class="proyecto-card" data-categoria="genai" data-keywords="python langchain langgraph qdrant flask ollama chatbots rag state graph">
+            <div>
+                <div class="card-header">
+                    <span class="card-categoria cat-genai">Conversational AI & Graphs</span>
+                    <h3><a href="https://github.com/RACM-IA-DataScience/Desarrollo-de-Chatbots" target="_blank" rel="noopener noreferrer">Chatbot Evolution: Rules to LangGraph</a></h3>
+                </div>
+                <p class="card-desc">
+                    Architectural suite demonstrating the full conversational AI evolution: deterministic fuzzy engines (`difflib`), declarative YAML workflows, RAG pipelines backed by <strong>Qdrant</strong> vector databases, and complex <strong>LangGraph</strong> state machines with a <strong>Flask</strong> gateway.
+                </p>
+                <div class="card-techs">
+                    <span class="tech-pill">LangChain</span>
+                    <span class="tech-pill">LangGraph</span>
+                    <span class="tech-pill">Qdrant Vector DB</span>
+                    <span class="tech-pill">Flask</span>
+                    <span class="tech-pill">Ollama</span>
+                </div>
+            </div>
+            <div class="card-actions">
+                <a href="https://github.com/RACM-IA-DataScience/Desarrollo-de-Chatbots" target="_blank" rel="noopener noreferrer" class="btn-card btn-card-primary">View Repository &rarr;</a>
+            </div>
+        </article>
+
+        <!-- PROJECT 10: CleanData AI Platform -->
+        <article class="proyecto-card" data-categoria="data" data-keywords="javascript typescript react vite full-stack saas eda data cleaning statistics csv">
+            <div>
+                <div class="card-header">
+                    <span class="card-categoria cat-data">Full-Stack Data SaaS</span>
+                    <h3><a href="https://github.com/RACM-IA-DataScience/cleandata-ai-platform" target="_blank" rel="noopener noreferrer">CleanData AI Platform: Cleaning & EDA SaaS</a></h3>
+                </div>
+                <p class="card-desc">
+                    Modern SaaS platform automating standardization, statistical imputation (mean/mode), outlier capping via interquartile range (IQR), and instant exploratory visualization of tabular datasets with zero code.
+                </p>
+                <div class="card-techs">
+                    <span class="tech-pill">TypeScript</span>
+                    <span class="tech-pill">React</span>
+                    <span class="tech-pill">Vite</span>
+                    <span class="tech-pill">EDA Automation</span>
+                    <span class="tech-pill">SaaS UI</span>
+                </div>
+            </div>
+            <div class="card-actions">
+                <a href="https://github.com/RACM-IA-DataScience/cleandata-ai-platform" target="_blank" rel="noopener noreferrer" class="btn-card btn-card-primary">View Repository &rarr;</a>
+            </div>
+        </article>
+
+    </section>
+
+    <!-- DYNAMIC GITHUB LIVE EXPLORER -->
+    <section class="glass-panel">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 0.5rem;">
+            <h3 class="section-title" style="margin-bottom: 0;">
+                <span>🌐 Real-Time GitHub Repository Explorer</span>
+            </h3>
+            <a href="https://github.com/RACM-IA-DataScience?tab=repositories" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="font-size: 0.85rem; padding: 0.4rem 0.9rem;">
+                View all repositories on GitHub &rarr;
+            </a>
+        </div>
+        <p style="color: var(--text-muted); font-size: 0.92rem; margin-bottom: 1.8rem;">
+            Repositories synced live from the public GitHub API (<a href="https://github.com/RACM-IA-DataScience" target="_blank" rel="noopener noreferrer" style="color: var(--accent-cyan); text-decoration: none;">@RACM-IA-DataScience</a>).
+        </p>
+        
+        <div id="repositorios" class="repo-grid">
+            <div class="loading-state">
+                <div class="spinner"></div>
+                <p>Loading public repositories from GitHub...</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- UNIFIED CORPORATE FOOTER -->
+<footer class="site-footer">
+    <p>&copy; 2026 RACM Artificial Intelligence & Data Science. All rights reserved.</p>
+    <div class="footer-links">
+        <a href="https://wa.me/525664903696?text=Hello,%20I%20am%20interested%20in%20your%20services." target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        <span>•</span>
+        <a href="https://www.linkedin.com/in/racm-ia-datascience/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <span>•</span>
+        <a href="https://github.com/RACM-IA-DataScience" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <span>•</span>
+        <a href="https://www.facebook.com/racm.ia.datascience" target="_blank" rel="noopener noreferrer">Facebook</a>
+    </div>
+    <p style="font-size: 0.82rem; color: #64748b; margin-top: 0.4rem;">
+        Technical Direction: Roberto Alejandro Chagra Martínez • B.S. in Artificial Intelligence & Data Science (UdeG)
+    </p>
+    <p style="font-size: 0.78rem; color: #475569;">
+        Deployed on GitHub Pages • Open-source and high-performance architecture.
+    </p>
+</footer>
+
+<!-- SCRIPTS -->
+<script defer src="../js/neural-canvas.js"></script>
+<script defer src="../js/lang-switcher.js"></script>
+<script>
+    // 1. INTERACTIVE FILTERING AND SEARCH FOR FEATURED PROJECTS
+    const searchInput = document.getElementById('buscadorProyectos');
+    const filterButtons = document.querySelectorAll('.filtro-btn');
+    const cards = document.querySelectorAll('.proyecto-card');
+
+    let activeCategory = 'todos';
+    let searchQuery = '';
+
+    function filterProjects() {
+        cards.forEach(card => {
+            const cardCategory = card.getAttribute('data-categoria');
+            const cardKeywords = (card.getAttribute('data-keywords') || '') + ' ' + card.innerText.toLowerCase();
+            
+            const matchesCategory = (activeCategory === 'todos' || cardCategory === activeCategory);
+            const matchesSearch = searchQuery === '' || cardKeywords.includes(searchQuery);
+
+            if (matchesCategory && matchesSearch) {
+                card.style.display = 'flex';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
+
+    filterButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            filterButtons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            activeCategory = btn.getAttribute('data-categoria');
+            filterProjects();
+        });
+    });
+
+    searchInput.addEventListener('input', (e) => {
+        searchQuery = e.target.value.toLowerCase().trim();
+        filterProjects();
+    });
+
+    // 2. DYNAMIC GITHUB REPOSITORY EXPLORER
+    const githubUsername = 'RACM-IA-DataScience';
+    const apiUrl = `https://api.github.com/users/${githubUsername}/repos?sort=updated&per_page=12`;
+
+    async function fetchRepos() {
+        const container = document.getElementById('repositorios');
+
+        try {
+            const response = await fetch(apiUrl);
+            if (!response.ok) throw new Error('HTTP status ' + response.status);
+
+            const repos = await response.json();
+            container.innerHTML = '';
+
+            const reposToShow = repos
+                .filter(repo => !repo.fork && repo.name.toLowerCase() !== githubUsername.toLowerCase())
+                .slice(0, 9);
+
+            if (reposToShow.length === 0) {
+                container.innerHTML = '<p class="empty-state">No additional repositories found.</p>';
+                return;
+            }
+
+            reposToShow.forEach(repo => {
+                const card = document.createElement('div');
+                card.className = 'repo-card';
+
+                const desc = repo.description || 'Open-source AI and Data Science repository.';
+                const lang = repo.language || 'Python / AI';
+                const stars = repo.stargazers_count || 0;
+                const formattedDate = new Date(repo.updated_at).toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'short'
+                });
+
+                card.innerHTML = `
+                    <div>
+                        <a href="${repo.html_url}" class="repo-name" target="_blank" rel="noopener noreferrer">${repo.name}</a>
+                        <p class="repo-desc">${desc}</p>
+                    </div>
+                    <div class="repo-meta">
+                        <span class="repo-lang">💻 ${lang}</span>
+                        <span title="Last updated: ${formattedDate}">📅 ${formattedDate}</span>
+                        <span class="repo-stars" title="Stars: ${stars}">⭐ ${stars}</span>
+                    </div>
+                `;
+
+                container.appendChild(card);
+            });
+
+        } catch (error) {
+            console.warn('Note: Could not fetch dynamic GitHub list (GitHub API rate limit).', error);
+            container.innerHTML = `
+                <div class="empty-state">
+                    <p style="margin-bottom: 1rem; color: #cbd5e1;">Browse the complete catalog of code and experiments directly on our official account:</p>
+                    <a href="https://github.com/${githubUsername}?tab=repositories" target="_blank" rel="noopener noreferrer" class="btn btn-github">
+                        Explore 26+ Repositories on GitHub &rarr;
+                    </a>
+                </div>
+            `;
+        }
+    }
+
+    fetchRepos();
+</script>
+</body>
+</html>

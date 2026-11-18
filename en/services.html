@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services & Solutions | RACM Artificial Intelligence & Data Science</title>
+    <meta name="description" content="Software engineering and Artificial Intelligence services for businesses: Autonomous Agents with LangGraph, Enterprise RAG, MLOps, Computer Vision, and Data Engineering.">
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="../img/favicon.png">
+    <link rel="apple-touch-icon" href="../img/logo.jpg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600;700&family=Geist:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        .services-header-box {
+            text-align: center;
+            padding: clamp(1.8rem, 4vw, 3rem) clamp(1rem, 3vw, 2rem) 2rem;
+        }
+        .deliverables-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.2rem;
+            margin-top: 1.5rem;
+        }
+        .deliverable-card {
+            background: rgba(11, 18, 33, 0.7);
+            border: 1px solid var(--border-glass);
+            border-radius: var(--radius-sm);
+            padding: 1.4rem;
+            transition: var(--transition);
+        }
+        .deliverable-card:hover {
+            border-color: var(--accent-cyan);
+            transform: translateY(-3px);
+        }
+        .deliverable-icon {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+
+<!-- UNIFIED CORPORATE HEADER -->
+<header class="site-header">
+    <!-- GLOBAL LANGUAGE SWITCHER -->
+    <div class="lang-switcher" data-lang-switcher>
+        <button type="button" class="lang-switcher-btn" aria-haspopup="true" aria-expanded="false" aria-label="Change language">
+            <svg class="lang-globe-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+            <span>EN</span>
+            <svg class="lang-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+        </button>
+        <div class="lang-dropdown" role="menu">
+            <a href="../servicios.html" class="lang-option" role="menuitem" hreflang="es">
+                <span class="lang-code">ES</span>
+                <span class="lang-name">Español</span>
+            </a>
+            <a href="services.html" class="lang-option active" role="menuitem" hreflang="en">
+                <span class="lang-code">EN</span>
+                <span class="lang-name">English</span>
+                <span class="lang-check">✓</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="avatar-wrapper">
+        <img src="../img/logo.jpg" alt="Official logo of RACM Artificial Intelligence & Data Science" class="foto-perfil" width="100" height="100" fetchpriority="high">
+    </div>
+    <h1 class="header-brand-title">
+        <span class="brand-name-main">RACM</span>
+        <span class="brand-name-sub">Artificial Intelligence & Data Science</span>
+    </h1>
+    <p class="site-subtitle">Consulting, Software Engineering & Artificial Intelligence Solutions</p>
+    <p class="site-affiliation">Empowering organizations through Autonomous Agents, MLOps, Enterprise RAG, Computer Vision, and High-Performance Data Architectures.</p>
+    
+    <div class="header-badges">
+        <span class="header-pill">🤖 Agents & LLMs</span>
+        <span class="header-pill">⚙️ MLOps & APIs</span>
+        <span class="header-pill">👁️ Deep Learning / CV</span>
+        <span class="header-pill">📊 Data Engineering</span>
+        <span class="header-pill">🚀 Enterprise Solutions</span>
+    </div>
+</header>
+
+<!-- NAVIGATION -->
+<nav class="site-nav">
+    <a href="index.html">⚡ Home</a>
+    <a href="services.html" class="active">🛠️ Services</a>
+    <a href="projects.html">💼 Projects</a>
+    <a href="about.html">🏢 About Us</a>
+    <a href="contact.html">📬 Contact</a>
+</nav>
+
+<main class="container">
+
+    <!-- SERVICES INTRO -->
+    <section class="glass-panel services-header-box">
+        <div class="hero-badge-tag">
+            <span>🛠️ Corporate Service Portfolio</span>
+        </div>
+        <h2 class="site-title" style="font-size: 2.2rem; margin-bottom: 0.8rem;">
+            Artificial Intelligence Solutions Engineered for Your Business
+        </h2>
+        <p style="color: var(--text-secondary); max-width: 720px; margin: 0 auto 1.5rem; font-size: 1.05rem; line-height: 1.65;">
+            We build robust, reproducible AI solutions scaled to your organization. From Proof of Concept (PoC) design to full production deployment with continuous support.
+        </p>
+        <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+            <a href="schedule.html" class="btn btn-primary">
+                <span>Request Technical Diagnostic</span> &rarr;
+            </a>
+            <a href="projects.html" class="btn btn-outline">
+                View Related Projects
+            </a>
+        </div>
+    </section>
+
+    <!-- SERVICES CATALOG -->
+    <section class="glass-panel" style="padding: 2.4rem 2rem;">
+        <h2 class="section-title">
+            <span>🚀 Core Service Pillars</span>
+        </h2>
+        <p class="section-desc">
+            Our four pillars of software engineering and artificial intelligence applied to solve real enterprise needs:
+        </p>
+
+        <div class="services-grid">
+            <!-- SERVICE 1 -->
+            <div class="service-card">
+                <div>
+                    <div class="service-icon-box">🤖</div>
+                    <h3>Autonomous Agents & Enterprise RAG</h3>
+                    <p>
+                        We build adaptive assistants and agents with persistent memory capable of querying your company's confidential knowledge base and executing internal tools with zero data leakage.
+                    </p>
+                    <ul class="service-checklist">
+                        <li>Cyclic decision-graph orchestration with LangGraph</li>
+                        <li>High-faithfulness RAG engines with vector databases (FAISS, Qdrant)</li>
+                        <li>Integration with leading LLMs (Google Gemini Pro, OpenAI, Claude)</li>
+                        <li>Secure tool execution (Tool Calling & Action APIs)</li>
+                        <li>Session persistence and conversational memory in PostgreSQL</li>
+                    </ul>
+                </div>
+                <div class="domain-tags">
+                    <span class="tag-pill">LangGraph</span>
+                    <span class="tag-pill">Google Gemini</span>
+                    <span class="tag-pill">FAISS</span>
+                    <span class="tag-pill">PostgreSQL</span>
+                </div>
+            </div>
+
+            <!-- SERVICE 2 -->
+            <div class="service-card">
+                <div>
+                    <div class="service-icon-box">⚙️</div>
+                    <h3>MLOps & Production Architectures</h3>
+                    <p>
+                        We turn experimental prototypes into high-performance production microservices, ensuring continuous monitoring, traceability, and full reproducibility.
+                    </p>
+                    <ul class="service-checklist">
+                        <li>High-concurrency REST APIs built with FastAPI</li>
+                        <li>Modular and reproducible containerization with Docker</li>
+                        <li>Full experiment tracking and model registry with MLflow</li>
+                        <li>Dataset and training pipeline versioning with DVC</li>
+                        <li>Automated test suites and CI/CD pipeline integration</li>
+                    </ul>
+                </div>
+                <div class="domain-tags">
+                    <span class="tag-pill">FastAPI</span>
+                    <span class="tag-pill">Docker</span>
+                    <span class="tag-pill">MLflow</span>
+                    <span class="tag-pill">DVC</span>
+                </div>
+            </div>
+
+            <!-- SERVICE 3 -->
+            <div class="service-card">
+                <div>
+                    <div class="service-icon-box">👁️</div>
+                    <h3>Computer Vision & Diagnostics</h3>
+                    <p>
+                        Training and fine-tuning (Transfer Learning) of convolutional neural networks for visual quality inspection, biomedical imaging analysis, and automated anomaly detection.
+                    </p>
+                    <ul class="service-checklist">
+                        <li>Biomedical and industrial image classification & segmentation</li>
+                        <li>Transfer Learning on proven backbones (MobileNetV2, ResNet)</li>
+                        <li>Data augmentation and critical class balancing</li>
+                        <li>Optimized export and inference for edge CPU/GPU targets</li>
+                        <li>Activation map visualization (Grad-CAM) for explainability</li>
+                    </ul>
+                </div>
+                <div class="domain-tags">
+                    <span class="tag-pill">TensorFlow</span>
+                    <span class="tag-pill">Keras</span>
+                    <span class="tag-pill">Transfer Learning</span>
+                    <span class="tag-pill">Edge AI</span>
+                </div>
+            </div>
+
+            <!-- SERVICE 4 -->
+            <div class="service-card">
+                <div>
+                    <div class="service-icon-box">📊</div>
+                    <h3>Data Engineering & KDD</h3>
+                    <p>
+                        Design and implementation of analytical pipelines that deliver clean, structured data ready to power predictive models and executive dashboards.
+                    </p>
+                    <ul class="service-checklist">
+                        <li>Medallion Data Architectures (Bronze, Silver, and Gold layers)</li>
+                        <li>KDD Methodology (Knowledge Discovery in Databases)</li>
+                        <li>Financial and transactional anomaly isolation</li>
+                        <li>Relational modeling and SQL query optimization in PostgreSQL</li>
+                        <li>Data quality monitoring and inconsistency prevention</li>
+                    </ul>
+                </div>
+                <div class="domain-tags">
+                    <span class="tag-pill">Medallion Arch</span>
+                    <span class="tag-pill">PostgreSQL</span>
+                    <span class="tag-pill">Pandas</span>
+                    <span class="tag-pill">KDD Lifecycle</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WORK METHODOLOGY -->
+    <section class="glass-panel" style="padding: 2.4rem 2rem;">
+        <h2 class="section-title">
+            <span>🧭 Our Methodology: Idea to Production in 4 Phases</span>
+        </h2>
+        <p class="section-desc">
+            An agile, iterative, and transparent engineering workflow designed to minimize technical risk and accelerate value delivery for your organization:
+        </p>
+
+        <div class="process-grid">
+            <div class="process-step">
+                <div class="step-badge">01</div>
+                <h3>Diagnostic & Feasibility</h3>
+                <p>
+                    We assess data maturity, define the core business problem, and validate technical feasibility and expected ROI before writing production code.
+                </p>
+            </div>
+
+            <div class="process-step">
+                <div class="step-badge">02</div>
+                <h3>Proof of Concept (PoC)</h3>
+                <p>
+                    We build a working prototype within weeks to validate hypotheses and algorithmic performance metrics directly against your real data.
+                </p>
+            </div>
+
+            <div class="process-step">
+                <div class="step-badge">03</div>
+                <h3>Engineering & MLOps</h3>
+                <p>
+                    We modularize the codebase, write automated unit tests with pytest, package services into Docker containers, and set up CI/CD pipelines.
+                </p>
+            </div>
+
+            <div class="process-step">
+                <div class="step-badge">04</div>
+                <h3>Deployment & Monitoring</h3>
+                <p>
+                    We integrate the API into your systems, enable continuous metric and data drift monitoring, and deliver comprehensive documentation.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- DELIVERABLES & STANDARDS -->
+    <section class="glass-panel" style="padding: 2.4rem 2rem;">
+        <h2 class="section-title">
+            <span>🛡️ Technical Standards & Deliverables</span>
+        </h2>
+        <p class="section-desc">
+            Every solution built by RACM adheres to rigorous software engineering criteria:
+        </p>
+
+        <div class="deliverables-grid">
+            <div class="deliverable-card">
+                <span class="deliverable-icon">📦</span>
+                <h4 style="color: #ffffff; margin-bottom: 0.4rem;">Docker Containers</h4>
+                <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.5;">Reproducible, identical deployments across development, staging, cloud, or on-premise servers.</p>
+            </div>
+            <div class="deliverable-card">
+                <span class="deliverable-icon">⚡</span>
+                <h4 style="color: #ffffff; margin-bottom: 0.4rem;">Documented APIs</h4>
+                <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.5;">FastAPI endpoints with Pydantic schema validation and interactive Swagger / OpenAPI docs.</p>
+            </div>
+            <div class="deliverable-card">
+                <span class="deliverable-icon">🧪</span>
+                <h4 style="color: #ffffff; margin-bottom: 0.4rem;">Automated Testing</h4>
+                <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.5;">Unit and integration test suites with pytest to guarantee production reliability.</p>
+            </div>
+            <div class="deliverable-card">
+                <span class="deliverable-icon">🔒</span>
+                <h4 style="color: #ffffff; margin-bottom: 0.4rem;">Full Confidentiality</h4>
+                <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.5;">Your data is never shared or used to train external public foundation models.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA BANNER -->
+    <section class="cta-banner">
+        <h2>Want to evaluate an AI use case for your company?</h2>
+        <p>
+            Let's talk about your needs and jointly design the most efficient and profitable technological solution.
+        </p>
+        <div class="cta-actions">
+            <a href="schedule.html" class="btn btn-primary" style="padding: 0.9rem 2rem; font-size: 1.05rem;">
+                <span>Schedule Diagnostic Session</span> &rarr;
+            </a>
+            <a href="projects.html" class="btn btn-outline" style="padding: 0.9rem 1.8rem; font-size: 1.05rem;">
+                Explore Projects
+            </a>
+        </div>
+    </section>
+
+</main>
+
+<!-- UNIFIED CORPORATE FOOTER -->
+<footer class="site-footer">
+    <p>&copy; 2026 RACM Artificial Intelligence & Data Science. All rights reserved.</p>
+    <div class="footer-links">
+        <a href="https://wa.me/525664903696?text=Hello,%20I%20am%20interested%20in%20your%20services." target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        <span>•</span>
+        <a href="https://www.linkedin.com/in/racm-ia-datascience/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <span>•</span>
+        <a href="https://github.com/RACM-IA-DataScience" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <span>•</span>
+        <a href="https://www.facebook.com/racm.ia.datascience" target="_blank" rel="noopener noreferrer">Facebook</a>
+    </div>
+    <p style="font-size: 0.82rem; color: #64748b; margin-top: 0.4rem;">
+        Technical Direction: Roberto Alejandro Chagra Martínez • B.S. in Artificial Intelligence & Data Science (UdeG)
+    </p>
+    <p style="font-size: 0.78rem; color: #475569;">
+        Deployed on GitHub Pages • Open-source and high-performance architecture.
+    </p>
+</footer>
+
+<!-- SCRIPTS -->
+<script defer src="../js/neural-canvas.js"></script>
+<script defer src="../js/lang-switcher.js"></script>
+</body>
+</html>

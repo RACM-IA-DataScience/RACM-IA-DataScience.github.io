@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord Bot Terms of Service | RACM Artificial Intelligence & Data Science</title>
+    <meta name="description" content="Official Terms of Service for the Discord Bot developed and operated by RACM Artificial Intelligence & Data Science. Acceptable use policies, Discord compliance, and AI guidelines.">
+    
+    <!-- FAVICON & TOUCH ICONS -->
+    <link rel="icon" type="image/png" href="../img/favicon.png">
+    <link rel="apple-touch-icon" href="../img/logo.jpg">
+
+    <!-- PRECONNECT & GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600;700&family=Geist:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- UNIFIED STYLES -->
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+<!-- UNIFIED CORPORATE HEADER -->
+<header class="site-header">
+    <!-- GLOBAL LANGUAGE SWITCHER -->
+    <div class="lang-switcher" data-lang-switcher>
+        <button type="button" class="lang-switcher-btn" aria-haspopup="true" aria-expanded="false" aria-label="Change language">
+            <svg class="lang-globe-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+            <span>EN</span>
+            <svg class="lang-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+        </button>
+        <div class="lang-dropdown" role="menu">
+            <a href="../terminos-bot.html" class="lang-option" role="menuitem" hreflang="es">
+                <span class="lang-code">ES</span>
+                <span class="lang-name">Español</span>
+            </a>
+            <a href="terms-bot.html" class="lang-option active" role="menuitem" hreflang="en">
+                <span class="lang-code">EN</span>
+                <span class="lang-name">English</span>
+                <span class="lang-check">✓</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="avatar-wrapper">
+        <img src="../img/logo.jpg" alt="Official logo of RACM Artificial Intelligence & Data Science" class="foto-perfil" width="100" height="100" fetchpriority="high">
+    </div>
+    <h1 class="header-brand-title">
+        <span class="brand-name-main">RACM</span>
+        <span class="brand-name-sub">Artificial Intelligence & Data Science</span>
+    </h1>
+    <p class="site-subtitle">Consulting, Software Engineering & Artificial Intelligence Solutions</p>
+    <p class="site-affiliation">Legal Framework and Usage Policies for Applications & Bots in the Discord Ecosystem.</p>
+    
+    <div class="header-badges">
+        <span class="header-pill">🤖 Discord Bot</span>
+        <span class="header-pill">📜 Terms of Service</span>
+        <span class="header-pill">🛡️ Policy Compliance</span>
+        <span class="header-pill">🔒 Privacy & Data</span>
+        <span class="header-pill">⚖️ Legal Framework</span>
+    </div>
+</header>
+
+<!-- MAIN NAVIGATION (NO TERMS TAB, DIRECT URL ACCESS ONLY) -->
+<nav class="site-nav">
+    <a href="index.html">⚡ Home</a>
+    <a href="services.html">🛠️ Services</a>
+    <a href="projects.html">💼 Projects</a>
+    <a href="about.html">🏢 About Us</a>
+    <a href="contact.html">📬 Contact</a>
+</nav>
+
+<main class="container">
+
+    <!-- TOP QUICK ACTIONS BAR -->
+    <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;">
+        <div style="display: flex; align-items: center; gap: 0.8rem; flex-wrap: wrap;">
+            <a href="index.html" class="btn btn-outline" style="font-size: 0.88rem; padding: 0.45rem 1rem;">
+                &larr; Back to Home
+            </a>
+            <a href="privacy-bot.html" class="btn btn-outline" style="font-size: 0.88rem; padding: 0.45rem 1rem;">
+                🔒 Privacy Policy
+            </a>
+            <a href="contact.html" class="btn btn-outline" style="font-size: 0.88rem; padding: 0.45rem 1rem;">
+                📬 Contact & Support
+            </a>
+        </div>
+        <div style="display: flex; align-items: center; gap: 0.8rem; flex-wrap: wrap;">
+            <button id="btnCopyLegalUrl" class="btn btn-outline" style="font-size: 0.88rem; padding: 0.45rem 1.1rem; cursor: pointer;">
+                <span>📋 Copy Link for Discord</span>
+            </button>
+            <a href="https://wa.me/525664903696?text=Hello,%20I%20have%20a%20question%20about%20the%20Discord%20Bot%20Terms%20of%20Service." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" style="font-size: 0.88rem; padding: 0.45rem 1.1rem;">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.63C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2ZM12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.59 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19.01L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.81 13.47 3.81 11.91C3.81 7.37 7.5 3.67 12.05 3.67ZM8.53 7.33C8.37 7.33 8.1 7.39 7.87 7.64C7.65 7.89 7.02 8.48 7.02 9.7C7.02 10.92 7.91 12.09 8.03 12.25C8.16 12.42 9.75 14.87 12.19 15.92C14.21 16.79 14.63 16.62 15.07 16.58C15.52 16.54 16.5 15.99 16.7 15.42C16.91 14.85 16.91 14.36 16.85 14.26C16.79 14.16 16.63 14.1 16.38 13.98C16.14 13.86 14.94 13.27 14.71 13.19C14.49 13.11 14.33 13.07 14.16 13.31C14 13.56 13.54 14.1 13.4 14.26C13.26 14.42 13.12 14.44 12.87 14.32C12.63 14.2 11.84 13.94 10.91 13.11C10.18 12.46 9.69 11.66 9.55 11.41C9.41 11.17 9.53 11.04 9.66 10.92C9.77 10.81 9.91 10.63 10.03 10.48C10.16 10.34 10.2 10.24 10.28 10.08C10.36 9.91 10.32 9.77 10.26 9.65C10.2 9.53 9.73 8.37 9.53 7.89C9.33 7.42 9.13 7.48 8.98 7.47C8.84 7.47 8.68 7.33 8.53 7.33Z"/>
+                </svg>
+                <span>WhatsApp Support</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- MAIN LEGAL CONTAINER -->
+    <article class="legal-card">
+        
+        <div class="legal-badge">
+            <span>🛡️ Discord Developer Policy & Terms Compliance</span>
+        </div>
+
+        <h2 class="legal-title">Discord Bot Terms of Service</h2>
+        <p class="legal-subtitle">
+            Binding Terms of Service and usage rules for users, community members, and server administrators interacting with or integrating the Discord application / bot developed by <strong>RACM Artificial Intelligence & Data Science</strong>.
+        </p>
+
+        <!-- LEGAL METADATA CARDS -->
+        <div class="legal-meta-grid">
+            <div class="legal-meta-item">
+                <span class="legal-meta-icon">📅</span>
+                <div>
+                    <h5>Last Updated</h5>
+                    <p>November 2026</p>
+                </div>
+            </div>
+            <div class="legal-meta-item">
+                <span class="legal-meta-icon">👨‍💻</span>
+                <div>
+                    <h5>Responsible Developer</h5>
+                    <p>Roberto Alejandro Chagra M.</p>
+                </div>
+            </div>
+            <div class="legal-meta-item">
+                <span class="legal-meta-icon">⚖️</span>
+                <div>
+                    <h5>Jurisdiction & Governing Law</h5>
+                    <p>Jalisco, Mexico</p>
+                </div>
+            </div>
+            <div class="legal-meta-item">
+                <span class="legal-meta-icon">🤖</span>
+                <div>
+                    <h5>Target Platform</h5>
+                    <p>Discord Inc. API & App Directory</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- DISCORD COMPLIANCE NOTICE -->
+        <div class="legal-callout discord">
+            <span class="legal-callout-icon">ℹ️</span>
+            <div>
+                <strong>Alignment with Discord Inc. Policies:</strong> This document is structured in full compliance with the 
+                <a href="https://discord.com/developers/docs/policies-and-agreements/developer-policy" target="_blank" rel="noopener noreferrer" style="color: #ffffff; text-decoration: underline;">Discord Developer Policy</a>, 
+                <a href="https://discord.com/terms" target="_blank" rel="noopener noreferrer" style="color: #ffffff; text-decoration: underline;">Discord Terms of Service</a>, and 
+                <a href="https://discord.com/guidelines" target="_blank" rel="noopener noreferrer" style="color: #ffffff; text-decoration: underline;">Discord Community Guidelines</a>. Using this Bot requires simultaneous compliance with all of these regulations.
+            </div>
+        </div>
+
+        <!-- QUICK TABLE OF CONTENTS -->
+        <nav class="legal-toc" aria-label="Table of Contents">
+            <div class="legal-toc-title">
+                <span>📑 Table of Contents & Sections</span>
+            </div>
+            <div class="legal-toc-links">
+                <a href="#section-1" class="legal-toc-link">1. Acceptance & Eligibility</a>
+                <a href="#section-2" class="legal-toc-link">2. Discord Compliance</a>
+                <a href="#section-3" class="legal-toc-link">3. Scope & License</a>
+                <a href="#section-4" class="legal-toc-link">4. Acceptable Use & Restrictions</a>
+                <a href="#section-5" class="legal-toc-link">5. AI Nature & Disclaimers</a>
+                <a href="#section-6" class="legal-toc-link">6. Availability & Changes</a>
+                <a href="#section-7" class="legal-toc-link">7. Privacy & Data Handling</a>
+                <a href="#section-8" class="legal-toc-link">8. Intellectual Property</a>
+                <a href="#section-9" class="legal-toc-link">9. Suspension & Termination</a>
+                <a href="#section-10" class="legal-toc-link">10. Limitation of Liability</a>
+                <a href="#section-11" class="legal-toc-link">11. Updates to Terms</a>
+                <a href="#section-12" class="legal-toc-link">12. Jurisdiction & Contact</a>
+            </div>
+        </nav>
+
+        <!-- SECTION 1 -->
+        <section id="section-1" class="legal-section">
+            <div class="legal-section-header">
+                <span class="legal-section-num">01</span>
+                <h3>Acceptance of Terms & Eligibility Requirements</h3>
+            </div>
+            <p>
+                By authorizing, inviting, or adding the Bot to a Discord server (<em>guild</em>), or by interacting with the Bot via slash commands (<code>/</code>), interactive components (buttons, dropdown menus), mentions, or direct messages, you (hereinafter the <strong>"User"</strong> or <strong>"Server Administrators"</strong>) confirm that you have read, understood, and agreed to be legally bound by these Terms of Service.
+            </p>
+            <p>
+                <strong>Minimum Age Requirement:</strong> To use this Bot, you must be at least <strong>13 years old</strong> (or the minimum legal age required in your country of residence to consent to digital data processing and Discord's services). If you do not meet this requirement or disagree with any provision herein, you must not authorize, configure, or interact with the Bot.
+            </p>
+        </section>
+
+        <!-- SECTION 2 -->
+        <section id="section-2" class="legal-section">
+            <div class="legal-section-header">
+                <span class="legal-section-num">02</span>
+                <h3>Compliance with Discord Inc.</h3>
+            </div>
+            <p>
+                This Bot operates as a third-party application on infrastructure provided by Discord Inc. Accordingly, your use of the Bot is strictly governed by:
+            </p>
+            <ul>
+                <li><strong>Discord Terms of Service</strong></li>
+                <li><strong>Discord Community Guidelines</strong></li>
+                <li><strong>Discord Developer Policy</strong></li>
+            </ul>
+            <p>
+                Any activity performed through or in connection with this Bot that violates Discord's official rules will automatically be deemed a material breach of these Terms, entitling RACM to revoke access immediately.
+            </p>
+        </section>
+
+        <!-- SECTION 3 -->
+        <section id="section-3" class="legal-section">
+            <div class="legal-section-header">
+                <span class="legal-section-num">03</span>
+                <h3>Service Description & License Grant</h3>
+            </div>
+            <p>
+                The Bot is a software application engineered by <strong>RACM Artificial Intelligence & Data Science</strong> to deliver advanced capabilities within Discord, which may include without limitation:
+            </p>
+            <ul>
+                <li>Natural Language Processing (NLP) and Large Language Model (LLM)-assisted queries.</li>
+                <li>Workflow automation, information summaries, and productivity utilities for servers.</li>
+                <li>Data analysis, automated technical assistance, and interactive commands oriented toward data science and software engineering.</li>
+            </ul>
+            <p>
+                <strong>Limited License Grant:</strong> RACM grants the User and authorized server a limited, non-exclusive, revocable, non-sublicensable, and non-transferable license to use the Bot solely for lawful purposes aligned with its intended functionality. Unless agreed otherwise in writing, the service is provided under standard terms and conveys no ownership rights over the underlying software.
+            </p>
+        </section>
+
+        <!-- SECTION 4 -->
+        <section id="section-4" class="legal-section">
+            <div class="legal-section-header">
+                <span class="legal-section-num">04</span>
+                <h3>Acceptable Use Policy & Strict Prohibitions</h3>
+            </div>
+            <p>
+                Users and server administrators expressly agree NOT to engage in, facilitate, or encourage any of the following conduct while using the Bot:
+            </p>
+            <ol>
+                <li>
+                    <strong>Infrastructure Abuse & Flooding (Spam / DoS):</strong> Sending automated bulk requests, command flooding (<em>rate-limit flooding</em>), saturating the API, or performing any denial-of-service (DoS/DDoS) action that degrades the performance or stability of the Bot or linked servers.
+                </li>
+                <li>
+                    <strong>Adversarial Prompt Injections (Jailbreaking):</strong> Deliberately crafting inputs intended to bypass AI safety filters (<em>jailbreaks</em> or <em>adversarial prompt injections</em>) to force generation of malicious, fraudulent, unlawful, or unethical content.
+                </li>
+                <li>
+                    <strong>Unlawful, Harmful, or Abusive Content:</strong> Using the Bot to generate, distribute, or facilitate hate speech, harassment, violent threats, extortion, child exploitation (CSAM), malware/spyware distribution, phishing, or third-party intellectual property infringement.
+                </li>
+                <li>
+                    <strong>Reverse Engineering & Credential Extraction:</strong> Decompiling, disassembling, reverse engineering, intercepting protected traffic, or attempting to extract Discord bot tokens, API keys, environment variables, or databases.
+                </li>
+                <li>
+                    <strong>NSFW Content Outside Designated Channels:</strong> Requesting or processing age-restricted (NSFW) content outside channels properly flagged as age-restricted in accordance with Discord guidelines and applicable law.
+                </li>
+            </ol>
+            <div class="legal-callout warning">
+                <span class="legal-callout-icon">⚠️</span>
+                <div>
+                    <strong>Zero-Tolerance Policy Against Abuse:</strong> Verified violations of any of the restrictions above will result in immediate permanent blacklisting of the User ID and/or Server ID from the Bot, as well as a formal report to Discord Trust & Safety.
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5 -->
+        <section id="section-5" class="legal-section">
+            <div class="legal-section-header">
+                <span class="legal-section-num">05</span>
+                <h3>Nature of AI Outputs & Disclaimer of Warranties</h3>
+            </div>
+            <p>
+                Responses, summaries, code snippets, and analytical outputs generated by the Bot rely on probabilistic Artificial Intelligence models. Accordingly, the User acknowledges and accepts that:
+            </p>
+            <ul>
+                <li>
+                    <strong>Probabilistic Nature & Potential "Hallucinations":</strong> Language models may occasionally produce inaccurate, outdated, incomplete, or erroneous information. RACM does not guarantee absolute infallibility, accuracy, or completeness of AI-generated outputs.
+                </li>
+                <li>
+                    <strong>No Critical Professional Advice:</strong> Outputs from the Bot are strictly informational and experimental. They do not constitute binding legal, accounting, tax, financial, medical, critical cybersecurity, or life-safety engineering advice.
+                </li>
+                <li>
+                    <strong>Human Verification Duty:</strong> The User bears sole responsibility for reviewing, testing, and auditing any code, technical recommendation, or data produced by the Bot before deploying it in production or commercial decision-making.
+                </li>
+            </ul>
+        </section>
+
+        <!-- SECTION 6 -->
+        <section id="section-6" class="legal-section">
+            <div class="legal-section-header">
+                <span class="legal-section-num">06</span>
+                <h3>Service Availability, Maintenance & Modifications</h3>
+            </div>
+            <p>
+                The Bot is provided strictly on an <strong>"As Is"</strong> and <strong>"As Available"</strong> basis, without express or implied warranties of uninterrupted or error-free operation.
+            </p>
+            <p>RACM reserves the unrestricted right to:</p>
+            <ul>
+                <li>Temporarily suspend service for preventive maintenance, code upgrades, or cloud infrastructure migrations.</li>
+                <li>Add, modify, throttle, or discontinue commands, parameters, or integrations without individual prior notice.</li>
+                <li>Enforce per-user, per-server, or global rate limits to protect operational resilience and cloud compute budgets.</li>
+            </ul>
+        </section>
+
+        <!-- SECTION 7 -->
+        <section id="section-7" class="legal-section">
+            <div class="legal-section-header">
+                <span class="legal-section-num">07</span>
+                <h3>Privacy & Basic Data Processing Overview</h3>
+            </div>
+            <p>
+                Data privacy and security are core pillars at RACM Artificial Intelligence & Data Science. Below is a transparent summary of the data processed by the Bot:
+            </p>
+            
+            <div class="legal-table-wrapper">
+                <table class="legal-table">
+                    <thead>
+                        <tr>
+                            <th>Data Collected / Processed</th>
+                            <th>Strict Technical Purpose</th>
+                            <th>Retention / Storage</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Discord User ID (User Snowflake)</strong></td>
+                            <td>Permission checks, rate-limit control, and routing replies back to the requesting user.</td>
+                            <td>Temporary in memory during session; persistent only for blacklists or saved preferences.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Server & Channel ID (Guild & Channel ID)</strong></td>
+                            <td>Delivering responses to the originating channel and persisting server-specific settings.</td>
+                            <td>While the Bot remains installed on that server or until removal/purge request.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Command Inputs & Parameters</strong></td>
+                            <td>Processing the prompt through the AI engine to generate the requested output.</td>
+                            <td>Ephemeral (volatile). Never used to train external public foundation models without consent.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Private Messages / Unrelated Channels</strong></td>
+                            <td>The Bot <strong>DOES NOT</strong> read or store conversations outside explicit commands or mentions.</td>
+                            <td>Zero retention. Full compliance with Discord Message Content Intent rules.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p>
+                <strong>No Data Sale:</strong> RACM does not sell, lease, trade, or share user or server data with advertisers, data brokers, or unrelated commercial third parties.
+            </p>
+            <p>
+                <strong>Right to Erasure (Right to be Forgotten):</strong> Server administrators and users may request complete deletion of any stored identifiers or settings at any time via the official channels in Section 12.
+            </p>
+            <div class="legal-callout info">
+                <span class="legal-callout-icon">🔒</span>
+                <div>
+                    <strong>Full Privacy Policy:</strong> For a detailed breakdown of technical processing, security safeguards, and user rights, visit our <a href="privacy-bot.html" style="color: var(--accent-cyan); text-decoration: underline; font-weight: 700;">Discord Bot Privacy Policy</a>.
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 8 -->
+        <section id="section-8" class="legal-section">
+            <div class="legal-section-header">
+                <span class="legal-section-num">08</span>
+                <h3>Intellectual Property Rights</h3>
+            </div>
+            <p>
+                All intellectual and industrial property rights in the Bot—including source code, intelligent agent logic, software architectures, trade names, logos, trademarks, and interfaces associated with <strong>RACM Artificial Intelligence & Data Science</strong>—are the exclusive property of Roberto Alejandro Chagra Martínez and are protected by Mexican and international copyright and intellectual property laws.
+            </p>
+            <p>
+                <strong>Ownership of User Inputs:</strong> Users retain ownership of the text, data, or prompts they submit to the Bot. By submitting inputs, the User grants RACM a worldwide, royalty-free, non-exclusive technical license solely to process, transmit, and format that input to deliver the requested output.
+            </p>
+        </section>
+
+        <!-- SECTION 9 -->
+        <section id="section-9" class="legal-section">
+            <div class="legal-section-header">
+                <span class="legal-section-num">09</span>
+                <h3>Suspension, Restriction & Termination</h3>
+            </div>
+            <p>
+                RACM reserves the right to deny, temporarily restrict, or permanently terminate access to the Bot (by User ID block or server blacklist) at any time without prior notice if:
+            </p>
+            <ul>
+                <li>A violation or substantiated suspicion of violation of these Terms or Discord policies occurs.</li>
+                <li>Attack patterns, vulnerability exploitation, or malicious compute abuse is detected.</li>
+                <li>A formal order is issued by legal/judicial authorities or Discord Trust & Safety.</li>
+            </ul>
+            <p>
+                Server administrators may terminate these Terms at any time by ceasing use of the Bot and removing/revoking its permissions from their Discord server settings.
+            </p>
+        </section>
+
+        <!-- SECTION 10 -->
+        <section id="section-10" class="legal-section">
+            <div class="legal-section-header">
+                <span class="legal-section-num">10</span>
+                <h3>General Limitation of Liability</h3>
+            </div>
+            <p>
+                To the fullest extent permitted by applicable law, <strong>RACM Artificial Intelligence & Data Science</strong>, its founder Roberto Alejandro Chagra Martínez, and contributors shall not be liable for any direct, indirect, incidental, punitive, special, or consequential damages, lost profits, or data loss arising from:
+            </p>
+            <ul>
+                <li>The use, misuse, or inability to use the Bot.</li>
+                <li>Service outages, Discord API downtime, network disruptions, or third-party cloud hosting failures.</li>
+                <li>Moderation actions, bans, or sanctions imposed by Discord community administrators or Discord Inc.</li>
+                <li>Business, technical, or personal decisions made based on AI-generated outputs.</li>
+            </ul>
+        </section>
+
+        <!-- SECTION 11 -->
+        <section id="section-11" class="legal-section">
+            <div class="legal-section-header">
+                <span class="legal-section-num">11</span>
+                <h3>Modifications to These Terms of Service</h3>
+            </div>
+            <p>
+                RACM may update or amend these Terms at any time to reflect Bot improvements, regulatory updates, or changes to the Discord Developer Policy.
+            </p>
+            <p>
+                Updates take effect immediately upon publication at this URL, as reflected by the revision date at the top of the page. Continued interaction with the Bot after changes are posted constitutes full acceptance of the revised Terms.
+            </p>
+        </section>
+
+        <!-- SECTION 12 -->
+        <section id="section-12" class="legal-section">
+            <div class="legal-section-header">
+                <span class="legal-section-num">12</span>
+                <h3>Governing Law, Jurisdiction & Official Contact</h3>
+            </div>
+            <p>
+                These Terms of Service are governed by and construed in accordance with the laws of the <strong>United Mexican States</strong>. Any dispute or claim arising out of or relating to these Terms shall be submitted to the competent courts of <strong>Guadalajara, Jalisco, Mexico</strong>.
+            </p>
+
+            <div class="legal-callout info">
+                <span class="legal-callout-icon">📬</span>
+                <div>
+                    <strong>Official Channels for Support, Legal Inquiries & Privacy Requests:</strong>
+                    <ul style="margin: 0.5rem 0 0.2rem 1.2rem;">
+                        <li><strong>Application Owner:</strong> Roberto Alejandro Chagra Martínez (B.S. in Artificial Intelligence & Data Science — UdeG).</li>
+                        <li><strong>Organization:</strong> RACM Artificial Intelligence & Data Science.</li>
+                        <li><strong>Official Support WhatsApp:</strong> <a href="https://wa.me/525664903696?text=Hello,%20I%20have%20a%20question%20about%20the%20Discord%20Bot%20Terms%20of%20Service." target="_blank" rel="noopener noreferrer" style="color: var(--accent-cyan); text-decoration: underline;">+52 56 6490 3696</a></li>
+                        <li><strong>Web Contact Form:</strong> <a href="contact.html" style="color: var(--accent-cyan); text-decoration: underline;">RACM Official Contact Form</a></li>
+                        <li><strong>Repositories & Code:</strong> <a href="https://github.com/RACM-IA-DataScience" target="_blank" rel="noopener noreferrer" style="color: var(--accent-cyan); text-decoration: underline;">github.com/RACM-IA-DataScience</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- BOTTOM BAR -->
+        <div style="margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border-glass); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+            <span style="font-size: 0.85rem; color: var(--text-muted);">
+                🔒 Official public document for Discord Developer Portal registration (Terms of Service URL).
+            </span>
+            <div style="display: flex; gap: 0.8rem; flex-wrap: wrap;">
+                <a href="privacy-bot.html" class="btn btn-outline" style="font-size: 0.88rem; padding: 0.5rem 1.2rem;">
+                    🔒 Privacy Policy
+                </a>
+                <a href="index.html" class="btn btn-outline" style="font-size: 0.88rem; padding: 0.5rem 1.2rem;">
+                    &larr; Back to RACM Home
+                </a>
+                <a href="contact.html" class="btn btn-primary" style="font-size: 0.88rem; padding: 0.5rem 1.2rem;">
+                    <span>Contact Developer</span> &rarr;
+                </a>
+            </div>
+        </div>
+
+    </article>
+
+</main>
+
+<!-- UNIFIED CORPORATE FOOTER -->
+<footer class="site-footer">
+    <p>&copy; 2026 RACM Artificial Intelligence & Data Science. All rights reserved.</p>
+    <div class="footer-links">
+        <a href="https://wa.me/525664903696?text=Hello,%20I%20am%20interested%20in%20your%20services." target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        <span>•</span>
+        <a href="https://www.linkedin.com/in/racm-ia-datascience/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <span>•</span>
+        <a href="https://github.com/RACM-IA-DataScience" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <span>•</span>
+        <a href="https://www.facebook.com/racm.ia.datascience" target="_blank" rel="noopener noreferrer">Facebook</a>
+    </div>
+    <p style="font-size: 0.82rem; color: #64748b; margin-top: 0.4rem;">
+        Technical Direction: Roberto Alejandro Chagra Martínez • B.S. in Artificial Intelligence & Data Science (UdeG)
+    </p>
+    <p style="font-size: 0.78rem; color: #475569;">
+        Deployed on GitHub Pages • Open-source and high-performance architecture.
+    </p>
+</footer>
+
+<!-- INTERACTIVITY & COPY SCRIPTS -->
+<script defer src="../js/neural-canvas.js"></script>
+<script defer src="../js/lang-switcher.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const copyBtn = document.getElementById('btnCopyLegalUrl');
+        if (copyBtn) {
+            copyBtn.addEventListener('click', async () => {
+                const currentUrl = window.location.href;
+                try {
+                    if (navigator.clipboard && window.isSecureContext) {
+                        await navigator.clipboard.writeText(currentUrl);
+                    } else {
+                        const tempInput = document.createElement('input');
+                        tempInput.value = currentUrl;
+                        document.body.appendChild(tempInput);
+                        tempInput.select();
+                        document.execCommand('copy');
+                        document.body.removeChild(tempInput);
+                    }
+                    const originalText = copyBtn.innerHTML;
+                    copyBtn.innerHTML = '<span>✅ Link Copied to Clipboard!</span>';
+                    copyBtn.style.borderColor = 'var(--accent-cyan)';
+                    copyBtn.style.color = 'var(--accent-cyan)';
+                    setTimeout(() => {
+                        copyBtn.innerHTML = originalText;
+                        copyBtn.style.borderColor = '';
+                        copyBtn.style.color = '';
+                    }, 2800);
+                } catch (err) {
+                    console.error('Error copying link:', err);
+                }
+            });
+        }
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RACM Artificial Intelligence & Data Science | End-to-End AI Solutions</title>
+    <meta name="description" content="RACM Artificial Intelligence & Data Science — Consulting, software engineering, and production AI solutions: LangGraph Agents, MLOps, LLMs/RAG, Computer Vision, and Data Engineering. Founded by Roberto Alejandro Chagra Martínez.">
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="../img/favicon.png">
+    <link rel="apple-touch-icon" href="../img/logo.jpg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600;700&family=Geist:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        .hero-panel {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            padding: 3rem 2.2rem;
+        }
+        .hero-text-content {
+            flex: 1 1 540px;
+        }
+        .hero-badge-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(56, 189, 248, 0.1);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            color: var(--accent-cyan);
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            padding: 0.35rem 0.9rem;
+            border-radius: var(--radius-full);
+            margin-bottom: 1.2rem;
+        }
+        .hero-headline {
+            font-size: clamp(1.6rem, 4vw, 2.3rem);
+            font-weight: 800;
+            line-height: 1.25;
+            margin-bottom: 1rem;
+            color: #ffffff;
+        }
+        .typewriter-wrapper {
+            font-size: clamp(1rem, 2.6vw, 1.25rem);
+            font-weight: 600;
+            color: #93c5fd;
+            min-height: 2.2rem;
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.2rem;
+        }
+        .typewriter-cursor {
+            color: var(--accent-cyan);
+            animation: blink 0.9s infinite;
+            font-weight: bold;
+            margin-left: 2px;
+        }
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+        .hero-lead {
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            line-height: 1.65;
+            margin-bottom: 1.8rem;
+            max-width: 650px;
+        }
+        .hero-ctas {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+
+<!-- UNIFIED CORPORATE HEADER -->
+<header class="site-header">
+    <!-- GLOBAL LANGUAGE SWITCHER -->
+    <div class="lang-switcher" data-lang-switcher>
+        <button type="button" class="lang-switcher-btn" aria-haspopup="true" aria-expanded="false" aria-label="Change language">
+            <svg class="lang-globe-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+            <span>EN</span>
+            <svg class="lang-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+        </button>
+        <div class="lang-dropdown" role="menu">
+            <a href="../index.html" class="lang-option" role="menuitem" hreflang="es">
+                <span class="lang-code">ES</span>
+                <span class="lang-name">Español</span>
+            </a>
+            <a href="index.html" class="lang-option active" role="menuitem" hreflang="en">
+                <span class="lang-code">EN</span>
+                <span class="lang-name">English</span>
+                <span class="lang-check">✓</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="avatar-wrapper">
+        <img src="../img/logo.jpg" alt="Official logo of RACM Artificial Intelligence & Data Science" class="foto-perfil" width="100" height="100" fetchpriority="high">
+    </div>
+    <h1 class="header-brand-title">
+        <span class="brand-name-main">RACM</span>
+        <span class="brand-name-sub">Artificial Intelligence & Data Science</span>
+    </h1>
+    <p class="site-subtitle">Consulting, Software Engineering & Artificial Intelligence Solutions</p>
+    <p class="site-affiliation">Empowering organizations through Autonomous Agents, MLOps, Enterprise RAG, Computer Vision, and High-Performance Data Architectures.</p>
+    
+    <div class="header-badges">
+        <span class="header-pill">🤖 Agents & LLMs</span>
+        <span class="header-pill">⚙️ MLOps & APIs</span>
+        <span class="header-pill">👁️ Deep Learning / CV</span>
+        <span class="header-pill">📊 Data Engineering</span>
+        <span class="header-pill">🚀 Enterprise Solutions</span>
+    </div>
+</header>
+
+<!-- MAIN NAVIGATION WITH 5 TABS -->
+<nav class="site-nav">
+    <a href="index.html" class="active">⚡ Home</a>
+    <a href="services.html">🛠️ Services</a>
+    <a href="projects.html">💼 Projects</a>
+    <a href="about.html">🏢 About Us</a>
+    <a href="contact.html">📬 Contact</a>
+</nav>
+
+<main class="container">
+
+    <!-- HIGH-IMPACT CORPORATE HERO SECTION -->
+    <section class="glass-panel hero-panel">
+        <div class="hero-text-content">
+            <div class="hero-badge-tag">
+                <span>⚡ Enterprise Artificial Intelligence Solutions</span>
+            </div>
+            <h2 class="hero-headline">
+                End-to-End AI Solutions: From Algorithm to Enterprise Production.
+            </h2>
+            <div class="typewriter-wrapper">
+                <span id="typewriter-text"></span><span class="typewriter-cursor">|</span>
+            </div>
+            <p class="hero-lead">
+                At <strong>RACM Artificial Intelligence & Data Science</strong>, we turn complex data into measurable competitive advantages. We design scalable architectures, orchestrate adaptive autonomous agents, build reproducible MLOps pipelines, and deploy high-performance containerized APIs in Docker.
+            </p>
+            <div class="hero-ctas">
+                <a href="services.html" class="btn btn-primary">
+                    <span>Explore Services</span> &rarr;
+                </a>
+                <a href="projects.html" class="btn btn-outline">
+                    View Projects (10)
+                </a>
+                <a href="contact.html" class="btn btn-glow-cyan">
+                    <span>Request Consultation</span>
+                </a>
+                <a href="https://github.com/RACM-IA-DataScience" target="_blank" rel="noopener noreferrer" class="btn btn-github">
+                    <svg height="18" width="18" viewBox="0 0 16 16" fill="currentColor">
+                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+                    </svg>
+                    <span>@RACM-IA-DataScience</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ANIMATED IMPACT METRICS -->
+    <section class="metrics-grid">
+        <div class="metric-card">
+            <div class="metric-number" data-target="10" data-suffix="+">0</div>
+            <div class="metric-label">Production Solutions</div>
+        </div>
+        <div class="metric-card">
+            <div class="metric-number" data-target="26" data-suffix="+">0</div>
+            <div class="metric-label">Public Repositories</div>
+        </div>
+        <div class="metric-card">
+            <div class="metric-number" data-target="4" data-suffix="">0</div>
+            <div class="metric-label">Specialization Tracks</div>
+        </div>
+        <div class="metric-card">
+            <div class="metric-number" data-target="100" data-suffix="%">0</div>
+            <div class="metric-label">Open Source & Reproducible</div>
+        </div>
+    </section>
+
+    <!-- INTERACTIVE AI INFERENCE SANDBOX TERMINAL -->
+    <section class="glass-panel" style="padding: 2.2rem 2rem;">
+        <h2 class="section-title">
+            <span>🔬 Interactive AI Inference Terminal</span>
+        </h2>
+        <p class="section-desc">
+            Experience in real time how our Artificial Intelligence architectures operate. Select a pipeline below to simulate an API call, vector search, or agent state machine:
+        </p>
+
+        <div class="terminal-window">
+            <div class="terminal-header">
+                <div class="terminal-dots">
+                    <span class="terminal-dot dot-red"></span>
+                    <span class="terminal-dot dot-yellow"></span>
+                    <span class="terminal-dot dot-green"></span>
+                </div>
+                <div class="terminal-title">fastapi-mlops: infer --model churn_rf_v2</div>
+                <div style="font-size: 0.75rem; color: #64748b;">bash v5.2</div>
+            </div>
+            <div class="terminal-actions-bar">
+                <span style="font-size: 0.8rem; color: #94a3b8; font-weight: 600; margin-right: 0.5rem;">Run Pipeline:</span>
+                <button class="terminal-btn active" data-demo="churn">
+                    <span>⚡ 1. MLOps Churn (FastAPI)</span>
+                </button>
+                <button class="terminal-btn" data-demo="rag">
+                    <span>🧠 2. DocuMind RAG (FAISS + Gemini)</span>
+                </button>
+                <button class="terminal-btn" data-demo="langgraph">
+                    <span>🤖 3. Autonomous Agent (LangGraph)</span>
+                </button>
+            </div>
+            <pre class="terminal-body" id="terminal-content"></pre>
+        </div>
+    </section>
+
+    <!-- FINAL CALL TO ACTION -->
+    <section class="cta-banner">
+        <h2>Ready to power your business with Artificial Intelligence?</h2>
+        <p>
+            Let's discuss your business challenges and architect a tailored solution backed by RACM's scientific and engineering expertise.
+        </p>
+        <div class="cta-actions">
+            <a href="schedule.html" class="btn btn-primary" style="padding: 0.9rem 2rem; font-size: 1.05rem;">
+                <span>Schedule Diagnostic Session</span> &rarr;
+            </a>
+            <a href="services.html" class="btn btn-outline" style="padding: 0.9rem 1.8rem; font-size: 1.05rem;">
+                Explore Our Services
+            </a>
+            <a href="projects.html" class="btn btn-outline" style="padding: 0.9rem 1.8rem; font-size: 1.05rem;">
+                Browse Project Catalog
+            </a>
+        </div>
+    </section>
+
+</main>
+
+<!-- UNIFIED CORPORATE FOOTER -->
+<footer class="site-footer">
+    <p>&copy; 2026 RACM Artificial Intelligence & Data Science. All rights reserved.</p>
+    <div class="footer-links">
+        <a href="https://wa.me/525664903696?text=Hello,%20I%20am%20interested%20in%20your%20services." target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        <span>•</span>
+        <a href="https://www.linkedin.com/in/racm-ia-datascience/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <span>•</span>
+        <a href="https://github.com/RACM-IA-DataScience" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <span>•</span>
+        <a href="https://www.facebook.com/racm.ia.datascience" target="_blank" rel="noopener noreferrer">Facebook</a>
+    </div>
+    <p style="font-size: 0.82rem; color: #64748b; margin-top: 0.4rem;">
+        Technical Direction: Roberto Alejandro Chagra Martínez • B.S. in Artificial Intelligence & Data Science (UdeG)
+    </p>
+    <p style="font-size: 0.78rem; color: #475569;">
+        Deployed on GitHub Pages • Open-source and high-performance architecture.
+    </p>
+</footer>
+
+<!-- INTERACTIVITY SCRIPTS -->
+<script defer src="../js/neural-canvas.js"></script>
+<script defer src="../js/lang-switcher.js"></script>
+<script defer src="../js/home-interactive-en.js"></script>
+
+</body>
+</html>
