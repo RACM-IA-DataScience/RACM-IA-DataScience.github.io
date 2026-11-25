@@ -25,9 +25,9 @@
         particleCountBase: 65,         // Base para pantallas de 1920px
         maxDistance: 135,             // Distancia máxima para sinapsis entre neuronas
         mouseDistance: 160,           // Distancia de interacción con el cursor
-        nodeColor: 'rgba(56, 189, 248, 0.7)',       // Cyan Neón
-        synapseColor: '56, 189, 248',               // RGB base para enlaces
-        pulseColor: '168, 85, 247',                 // Violeta para pulsos
+        nodeColor: 'rgba(96, 193, 240, 0.75)',       // Sky Blue Neón Chalk
+        synapseColor: '96, 193, 240',               // RGB base para enlaces
+        pulseColor: '236, 68, 110',                 // Rose Neón para pulsos
         speed: 0.45                                 // Velocidad de deriva
     };
 
@@ -51,6 +51,14 @@
             this.baseRadius = this.radius;
             this.pulse = Math.random() * Math.PI * 2;
             this.isSynapseActive = false;
+            const palette = [
+                'rgba(96, 193, 240, 0.75)',  // Sky Blue
+                'rgba(236, 68, 110, 0.75)',  // Rose
+                'rgba(250, 170, 62, 0.75)',  // Amber
+                'rgba(52, 211, 153, 0.75)',  // Mint
+                'rgba(157, 78, 221, 0.75)'   // Violet
+            ];
+            this.color = palette[Math.floor(Math.random() * palette.length)];
         }
 
         update() {
@@ -88,11 +96,11 @@
             ctx.beginPath();
             ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
             if (this.isSynapseActive) {
-                ctx.fillStyle = '#a855f7';
-                ctx.shadowBlur = 8;
-                ctx.shadowColor = '#a855f7';
+                ctx.fillStyle = '#ec446e';
+                ctx.shadowBlur = 10;
+                ctx.shadowColor = '#ec446e';
             } else {
-                ctx.fillStyle = CONFIG.nodeColor;
+                ctx.fillStyle = this.color || CONFIG.nodeColor;
                 ctx.shadowBlur = 0;
             }
             ctx.fill();
